@@ -1,0 +1,102 @@
+# Button variant experiment
+
+**Question:** Can I make an AI consistently choose the correct button variant using only machine-readable rules?
+
+## Setup
+
+**Answer options** (the agent must pick exactly one):
+
+- `primary` (P)
+- `secondary` (S)
+- `ghost` (G)
+- `destructive` (D)
+- `none` — none of these fits; flag it
+
+**Information levels** (the only thing that changes between runs):
+
+- **A. Names only** — just the variant names (baseline)
+- **B. Human docs** — typical prose guidance, e.g. "Use primary for the main action"
+- **C. Machine rules** — intent, hard rules, "never" rules, and precedence for conflicts
+
+**Runs:** every scenario, 3 times per level. The agent answers with the variant and one line of reasoning.
+
+**Metrics:**
+
+- **Accuracy** — % correct per level
+- **Consistency** — same answer across the 3 runs
+- **Over-flagging** — % of scenarios where the agent picked `none` but shouldn't have
+
+⚖️ = contested; good designers could disagree. For each one, write one sentence on *why* — those sentences become the level C rules.
+
+## Scenarios
+
+### Easy (controls)
+
+| # | Scenario | Button | Answer |
+|---|---|---|---|
+| 1 | A sign-up form. This is the only button on the form. | "Create account" | P |
+| 2 | A dialog asking "Delete this project? This can't be undone." This button confirms the deletion. | "Delete project" | D |
+| 3 | A profile settings page where the user edits name, email and photo. At the bottom of the page is the button that saves their edits. | "Save changes" | P |
+| 4 | A projects list page with no projects yet (empty state). The button starts creating a project. | "Create your first project" | P |
+| 5 | An invoices list page. In the page header is the button that starts a new invoice. | "New invoice" | P |
+
+### Context (answer depends on surroundings)
+
+| # | Scenario | Button | Answer |
+|---|---|---|---|
+| 6 | A dialog asking "Delete this project? This can't be undone." Next to the "Delete project" button is a button that closes the dialog without deleting. | "Cancel" | S |
+| 7 | A grid of 12 product cards. Every card has the same button that opens that product's details. | "View details" | G |
+| 8 | A data table where the user has selected 3 rows. The toolbar above the table has a button that downloads the selected rows as a CSV file. | "Export CSV" | S |
+| 9 | A data table where the user has selected 3 rows. The toolbar above the table has a button that permanently deletes the selected rows. | "Delete 3 rows" | D |
+| 10 | An onboarding step with a "Continue" button. Next to it is a button that moves on without completing this step. | "Skip for now" | G |
+| 11 | A read-only dialog that shows information. This is the only button; it closes the dialog. | "Close" | S |
+| 12 | A promotional banner on a dashboard. The button opens a page with more information about a new feature. | "Learn more" | G |
+
+### Traps (sound like one variant, are another)
+
+| # | Scenario | Button | Answer |
+|---|---|---|---|
+| 13 | An account menu. The button signs the user out; they can sign in again at any time. | "Log out" | G |
+| 14 | A project settings page. The button archives the project; archived projects can be restored later. | "Archive project" | S |
+| 15 | A profile settings page. Next to "Save changes" is a button that puts every setting back to its original value. The user can change them again afterwards. | "Reset to defaults" | G |
+| 16 | An error banner shown after a file upload failed. The button retries the upload. | "Try again" | P |
+
+### Conflicts (two rules fight)
+
+| # | Scenario | Button | Answer |
+|---|---|---|---|
+| 17 | A dialog whose only purpose is removing a member from a team. This button removes the member. | "Remove member" | D |
+| 18 | A dialog shown when leaving a page with unsaved changes. It has three buttons: "Save", "Discard changes" and "Keep editing". This button throws away the unsaved changes. | "Discard changes" | D |
+| 19 | A code review screen with two actions of equal importance: "Approve" and "Request changes". This button sends the code back to the author with change requests. | "Request changes" | S |
+| 20 | A cookie consent banner with an "Accept all" button. Next to it is a button that rejects all optional cookies. | "Reject all" | S |
+
+### Interaction & tools
+
+| # | Scenario | Button | Answer |
+|---|---|---|---|
+| 21 | A chat app message composer. The user presses and holds this button to record a voice message, and releases it to send. | "Hold to record" | none |
+| 22 | A chat app message composer. Next to the "Send" button is a button that attaches a file to the message. | "Add file" | G |
+| 23 | An app's help panel, below a list of help articles. The button opens a short form for sending feedback to the team. | "Send feedback" | G |
+
+### Matched pairs (same rule, different wording)
+
+Each of these tests a rule that otherwise has only one scenario. If the agent gets the original right but misses the pair, it was matching words, not applying the rule.
+
+| # | Scenario | Button | Answer | Pairs with |
+|---|---|---|---|---|
+| 24 | A billing page. A notice says the monthly payment was declined because the card has expired. The notice has one button, which opens the form for entering a new card. | "Update card" | P | #16 (H9) |
+| 25 | A pricing screen shown to a user on the free plan. It has two buttons: "Upgrade to Pro" and a button that keeps the user on the free plan and closes the screen. | "Stay on Free" | S | #20 (H8) |
+| 26 | An image editor. The user has applied several crops and filters. In the toolbar is a button that removes all of them and shows the original photo again. The user can apply edits again afterwards. | "Revert to original" | G | #15 (H10) |
+| 27 | A notification toast at the top of the screen says "Your report is ready". It has one button, which hides the toast. | "Dismiss" | S | #11 (H5) |
+
+## Final answers and reasoning for contested scenarios
+
+Each reason is written as a general rule, so it also applies to screens not in this list. These become the level C rules.
+
+- **#6: S.** The button that backs out of a dialog is always secondary, so the confirming action stands out but cancelling still looks like a clear choice.
+- **#11: S.** A button that only dismisses something is secondary, even when it's the only button. Primary is reserved for actions that move the user forward.
+- **#15: G.** An action that undoes the user's own edits, but is rarely needed and can't cause permanent loss, is ghost. Secondary would make it compete with "Save changes".
+- **#16: P.** When something has failed and there is one clear way to recover, that recovery action is primary, wherever it sits. Fixing the problem is the user's main task at that moment.
+- **#19: S.** When two actions are equally important, the positive or forward-moving one is primary and the other is secondary. Two primaries next to each other is never allowed.
+- **#20: S.** Even when two choices are legally equal, the one the product recommends is primary and the alternative is secondary. The alternative must stay a real button, never ghost or hidden.
+- **#21: none.** The variants describe how important an action is, not how it's operated. A control with a different interaction (press and hold, drag, toggle) isn't covered, so the agent should flag it instead of forcing a variant.

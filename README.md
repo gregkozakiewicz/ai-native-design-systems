@@ -43,4 +43,4 @@ are written down.
 
 ## Current wheel
 
-None yet. Candidates are in `QUESTIONS.md`.
+[001: button variant](wheels/001-button-variant/) is answered. Candidates for the next one are in `QUESTIONS.md`.

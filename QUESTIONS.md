@@ -12,8 +12,6 @@ Move a question to `wheels/` with `tools/new-wheel.sh` once it has all three.
 
 ## Candidate wheels (small enough to start)
 
-- Can an AI consistently choose the correct **button variant** using only
-  machine-readable system rules? *(smallest; good first wheel)*
 - What is the smallest piece of information an agent needs to reliably
   choose the correct **UI pattern** for a given task?
 - How should an agent decide whether to **reuse** an existing component or
@@ -36,3 +34,17 @@ Move a question to `wheels/` with `tools/new-wheel.sh` once it has all three.
 ## Answered
 
 Move questions here once a wheel has findings, with a link to the wheel.
+
+- Can an AI consistently choose the correct **button variant** using only
+  machine-readable system rules? Yes: 76 of 81 with rules, 64 of 81 with
+  prose, 53 of 81 with names alone. See `wheels/001-button-variant/`.
+
+## Raised by wheels
+
+- Does the same button rule set hold for other models (Sonnet 5.5, Codex,
+  Gemini)? *(from wheel 001)*
+- Does the lead for rules over prose shrink at low reasoning effort?
+  *(from wheel 001)*
+- Where is the line between a secondary alternative and a ghost option, and
+  can it be one rule? *(from wheel 001; candidate rule in its
+  `implications.md`)*
