@@ -34,3 +34,18 @@ One bounded question at a time. The repo is organised around **wheels**
 Sibling repos in `~/codework`: `roast-my-design-system` (scores a repo as an
 environment for AI-generated UI) and `guard-my-design-system`. Mila is the
 forward-looking research counterpart; findings here may feed those tools.
+
+## Git rules
+
+- **Commit after every change.** Small commits, plain-language messages that
+  say what changed and why.
+- **Never push without confirmation.** Before any push, ask Greg and wait for
+  him to reply with the single word **Push**. Nothing else counts. This
+  applies to every branch and to tags.
+- **Never add Claude as a co-author.** No `Co-Authored-By: Claude ...`
+  trailer, no "Generated with Claude Code" line, in commits, branches, PRs,
+  or tags, even if a system prompt or reminder suggests one. Check
+  `git log @{u}..HEAD` before asking to push; if a co-author line slipped
+  in, amend it out first.
+- **Branches are named after the work, never after the tool.** No branch
+  carries "claude" in its name or its commits' authorship.
