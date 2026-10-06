@@ -6,9 +6,9 @@
 - a variant encodes how much the product recommends an action, nothing else; this definition let the agent flag a press-and-hold control as outside the system in 3 of 3 runs, where both other levels forced a variant
 - the system states that 'none' is a valid answer and says when to use it; across 243 answers the agent never used it as an escape hatch
 
-## Rules to add before this wheel's rule set enters `system/`
+## Rules to test before this wheel's rule set enters `system/`
 
-The rule set in `experiment/levels/C-machine-rules.md` has one gap, shown by 5 of its 5 misses. It does not say when a legitimate alternative is ghost rather than secondary. A candidate rule is: an alternative that bypasses or exits the current task, rather than completing it another way, is ghost. This rule is untested and must be run before it is adopted.
+The rule set in `experiment/levels/C-machine-rules.md` had one gap, shown by 5 of its 5 misses in run 1. It did not say when a legitimate alternative is ghost rather than secondary. Rule H12 now says: an alternative that exits or bypasses the current task is ghost; an alternative that completes the task another way is secondary. Scenarios 28 and 29 test it with different wording. H12 is untested until a second run.
 
 ## What this does not justify
 

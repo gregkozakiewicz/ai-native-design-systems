@@ -47,6 +47,8 @@ hard_rules:
     rule: an action that undoes the user's own edits, is rarely needed and cannot cause permanent loss, is ghost
   - id: H11
     rule: an action that opens a side task (attach a file, give feedback, learn more) rather than completing the current task is ghost
+  - id: H12
+    rule: an alternative that exits or bypasses the current task (skip, not now, maybe later) is ghost; an alternative that completes the task another way is secondary
 ```
 
 ## 3. Never rules
@@ -66,9 +68,9 @@ Apply in this order; the first rule that applies wins.
 
 1. **Reversibility** — can it be undone? Decides destructive vs not (H2, H3).
 2. **Interaction** — is it a plain click or tap? If not, answer none.
-3. **Role in the view** — does it back out, dismiss, repeat, or open a side task? (H4, H5, H6, H11)
+3. **Role in the view** — does it back out, dismiss, repeat, bypass, or open a side task? (H4, H5, H6, H11, H12)
 4. **Recommendation** — is it the one action the product recommends? (H1, H7, H8, H9)
-5. **Emphasis** — anything left: secondary if it is a real choice, ghost if optional.
+5. **Emphasis** — anything left: secondary if it is a real choice the user may take, ghost if it is optional and rarely needed.
 
 ## 5. Unknowns
 

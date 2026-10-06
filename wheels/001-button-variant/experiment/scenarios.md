@@ -56,7 +56,7 @@
 
 | # | Scenario | Button | Answer |
 |---|---|---|---|
-| 13 | An account menu. The button signs the user out; they can sign in again at any time. | "Log out" | G |
+| 13 | An account menu. The button signs the user out; they can sign in again at any time. | "Log out" | S |
 | 14 | A project settings page. The button archives the project; archived projects can be restored later. | "Archive project" | S |
 | 15 | A profile settings page. Next to "Save changes" is a button that puts every setting back to its original value. The user can change them again afterwards. | "Reset to defaults" | G |
 | 16 | An error banner shown after a file upload failed. The button retries the upload. | "Try again" | P |
@@ -88,6 +88,8 @@ Each of these tests a rule that otherwise has only one scenario. If the agent ge
 | 25 | A pricing screen shown to a user on the free plan. It has two buttons: "Upgrade to Pro" and a button that keeps the user on the free plan and closes the screen. | "Stay on Free" | S | #20 (H8) |
 | 26 | An image editor. The user has applied several crops and filters. In the toolbar is a button that removes all of them and shows the original photo again. The user can apply edits again afterwards. | "Revert to original" | G | #15 (H10) |
 | 27 | A notification toast at the top of the screen says "Your report is ready". It has one button, which hides the toast. | "Dismiss" | S | #11 (H5) |
+| 28 | A prompt asking the user to turn on notifications, with an "Enable notifications" button. Next to it is a button that closes the prompt and leaves notifications off. | "Not now" | G | #10 (H12) |
+| 29 | A checkout payment step with a "Pay with card" button. Next to it is a button that lets the user pay by bank transfer instead. | "Pay by bank transfer" | S | #13 (H12) |
 
 ## Final answers and reasoning for contested scenarios
 
@@ -99,4 +101,10 @@ Each reason is written as a general rule, so it also applies to screens not in t
 - **#16: P.** When something has failed and there is one clear way to recover, that recovery action is primary, wherever it sits. Fixing the problem is the user's main task at that moment.
 - **#19: S.** When two actions are equally important, the positive or forward-moving one is primary and the other is secondary. Two primaries next to each other is never allowed.
 - **#20: S.** Even when two choices are legally equal, the one the product recommends is primary and the alternative is secondary. The alternative must stay a real button, never ghost or hidden.
+- **#13: S** (changed from G after run 1, see below). Logging out is a real action the user chose from a menu of equal options, not a way of exiting a task. Equal options in a menu are secondary; what sets their order is position, not variant.
+- **#10: G** (confirmed after run 1). We want users to finish onboarding, so the button that bypasses the step is ghost. An alternative that exits or bypasses the current task is ghost; one that completes the task another way is secondary.
 - **#21: none.** The variants describe how important an action is, not how it's operated. A control with a different interaction (press and hold, drag, toggle) isn't covered, so the agent should flag it instead of forcing a variant.
+
+## Changes to the key
+
+- 7 October 2026, after run 1: scenario 13 ('Log out') changed from G to S. The agent chose secondary in 3 of 3 runs at level C and the designer agreed on reflection. Run 1 is scored against the original key and is not rescored. Scenarios 28 and 29 added to test the new rule H12 with different wording.

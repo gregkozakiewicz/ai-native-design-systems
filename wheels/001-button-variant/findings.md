@@ -28,9 +28,9 @@ The 5 easy scenarios were right in all 15 answers at every level. The whole gap 
 
 Rules scored 94% (76 of 81), human documentation 79% (64 of 81), and names alone 65% (53 of 81). The success criterion was 90% and a 10-point lead, so the wheel is answered "yes".
 
-### Human documentation made the agent less consistent than no documentation
+### Human documentation raised accuracy but lowered consistency compared with names only
 
-With names only, the agent fell back on convention and gave the same answer every time: 26 of 27 scenarios agreed across runs. With prose, that fell to 22 of 27. On scenario 11 ('Close' as the only button in a read-only dialog) one run wrote "one could argue for Secondary", then chose primary anyway. Prose gave the agent room to reason towards different answers in different runs.
+Consistency measures whether the 3 separate answers to a scenario were identical, right or wrong. With names only, the agent fell back on convention and gave the same answer each time: 26 of 27 scenarios agreed across runs, though only 53 of 81 answers were right. With prose, accuracy rose to 64 of 81 but agreement fell to 22 of 27. On scenario 11 ('Close' as the only button in a read-only dialog) one run wrote "one could argue for Secondary", then chose primary anyway. Prose gave the agent room to reason towards different answers in different runs.
 
 ### The agent applied the rules rather than matching their words
 
@@ -43,6 +43,8 @@ Scenario 21, a press-and-hold recording control, is the only scenario where 'non
 ## Failure modes seen
 
 The 5 misses with rules are one disagreement. On 'Log out' (3 of 3 runs) and 'Skip for now' (2 of 3 runs) the agent chose secondary where the key says ghost. Its reasoning was the same each time: a real choice the user must be able to find. Nothing in the rules says when a legitimate alternative is ghost rather than secondary, so the agent used the emphasis rule and reached a defensible answer. This is a gap in the rules, and one rule would close it.
+
+On reflection the designer agreed with the agent on 'Log out': the key now says secondary, and the rules changed the agent's answer away from the convention it used at levels A and B (ghost in 6 of 6 runs). On 'Skip for now' the designer kept ghost, because the product wants users to finish onboarding. Rule H12 now records that line, and 2 scenarios were added to test it. Run 1 is scored against the original key; a second run tests the revised set.
 
 With human documentation, the agent twice called 'Revert to original' destructive because redoing edits by hand "is not an undo". The documentation's one line on destructive ("delete data or can't be undone") does not say that reversible means recoverable, not instant.
 
