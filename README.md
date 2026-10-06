@@ -20,7 +20,7 @@ The method is: one wheel at a time, not the whole factory.
 | `examples/` | Reference inputs for tests: component docs, token files, real-world UI, good and bad cases. |
 | `system/` | The design system itself. Every rule in here cites the wheel that proved it. |
 | `tools/` | Shared scripts for running experiments and scoring results. |
-| `templates/` | The skeleton a new wheel is copied from. |
+| `templates/` | Skeletons: the folder a new wheel is copied from, and `post.md` for any write-up we publish. |
 
 ## Starting a new wheel
 

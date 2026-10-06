@@ -21,6 +21,12 @@ Move a question to `wheels/` with `tools/new-wheel.sh` once it has all three.
 - What does a component need to tell an agent that current component
   documentation does not?
 
+- Does matching the names models already expect (Switch, Box, TextField,
+  spacing) do more for compliance than writing guidance? *(from the reading note
+  `research/notes/2026-10-06-measuring-agent-use-of-a-design-system.md`)*
+- If an agent can ask the design system a question mid-task, what, if
+  anything, still has to be told to it up front? *(from the same reading note)*
+
 ## Big questions (too large; here so they stop nagging)
 
 - What is an AI-native design system?
