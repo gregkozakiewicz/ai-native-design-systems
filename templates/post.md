@@ -1,22 +1,29 @@
-# <Title: the finding or the question, 65 characters or less, sentence case>
+# <Title: the finding as a statement, 65 characters or less, sentence case>
 
 <!--
 How to use this template
 
-Copy it for any write-up we publish or share during the research phase: a
-wheel write-up, a reading note turned into a post, a progress report. Keep
-the sections in this order. Delete a section only if it is truly empty, and
-say so in one line instead ("No change to the system yet.").
+Copy it for any post we publish during the research phase. Each post is one
+reading of one wheel. The wheel folder holds the full discipline
+(README.md, hypothesis.md, experiment/, runs/, findings.md,
+implications.md). The post is the readable version of it, so it stays
+short: the reader gets the result in the first screen and the detail at the
+bottom.
 
-Write to the rules in CLAUDE.md under "Writing": GOV.UK first, Google style
-where GOV.UK is silent. The checklist at the bottom is the short version.
+Write to the rules in CLAUDE.md under "Writing". The checklist at the end is
+the short version. Text in angle brackets is a prompt to you: replace it or
+delete it. Delete every comment before publishing.
 
-Text in angle brackets is a prompt to you. Replace it or delete it. Delete
-every comment before publishing.
+Visual rules for the published page
+- the 4 numbers under the title render as tiles, not a table
+- at least one chart in "What we found", with its data table beside or under it
+- the example renders as before and after, side by side where the width allows
+- "Details" is collapsed or visually lighter than the rest
 -->
 
-<Summary: one sentence, 160 characters or less, with a verb, ending in a
-full stop. It says what we found, not what the post is about.>
+<Summary: one sentence with a verb, ending in a full stop. It says what we
+found, not what the post is about. 160 characters or less so it survives a
+link preview.>
 
 **Wheel:** `wheels/NNN-name/` · **Runs dated:** YYYY-MM-DD · **Status:** answered | partial | abandoned
 
@@ -25,15 +32,17 @@ full stop. It says what we found, not what the post is about.>
 | <what it counts, with the denominator> | <what it counts, with the denominator> | <what it counts, with the denominator> | <what it counts, with the denominator> |
 
 <!--
-The numbers strip is the whole post for a reader who stops here. Each cell is
-a number plus what it is a number of: "41 of 69 runs", not "59%". Dated
-numbers only. No number that does not appear again, with its evidence, below.
+These 4 numbers are the whole post for a reader who stops here. Each is a
+number plus what it is a number of: "41 of 69 runs", not "59%". Every number
+here appears again below, next to its evidence. Nothing here that is not
+proven below.
 -->
 
 ## The question
 
-<One sentence, copied from the wheel's README.md. If it needs two sentences,
-it is two posts.>
+<The hook. One sentence, copied from the wheel's README.md, then one or two
+sentences on what breaks today because it is unanswered. If the question
+needs two sentences, it is two posts.>
 
 **In scope:** <one line>
 **Out of scope:** <one line>
@@ -41,35 +50,99 @@ it is two posts.>
 ## The answer
 
 <Two or three sentences. Answer the question directly, including "no" or
-"not yet". Then say in one sentence what the evidence does not cover. A
-reader who stops here knows the result and its limit.>
+"not yet". Then one sentence on what the evidence does not cover. A reader
+who stops here knows the result and its limit.>
 
-## Why it matters
+## One example
 
-<Two or three sentences. What breaks today because this was unanswered, and
-who feels it. No adjectives doing the work of evidence.>
+<One scenario exactly as the agent saw it, then what the agent did without
+help and what it did with help. One line of explanation under each. Full
+output lives in runs/, linked here. If you trim anything, say what was cut.>
 
-## One example in full
-
-<One scenario, prompt or task exactly as the agent saw it, then exactly what
-the agent produced, then how it was scored. Show it before explaining the
-method. If the example needs trimming to fit, link to the untrimmed run in
-runs/ and say what was cut.>
+**The task**
 
 ```
 <the prompt, verbatim>
 ```
 
+**Without <the thing we are testing>**
+
 ```
-<the output, verbatim>
+<the output, verbatim or trimmed>
 ```
 
-<Score and reason, one or two sentences.>
+<One sentence: what went wrong and the score.>
 
-## How we tested
+**With <the thing we are testing>**
 
-<Enough for someone to re-run it. Prose for the shape, a table for the
-facts.>
+```
+<the output, verbatim or trimmed>
+```
+
+<One sentence: what changed and the score. Link: `runs/YYYY-MM-DD-...`.>
+
+## What we found
+
+<!--
+2 to 4 findings. The heading is the finding as a statement ("Guidance moved
+one model by 24 points and another by 6"), never a topic ("Results") and
+never a question. Order by importance.
+
+Under each heading: the claim in one or two sentences, one chart or table
+with denominators, then one sentence on what it does not show and which
+runs it comes from.
+-->
+
+### <Finding 1 as a statement>
+
+<Claim.>
+
+| <Level or model> | <Measure, n of N> | <Measure, n of N> |
+| --- | --- | --- |
+| | | |
+
+<What this does not show. Runs: `runs/YYYY-MM-DD-...`.>
+
+### <Finding 2 as a statement>
+
+<Same shape.>
+
+### <Where it failed>
+
+<One line each: what went wrong, how often, where to look. Include our own
+setup's failures, not only the agent's.>
+
+## What this does not show
+
+<The honest list, one sentence each: sample size, one system, one model,
+levels that bundle two changes, scoring that depends on a model, anything
+anonymised and why. Nothing claimed about a fix without a measurement of
+the fix.>
+
+- <limit>
+- <limit>
+
+## What to do with this
+
+<For a reader with their own design system. Two to four steps, in order,
+each one sentence, each tied to a finding above. If the honest answer is
+"nothing yet", say so and say what would change that.>
+
+1. <step>
+2. <step>
+
+<One line on what changes in `system/`, if anything, with the rule from the
+wheel's implications.md and the run that justifies it. Otherwise "Nothing
+changes in the system yet."
+
+## Details
+
+<!--
+Reference material. Keep it, but keep it light and last. Setup instructions
+stay in the repo; link to them.
+-->
+
+**How we tested**
 
 | Setting | Value |
 | --- | --- |
@@ -81,82 +154,24 @@ facts.>
 | Dates | <first and last run> |
 | Cost | <money and time, roughly> |
 
-<One sentence on what was fixed before the runs started and what was
-changed after. If a scoring rule changed mid-way, say so here and in the
-findings.>
+<One sentence on anything fixed before the runs started or changed after.>
 
-## What we found
-
-<!--
-One sub-heading per finding. The heading is the finding as a statement
-("Guidance moved one model by 24 points and another by 6"), never a topic
-("Results") and never a question. Order by importance, not by the order you
-discovered them.
-
-Under each heading: the claim in one or two sentences, then the table that
-supports it, then one or two sentences on what the table does not show.
-Every table has a denominator column or a caption that gives it. Every chart
-has a table beside it. Point at specific files in runs/.
--->
-
-### <Finding 1 as a statement>
-
-<Claim.>
-
-| <Level or model> | <Measure, n of N> | <Measure, n of N> |
-| --- | --- | --- |
-| | | |
-
-<What this does not show. Which runs: `runs/YYYY-MM-DD-...`.>
-
-### <Finding 2 as a statement>
-
-<Same shape.>
-
-### <Failure modes we saw>
-
-<One line each: what went wrong, how often, where to look. Include the
-failures of our own setup, not only the agent's.>
-
-## What this does not show
-
-<The honest list, beside the claims rather than at the bottom of an FAQ.
-Sample size, single system, single model, levels that bundle two changes,
-scoring that depends on a model, anything anonymised and why. One sentence
-each.>
-
-- <limit>
-- <limit>
-
-## What changes in the system
-
-<Only rules proposed in the wheel's implications.md may appear here, each
-with the run that justifies it. If nothing changes yet, say "Nothing yet" and
-why.>
-
-- <rule in one sentence>: justified by `runs/...`
-
-## Questions this raises
-
-<New questions go to QUESTIONS.md, not into this wheel. List them here with
-one line each so the reader can see where the thinking is going.>
-
-- <question>
-
-## Reproduce it
-
-<Where the wheel lives, where the raw runs live, and the one command or the
-steps that run it. Setup detail stays in the repo, not in the post.>
+**Reproduce it**
 
 - wheel: `wheels/NNN-name/`
 - raw output: `wheels/NNN-name/runs/`
-- scoring: `wheels/NNN-name/experiment/`
+- scoring and setup: `wheels/NNN-name/experiment/`
 
-## Changes to this post
+**Questions this raises**
 
-<One line per change that alters what a reader would do or believe. Date,
-what changed, and the new figure if a number moved. Typos and layout do not
-get a line.>
+<One line each. They go to QUESTIONS.md, not into this wheel.>
+
+- <question>
+
+**Changes to this post**
+
+<One line per change that alters what a reader would do or believe: date,
+what changed, new figure if a number moved. Typos and layout get no line.>
 
 - YYYY-MM-DD: <what changed>
 
@@ -165,24 +180,27 @@ Checklist before publishing
 
 Content
 - [ ] title 65 characters or less, states the finding, no question mark
-- [ ] summary 160 characters or less, one sentence, verb, full stop
+- [ ] summary one sentence, verb, full stop, 160 characters or less
+- [ ] 4 numbers under the title, each with a denominator and a date, each repeated beside its evidence
 - [ ] the answer appears before the method
-- [ ] one example shown in full before any abstraction
-- [ ] every number has a denominator and a date, and appears twice: in the strip and beside its evidence
+- [ ] one example shown before any abstraction, before and after
+- [ ] at least one chart, with its data table
 - [ ] the same figure is used everywhere it appears, here and in other posts
 - [ ] every limit sits next to the claim it limits
 - [ ] systems and models are named, or the post says why not
 - [ ] nothing is claimed about a fix without a measurement of the fix
+- [ ] "What to do with this" has steps a reader can take, in order
 - [ ] setup instructions live in the repo, the post links to them
 - [ ] no FAQ
 
 Writing
+- [ ] British English
 - [ ] sentences under 25 words, paragraphs under 5 sentences
 - [ ] active voice, "you" and "we", present tense
 - [ ] every specialist term explained on first use, every abbreviation expanded on first use
 - [ ] headings are statements in sentence case, never questions, no links in them
 - [ ] bullets have a lead-in line, start lower case, one sentence each, no full stops
-- [ ] no italics, no bold for emphasis, bold only for interface elements
+- [ ] no italics, no bold for emphasis, bold only for interface elements and the run-in labels in this template
 - [ ] code, filenames and commands in code font
 - [ ] link text says where it goes, no "click here", no bare URLs in prose
 - [ ] none of the words on the GOV.UK avoid list, no "simply", "easy", "just", "please note"
