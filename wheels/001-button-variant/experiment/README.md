@@ -32,7 +32,7 @@ You need Python 3 and an Anthropic API key with a few pounds of credit. The full
 
 1. Install the SDK with `pip3 install anthropic`.
 2. Set the key with `export ANTHROPIC_API_KEY=YOUR_KEY`.
-3. Run `python3 run.py` from this folder. Output goes to `../runs/<date>-<model>-<effort>/`.
+3. Run `python3 run.py` from this folder. It prints the folder it writes to, `../runs/<date>-<model>-<effort>/`, and never reuses an existing one: a second run on the same day gets `-run2` added.
 4. Run `python3 score.py ../runs/<that folder>` to write `summary.md` inside it.
 
-`run.py` skips answers already saved in its output folder, so you can stop and resume. To try other settings, use `--model`, `--effort`, `--runs`, `--levels` and `--only`, or `--out` to name the run folder.
+To resume a run that stopped early, pass its folder with `--out`; answers already saved there are skipped. To try other settings, use `--model`, `--effort`, `--runs`, `--levels` and `--only`, or `--out` to name the run folder.

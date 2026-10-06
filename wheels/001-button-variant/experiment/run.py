@@ -159,10 +159,17 @@ def main():
     if args.out:
         out_dir = Path(args.out)
     else:
+        # A run folder is never reused: pick the next free name so a second
+        # run on the same day does not append to the first.
         today = datetime.date.today().isoformat()
         model_slug = re.sub(r"^claude-", "", args.model)
-        out_dir = RUNS_DIR / f"{today}-{model_slug}-{args.effort}"
+        base = RUNS_DIR / f"{today}-{model_slug}-{args.effort}"
+        out_dir, n = base, 2
+        while out_dir.exists():
+            out_dir = base.with_name(f"{base.name}-run{n}")
+            n += 1
     out_dir.mkdir(parents=True, exist_ok=True)
+    print(f"Writing to {out_dir}")
     client = anthropic.Anthropic()
 
     total = len(args.levels) * len(scenarios) * args.runs
