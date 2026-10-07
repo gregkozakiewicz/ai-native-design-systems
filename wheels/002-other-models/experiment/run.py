@@ -124,10 +124,13 @@ def ask_xai(model, level_text, scenario):
     return answer
 
 
+EFFORT = None  # set from --effort; None means each Claude model's default (medium, or none for Haiku)
+
+
 def ask_anthropic(model, level_text, scenario):
     import anthropic
     client = ask_anthropic.client = getattr(ask_anthropic, "client", None) or anthropic.Anthropic()
-    effort = None if model.startswith("claude-haiku") else "medium"
+    effort = EFFORT or (None if model.startswith("claude-haiku") else "medium")
     return w1.ask(client, model, effort, level_text, scenario)
 
 
@@ -141,7 +144,10 @@ def main():
     parser.add_argument("--runs", type=int, default=3)
     parser.add_argument("--only", type=int, nargs="*")
     parser.add_argument("--out", help="run folder (default: ../runs/<date>-<model>)")
+    parser.add_argument("--effort", choices=["low", "medium", "high", "xhigh", "max"], help="Claude models only; default is the model's own")
     args = parser.parse_args()
+    global EFFORT
+    EFFORT = args.effort
 
     provider = provider_for(args.model)
     ask = ASK[provider]
@@ -152,7 +158,8 @@ def main():
     if args.out:
         out_dir = Path(args.out)
     else:
-        base = RUNS_DIR / f"{datetime.date.today().isoformat()}-{args.model}"
+        label = f"{args.model}-{args.effort}" if args.effort else args.model
+        base = RUNS_DIR / f"{datetime.date.today().isoformat()}-{label}"
         out_dir, n = base, 2
         while out_dir.exists():
             out_dir = base.with_name(f"{base.name}-run{n}")
@@ -208,7 +215,7 @@ def main():
                         "reason": answer["reason"],
                         "model": args.model,
                         "provider": provider,
-                        "effort": "default",
+                        "effort": args.effort or "default",
                         "usage": answer["usage"],
                     }
                     out.write(json.dumps(row) + "\n")
