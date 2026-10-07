@@ -1,6 +1,6 @@
 # Written rules let an agent pick the right button every time
 
-With 12 written rules, Claude chose the correct button variant in 87 of 87 answers. With typical documentation it managed 63 of 87.
+With 12 written rules, Claude chose the correct button variant in 87 of 87 answers. With typical human written documentation it managed 63 of 87.
 
 **Wheel:** `wheels/001-button-variant/` · **Runs dated:** 7 October 2026 · **Status:** answered
 
