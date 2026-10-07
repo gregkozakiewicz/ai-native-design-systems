@@ -21,6 +21,9 @@ from pathlib import Path
 
 import anthropic
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[3] / "tools"))
+import env  # noqa: E402,F401  loads API keys from the repo's .env
+
 HERE = Path(__file__).parent
 SCENARIOS_MD = HERE / "scenarios.md"
 LEVELS_DIR = HERE / "levels"

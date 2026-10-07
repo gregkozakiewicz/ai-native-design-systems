@@ -31,7 +31,7 @@ Scoring is mechanical. `score.py` compares each answer with the key and reports:
 You need Python 3 and an Anthropic API key with a few euros of credit. This is pay-as-you-go API credit, separate from a Claude subscription. One full run costs about €1.
 
 1. Install the SDK with `pip3 install anthropic`.
-2. Set the key with `export ANTHROPIC_API_KEY=YOUR_KEY`.
+2. Put the key in the repo's `.env` file (copy `.env.example` if it is missing). Exporting `ANTHROPIC_API_KEY` in the shell also works.
 3. Run `python3 run.py` from this folder. It prints the folder it writes to, `../runs/<date>-<model>-<effort>/`, and never reuses an existing one: a second run on the same day gets `-run2` added.
 4. Run `python3 score.py ../runs/<that folder>` to write `summary.md` inside it.
 
