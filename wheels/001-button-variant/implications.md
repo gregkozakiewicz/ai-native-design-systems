@@ -10,7 +10,7 @@
 
 ## Rule set status
 
-The 12 rules in `experiment/levels/C-machine-rules.md` are tested on 29 scenarios in run 2 and scored 84 of 87. The 3 misses are a fault in scenario 17, not in the rules. The set is ready to be proposed for `system/` once the designer has decided what scenario 17 should say.
+The 12 rules in `experiment/levels/C-machine-rules.md` are tested on 29 scenarios in run 2 and scored 84 of 87. The 3 misses are a fault in scenario 17, not in the rules. Scenario 17 now states that the data is deleted for good, so the key stays destructive. A third run would confirm the change; until then the set is proposed for `system/` with that one scenario unverified.
 
 ## What this does not justify
 

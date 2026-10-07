@@ -65,7 +65,7 @@
 
 | # | Scenario | Button | Answer |
 |---|---|---|---|
-| 17 | A dialog whose only purpose is removing a member from a team. This button removes the member. | "Remove member" | D |
+| 17 | A dialog whose only purpose is removing a member from a team. Removing them also deletes their comments and files for good. This button removes the member. | "Remove member" | D |
 | 18 | A dialog shown when leaving a page with unsaved changes. It has three buttons: "Save", "Discard changes" and "Keep editing". This button throws away the unsaved changes. | "Discard changes" | D |
 | 19 | A code review screen with two actions of equal importance: "Approve" and "Request changes". This button sends the code back to the author with change requests. | "Request changes" | S |
 | 20 | A cookie consent banner with an "Accept all" button. Next to it is a button that rejects all optional cookies. | "Reject all" | S |
@@ -107,4 +107,5 @@ Each reason is written as a general rule, so it also applies to screens not in t
 
 ## Changes to the key
 
+- 7 October 2026, after run 2: scenario 17 ('Remove member') now says the member's data is deleted for good. The key stays D. The earlier text did not say whether removal could be undone, and the agent assumed it could not in run 1 (destructive, 3 of 3) and could in run 2 (primary, 3 of 3). Runs 1 and 2 are not rescored.
 - 7 October 2026, after run 1: scenario 13 ('Log out') changed from G to S. The agent chose secondary in 3 of 3 runs at level C and the designer agreed on reflection. Run 1 is scored against the original key and is not rescored. Scenarios 28 and 29 added to test the new rule H12 with different wording.
