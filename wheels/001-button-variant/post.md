@@ -17,7 +17,7 @@ Can an AI agent consistently choose the correct button variant using only machin
 
 ## The answer
 
-Yes. Given the rules, Claude Opus 5.5 got every one of 87 answers right and gave the same answer every time it was asked. Given documentation written the way design system sites usually write it, it got 63 of 87 and changed its mind between repeats on 3 of 29 scenarios. The evidence covers one model, one component and one designer's answer key, so it says nothing yet about other models or larger choices.
+Yes. When given the rules, Claude Opus 5.5 got every one of 87 answers right and gave the same answer every time it was asked. When given documentation written the way design system owners usually write it, it got 63 of 87 and changed its mind between repeats on 3 of 29 scenarios. The evidence covers one model, one component and one designer's decision, so it says nothing yet about other models or larger choices.
 
 ## One example
 
@@ -83,7 +83,7 @@ The risk with written rules is that the agent spots the rule's words in the scen
 
 ### Rules changed answers that convention gets wrong
 
-'Log out' in an account menu was ghost in 6 of 6 answers at levels A and B. The designer's key says secondary: it is a real action the user chose, not a low-emphasis extra. With rules it was secondary in 3 of 3. The rules did not make the agent cleverer; they replaced the convention it falls back on with the designer's decision.
+'Log out' in an account menu was ghost in 6 of 6 answers at levels A and B. The designer's decision says secondary: it is a real action the user chose, not a low-emphasis extra. With rules it was secondary in 3 of 3. The rules did not make the agent cleverer; they replaced the convention it falls back on with the designer's decision.
 
 ### It took 3 runs, and every fix was to the rules or the scenarios
 
@@ -106,7 +106,7 @@ Each fix was written down before the next run, and earlier runs were never resco
 
 - one model, Claude Opus 5.5 at medium reasoning effort; other models and lower effort are untested
 - one component; nothing here says rules work for layouts, patterns or whole screens
-- the answer key is one designer's judgement, and the designer changed it once after seeing the agent's reasoning
+- the answers are dictated by designer's judgement, and the designer changed it once after seeing the agent's reasoning
 - the human documentation was written by us in the style of a typical design system site, not taken from a real one
 - the agent names a variant; it does not render a button, so nothing is claimed about the result on screen
 
@@ -133,7 +133,7 @@ The 12 rules in `wheels/001-button-variant/experiment/levels/C-machine-rules.md`
 | Dates | 7 October 2026, 3 runs |
 | Cost | about €1 per run in API credit (pay as you go, not a Claude subscription); about €3 for all 3 runs and 765 calls, because our own mistakes in the rules and one scenario meant 2 reruns |
 
-The answer key changed once, after run 1: 'Log out' moved from ghost to secondary. Scenario 17 gained one sentence after run 2. Both changes are recorded in `experiment/scenarios.md`.
+The designer decision answer changed once, after run 1: 'Log out' moved from ghost to secondary. Scenario 17 gained one sentence after run 2. Both changes are recorded in `experiment/scenarios.md`.
 
 **Reproduce it**
 
