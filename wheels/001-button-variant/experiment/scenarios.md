@@ -107,5 +107,7 @@ Each reason is written as a general rule, so it also applies to screens not in t
 
 ## Changes to the key
 
+- 7 October 2026, after run 3: 5 em-dashes in the precedence list of `levels/C-machine-rules.md` replaced with colons, for the repo's writing rule. Punctuation only, not re-run. The runs used the dashed version.
+
 - 7 October 2026, after run 2: scenario 17 ('Remove member') now says the member's data is deleted for good. The key stays D. The earlier text did not say whether removal could be undone, and the agent assumed it could not in run 1 (destructive, 3 of 3) and could in run 2 (primary, 3 of 3). Runs 1 and 2 are not rescored.
 - 7 October 2026, after run 1: scenario 13 ('Log out') changed from G to S. The agent chose secondary in 3 of 3 runs at level C and the designer agreed on reflection. Run 1 is scored against the original key and is not rescored. Scenarios 28 and 29 added to test the new rule H12 with different wording.

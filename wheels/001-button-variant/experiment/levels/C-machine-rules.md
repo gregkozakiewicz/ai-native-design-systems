@@ -66,11 +66,11 @@ never:
 
 Apply in this order; the first rule that applies wins.
 
-1. **Reversibility** — can it be undone? Decides destructive vs not (H2, H3).
-2. **Interaction** — is it a plain click or tap? If not, answer none.
-3. **Role in the view** — does it back out, dismiss, repeat, bypass, or open a side task? (H4, H5, H6, H11, H12)
-4. **Recommendation** — is it the one action the product recommends? (H1, H7, H8, H9)
-5. **Emphasis** — anything left: secondary if it is a real choice the user may take, ghost if it is optional and rarely needed.
+1. **Reversibility**: can it be undone? Decides destructive vs not (H2, H3).
+2. **Interaction**: is it a plain click or tap? If not, answer none.
+3. **Role in the view**: does it back out, dismiss, repeat, bypass, or open a side task? (H4, H5, H6, H11, H12)
+4. **Recommendation**: is it the one action the product recommends? (H1, H7, H8, H9)
+5. **Emphasis**: anything left: secondary if it is a real choice the user may take, ghost if it is optional and rarely needed.
 
 ## 5. Unknowns
 

@@ -4,7 +4,7 @@
 
 **Scope:** one model, one component. The rules are untested on other models (wheel 002, planned) and say nothing about layouts, patterns or rendering.
 
-**Text:** sections 1 to 5 below are the file the agent was given, unchanged, so that what is in the system is what was tested. The tested file also had a section 6 setting the experiment's answer format; it is not a rule and is left out.
+**Text:** sections 1 to 5 below are the file the agent was given, with one change: 5 em-dashes in the precedence list are now colons, to meet the repo's writing rule. This was not re-run. The tested file also had a section 6 setting the experiment's answer format; it is not a rule and is left out.
 
 Give this file to an agent as it is. Where rules conflict, the precedence order in section 4 decides.
 
@@ -74,11 +74,11 @@ never:
 
 Apply in this order; the first rule that applies wins.
 
-1. **Reversibility** — can it be undone? Decides destructive vs not (H2, H3).
-2. **Interaction** — is it a plain click or tap? If not, answer none.
-3. **Role in the view** — does it back out, dismiss, repeat, bypass, or open a side task? (H4, H5, H6, H11, H12)
-4. **Recommendation** — is it the one action the product recommends? (H1, H7, H8, H9)
-5. **Emphasis** — anything left: secondary if it is a real choice the user may take, ghost if it is optional and rarely needed.
+1. **Reversibility**: can it be undone? Decides destructive vs not (H2, H3).
+2. **Interaction**: is it a plain click or tap? If not, answer none.
+3. **Role in the view**: does it back out, dismiss, repeat, bypass, or open a side task? (H4, H5, H6, H11, H12)
+4. **Recommendation**: is it the one action the product recommends? (H1, H7, H8, H9)
+5. **Emphasis**: anything left: secondary if it is a real choice the user may take, ghost if it is optional and rarely needed.
 
 ## 5. Unknowns
 
