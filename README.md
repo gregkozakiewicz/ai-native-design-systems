@@ -1,4 +1,4 @@
-# Mila
+# AI-native design systems
 
 Research towards an AI-native design system: what a design system has to
 contain so that an AI agent reliably builds the right UI from it.
