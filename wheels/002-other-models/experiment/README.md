@@ -12,7 +12,7 @@ Models, one per company at the tier closest to Opus 5.5, plus Anthropic's two sm
 | --- | --- | --- |
 | `gpt-5.6-sol` | OpenAI | Responses API with a strict JSON schema |
 | `gemini-3.1-pro-preview` | Google | generateContent with a response schema |
-| `gemini-2.5-pro` | Google | same; the stable model, added when the preview hit its daily cap |
+| `gemini-3.8-flash` | Google | same; the newest stable Flash model, added when the preview hit its daily cap (Gemini 2.5 Pro is not available to new accounts) |
 | `claude-sonnet-5-5` | Anthropic | wheel 001's code, same as Opus |
 | `claude-haiku-4-5` | Anthropic | wheel 001's code, same as Opus |
 
