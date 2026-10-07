@@ -36,8 +36,8 @@ Move a question to `wheels/` with `tools/new-wheel.sh` once it has all three.
 Move questions here once a wheel has findings, with a link to the wheel.
 
 - Can an AI consistently choose the correct **button variant** using only
-  machine-readable system rules? Yes: 84 of 87 with rules, 66 of 87 with
-  prose, 58 of 87 with names alone (run 2). See `wheels/001-button-variant/`.
+  machine-readable system rules? Yes: 87 of 87 with rules, 63 of 87 with
+  prose, 54 of 87 with names alone (run 3). See `wheels/001-button-variant/`.
 
 ## Raised by wheels
 

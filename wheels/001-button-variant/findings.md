@@ -2,13 +2,23 @@
 
 ## Summary
 
-Yes. Given machine-readable rules, Claude Opus 5.5 chose the correct button variant in 84 of 87 answers in run 2, against 66 of 87 with typical human documentation and 58 of 87 with variant names alone. It gave the same answer in all 3 runs for all 29 scenarios. The 3 misses trace to one scenario that does not say whether the action can be undone.
+Yes. Given machine-readable rules, Claude Opus 5.5 chose the correct button variant in 87 of 87 answers in run 3, against 63 of 87 with typical human documentation and 54 of 87 with variant names alone. It gave the same answer in all 3 repeats for all 29 scenarios.
 
-Run 1, on 27 scenarios with 11 rules, scored 76 of 81 with rules. Its 5 misses were one gap in the rules. Closing that gap with rule H12 and 2 test scenarios gave run 2.
+It took 3 runs to get there. Run 1, on 27 scenarios with 11 rules, scored 76 of 81 with rules; its 5 misses were one gap in the rules. Run 2, with rule H12 and 2 test scenarios added, scored 84 of 87; its 3 misses were one scenario that did not say whether the action could be undone. Run 3, with that scenario fixed, scored 87 of 87. Each fix was to the rules or the scenarios, never to the agent, and each was recorded before the next run.
 
 ## Evidence
 
-Run 1 is `runs/2026-10-07-opus-5-5-medium/` and run 2 is `runs/2026-10-07-opus-5-5-medium-run2/`. Each has a `summary.md`.
+Run 1 is `runs/2026-10-07-opus-5-5-medium/`, run 2 is `runs/2026-10-07-opus-5-5-medium-run2/` and run 3 is `runs/2026-10-07-opus-5-5-medium-run3/`. Each has a `summary.md`.
+
+### Run 3: 29 scenarios, 12 rules, scenario 17 states its data is deleted for good
+
+| Level | Correct answers | Scenarios where all 3 repeats agreed | 'None' where a variant was expected |
+| --- | --- | --- | --- |
+| A, names only | 54 of 87 | 26 of 29 | 0 of 84 |
+| B, human docs | 63 of 87 | 26 of 29 | 0 of 84 |
+| C, machine rules | 87 of 87 | 29 of 29 | 0 of 84 |
+
+'Remove member' (17) was destructive in 3 of 3 repeats with rules, each time citing rule H2 and the deleted data. The text change did what it was meant to.
 
 ### Run 2: 29 scenarios, 12 rules
 
@@ -47,9 +57,9 @@ The 5 easy scenarios were right in all 15 answers at every level. The whole gap 
 | Interaction and tools | 0 of 9 | 4 of 9 | 9 of 9 |
 | Matched pairs | 6 of 12 | 7 of 12 | 12 of 12 |
 
-### Rules beat human documentation by 15 points in run 1 and 21 in run 2
+### Rules beat human documentation by 15 points in run 1, 21 in run 2 and 28 in run 3
 
-In run 1 rules scored 94% (76 of 81), human documentation 79% (64 of 81), and names alone 65% (53 of 81). In run 2 the figures were 97% (84 of 87), 76% (66 of 87) and 67% (58 of 87). The success criterion was 90% and a 10-point lead, so the wheel is answered "yes" on both runs.
+In run 1 rules scored 94% (76 of 81), human documentation 79% (64 of 81), and names alone 65% (53 of 81). In run 2 the figures were 97% (84 of 87), 76% (66 of 87) and 67% (58 of 87). In run 3 they were 100% (87 of 87), 72% (63 of 87) and 62% (54 of 87). The success criterion was 90% and a 10-point lead, so the wheel is answered "yes" on every run. Levels A and B moved between runs without any change to their text, which shows the model's own variation from run to run; level C did not.
 
 ### Human documentation raised accuracy but lowered consistency compared with names only
 
@@ -65,7 +75,9 @@ Scenario 21, a press-and-hold recording control, is the only scenario where 'non
 
 ## Failure modes seen
 
-Run 2's 3 misses with rules are one scenario, 'Remove member' (17), chosen as primary in 3 of 3 runs where the key says destructive. In run 1 the same scenario was destructive in 3 of 3 runs. The rules did not change between runs on this point. The scenario does not say whether a removed member can be re-added, and the agent said so each time: run 1 assumed it cannot and chose destructive, run 2 assumed it can and chose primary. Both followed precedence step 1, reversibility, correctly. The fault is in the scenario, which should state whether the action can be undone. We have not changed it; the decision sits with the designer.
+Run 3 had no misses with rules.
+
+Run 2's 3 misses with rules were one scenario, 'Remove member' (17), chosen as primary in 3 of 3 repeats where the key says destructive. In run 1 the same scenario was destructive in 3 of 3. The rules did not change between runs on this point. The scenario did not say whether a removed member could be re-added, and the agent said so each time: run 1 assumed it could not and chose destructive, run 2 assumed it could and chose primary. Both followed precedence step 1, reversibility, correctly. The fault was in the scenario. It now states that the member's data is deleted for good, and run 3 confirmed the fix.
 
 Run 1's 5 misses with rules were one disagreement. On 'Log out' (3 of 3 runs) and 'Skip for now' (2 of 3 runs) the agent chose secondary where the key says ghost. Its reasoning was the same each time: a real choice the user must be able to find. Nothing in the rules says when a legitimate alternative is ghost rather than secondary, so the agent used the emphasis rule and reached a defensible answer. This is a gap in the rules, and one rule would close it.
 

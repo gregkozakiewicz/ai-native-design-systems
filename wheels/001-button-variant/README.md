@@ -18,7 +18,7 @@ Agents building UI today pick button variants from prose documentation or from h
 - 4 variants: primary, secondary, ghost and destructive, plus 'none' for a control the system does not cover
 - 29 written scenarios, each a button in a described context, with one correct answer fixed before each run (27 in run 1; see the change note in `experiment/scenarios.md`)
 - 3 ways of describing the system to the agent: names only, typical human documentation, and machine-readable rules
-- one model, Claude Opus 5.5, at medium reasoning effort, run twice on 7 October 2026
+- one model, Claude Opus 5.5, at medium reasoning effort, run 3 times on 7 October 2026
 
 **Out of scope**
 
