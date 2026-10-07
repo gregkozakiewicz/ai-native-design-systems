@@ -44,3 +44,7 @@ are written down.
 ## Current wheel
 
 [001: button variant](wheels/001-button-variant/) is answered. Candidates for the next one are in `QUESTIONS.md`.
+
+## Licence
+
+Code is under the MIT License. Writing, including findings, rules, scenarios and posts, is under CC BY 4.0: reuse it with credit to Greg Kozakiewicz and a link to this repository. See `LICENSE` for both.
