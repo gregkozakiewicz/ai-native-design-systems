@@ -28,7 +28,7 @@ Scoring is mechanical. `score.py` compares each answer with the key and reports:
 
 ## How to run
 
-You need Python 3 and an Anthropic API key with a few pounds of credit. The full set costs about £1.50.
+You need Python 3 and an Anthropic API key with a few euros of credit. This is pay-as-you-go API credit, separate from a Claude subscription. One full run costs about €1.
 
 1. Install the SDK with `pip3 install anthropic`.
 2. Set the key with `export ANTHROPIC_API_KEY=YOUR_KEY`.

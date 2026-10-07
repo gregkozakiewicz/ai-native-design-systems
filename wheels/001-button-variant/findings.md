@@ -87,6 +87,10 @@ With human documentation, the agent twice called 'Revert to original' destructiv
 
 Our own setup had one fault. Level B first contained a line saying variants are for click or tap actions, which gave away scenario 21. We removed it before the full run and did not keep the dry run.
 
+## Cost
+
+Each run cost about €1 in API credit (about $1.03 at Opus 5.5 rates, most of it cached input). All 3 runs together, 765 calls, cost about €3. Two of the runs were only needed because of our own mistakes.
+
 ## Open questions raised
 
 These go to `../../QUESTIONS.md`.

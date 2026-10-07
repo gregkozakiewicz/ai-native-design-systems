@@ -131,7 +131,7 @@ The 12 rules in `wheels/001-button-variant/experiment/levels/C-machine-rules.md`
 | Repeats | 3 per scenario per level, each a fresh conversation |
 | Scoring | mechanical, by `experiment/score.py`, against a key fixed before each run |
 | Dates | 7 October 2026, 3 runs |
-| Cost | about £1.50 per run, 261 calls |
+| Cost | about €1 per run in API credit (pay as you go, not a Claude subscription); about €3 for all 3 runs and 765 calls, because our own mistakes in the rules and one scenario meant 2 reruns |
 
 The answer key changed once, after run 1: 'Log out' moved from ghost to secondary. Scenario 17 gained one sentence after run 2. Both changes are recorded in `experiment/scenarios.md`.
 
@@ -150,3 +150,4 @@ The answer key changed once, after run 1: 'Log out' moved from ghost to secondar
 **Changes to this post**
 
 - 7 October 2026: first version
+- 7 October 2026: cost restated in euros as API credit, with the total across all 3 runs
