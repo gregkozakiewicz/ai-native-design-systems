@@ -1,0 +1,77 @@
+# Results
+
+Model: gemini-3.1-pro-preview · effort: default · 247 answers
+
+## Headline
+
+| Level | Accuracy | Consistency | Over-flagging |
+|---|---|---|---|
+| A · names only | 61% (53/87) | 69% | 6% (5/84) |
+| B · human docs | 75% (65/87) | 93% | 0% (0/84) |
+| C · machine rules | 96% (70/73) | 100% | 0% (0/70) |
+
+Accuracy: share of answers matching the key. Consistency: share of scenarios where all runs agreed. Over-flagging: answered `none` when a variant was expected.
+
+## By category
+
+| Category | A · names only | B · human docs | C · machine rules |
+|---|---|---|---|
+| Easy | 100% | 100% | 100% |
+| Context | 48% | 76% | 100% |
+| Traps | 25% | 25% | 75% |
+| Conflicts | 100% | 100% | 100% |
+| Interaction & tools | 44% | 78% | 100% |
+| Matched pairs | 50% | 67% | 100% |
+
+## Matched pairs
+
+Original scenario vs. a rewording that tests the same rule. 'Original only' means the agent matched words, not the rule.
+
+| Pair | Level | Both | Original only | Pair only | Neither |
+|---|---|---|---|---|---|
+| #16 → #24 | A | 0 | 0 | 3 | 0 |
+| #20 → #25 | A | 2 | 1 | 0 | 0 |
+| #15 → #26 | A | 0 | 0 | 0 | 3 |
+| #11 → #27 | A | 0 | 0 | 0 | 3 |
+| #10 → #28 | A | 1 | 2 | 0 | 0 |
+| #13 → #29 | A | 2 | 0 | 1 | 0 |
+| #16 → #24 | B | 0 | 0 | 3 | 0 |
+| #20 → #25 | B | 0 | 3 | 0 | 0 |
+| #15 → #26 | B | 0 | 0 | 3 | 0 |
+| #11 → #27 | B | 0 | 1 | 0 | 2 |
+| #10 → #28 | B | 3 | 0 | 0 | 0 |
+| #13 → #29 | B | 0 | 0 | 3 | 0 |
+| #16 → #24 | C | 3 | 0 | 0 | 0 |
+| #20 → #25 | C | 1 | 0 | 0 | 0 |
+| #15 → #26 | C | 0 | 0 | 0 | 0 |
+| #11 → #27 | C | 0 | 0 | 0 | 0 |
+| #10 → #28 | C | 0 | 0 | 0 | 0 |
+| #13 → #29 | C | 0 | 0 | 0 | 0 |
+
+## Hardest scenarios per level
+
+**A · names only**
+
+- #27 "Dismiss": wrong 3×, expected `secondary`, got `ghost`
+- #26 "Revert to original": wrong 3×, expected `ghost`, got `destructive`
+- #23 "Send feedback": wrong 3×, expected `ghost`, got `secondary`
+- #16 "Try again": wrong 3×, expected `primary`, got `none`, `secondary`
+- #15 "Reset to defaults": wrong 3×, expected `ghost`, got `secondary`
+- #12 "Learn more": wrong 3×, expected `ghost`, got `none`, `secondary`
+
+**B · human docs**
+
+- #27 "Dismiss": wrong 3×, expected `secondary`, got `ghost`
+- #25 "Stay on Free": wrong 3×, expected `secondary`, got `ghost`
+- #16 "Try again": wrong 3×, expected `primary`, got `secondary`
+- #15 "Reset to defaults": wrong 3×, expected `ghost`, got `secondary`
+- #13 "Log out": wrong 3×, expected `secondary`, got `ghost`
+- #8 "Export CSV": wrong 3×, expected `secondary`, got `ghost`
+
+**C · machine rules**
+
+- #14 "Archive project": wrong 3×, expected `secondary`, got `ghost`
+
+## Tokens
+
+Input 0 · output 0
