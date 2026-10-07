@@ -6,17 +6,19 @@ Wheel 001's test, run unchanged on other models. The scenarios, the 3 informatio
 
 Each model runs every scenario 3 times at each of the 3 levels: 261 calls per model. Each model runs at its default reasoning setting; wheel 001 ran Opus 5.5 at medium, which is its default.
 
-Models, one per company at the tier closest to Opus 5.5, plus smaller or older ones where the company offers them:
+Models, labelled by each company's own tier. Flagship means the company's top text model that the account can reach; an independent public index of model intelligence (checked 7 October 2026) was used to confirm which that is.
 
-| Model | Company | API |
-| --- | --- | --- |
-| `gpt-5.6-sol` | OpenAI | Responses API with a strict JSON schema |
-| `gemini-3.1-pro-preview` | Google | generateContent with a response schema |
-| `gemini-3.8-flash` | Google | same; the newest stable Flash model, added when the preview hit its daily cap (Gemini 2.5 Pro is not available to new accounts) |
-| `grok-4.7` | xAI | chat completions with a strict JSON schema; the current flagship |
-| `grok-4.3` | xAI | same; an older model, for a within-company comparison |
-| `claude-sonnet-5-5` | Anthropic | wheel 001's code, same as Opus |
-| `claude-haiku-4-5` | Anthropic | wheel 001's code, same as Opus |
+| Model | Company | Tier | API |
+| --- | --- | --- | --- |
+| `claude-opus-5-5` (wheel 001) | Anthropic | flagship, top of the index | wheel 001's code |
+| `claude-sonnet-5-5` | Anthropic | mid | wheel 001's code, same as Opus |
+| `claude-haiku-4-5` | Anthropic | small | wheel 001's code, same as Opus |
+| `gpt-6-astra` | OpenAI | flagship | Responses API with a strict JSON schema |
+| `gpt-5.6-sol` | OpenAI | previous generation's flagship | same |
+| `gemini-3.1-pro-preview` | Google | top Pro reachable by API; Google's newest, Gemini 4, is not available to this key | generateContent with a response schema |
+| `gemini-3.8-flash` | Google | small | same |
+| `grok-4.7` | xAI | flagship | chat completions with a strict JSON schema |
+| `grok-4.3` | xAI | older | same |
 
 The model names were taken from each API's own model list on 7 October 2026.
 
