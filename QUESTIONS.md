@@ -36,8 +36,8 @@ Move a question to `wheels/` with `tools/new-wheel.sh` once it has all three.
 Move questions here once a wheel has findings, with a link to the wheel.
 
 - Can an AI consistently choose the correct **button variant** using only
-  machine-readable system rules? Yes: 76 of 81 with rules, 64 of 81 with
-  prose, 53 of 81 with names alone. See `wheels/001-button-variant/`.
+  machine-readable system rules? Yes: 84 of 87 with rules, 66 of 87 with
+  prose, 58 of 87 with names alone (run 2). See `wheels/001-button-variant/`.
 
 ## Raised by wheels
 
@@ -46,5 +46,7 @@ Move questions here once a wheel has findings, with a link to the wheel.
 - Does the lead for rules over prose shrink at low reasoning effort?
   *(from wheel 001)*
 - Where is the line between a secondary alternative and a ghost option, and
-  can it be one rule? *(from wheel 001; candidate rule in its
-  `implications.md`)*
+  can it be one rule? *(from wheel 001; answered in run 2 by rule H12,
+  12 of 12 correct)*
+- How should a scenario or a rule state whether an action can be undone,
+  so the agent does not have to assume? *(from wheel 001, scenario 17)*

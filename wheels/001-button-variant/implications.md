@@ -2,13 +2,15 @@
 
 ## Proposed rules
 
-- button variant guidance is written as hard rules with a precedence order for conflicts, not as prose descriptions with examples; `runs/2026-10-07-opus-5-5-medium/` showed 76 of 81 correct with rules against 64 of 81 with prose
+- button variant guidance is written as hard rules with a precedence order for conflicts, not as prose descriptions with examples; run 1 showed 76 of 81 correct with rules against 64 of 81 with prose, and run 2 showed 84 of 87 against 66 of 87
+- an alternative that exits or bypasses the current task is ghost, and one that completes the task another way is secondary (rule H12); run 2 showed 12 of 12 correct on the 4 scenarios that test it, and 6 of 6 of those answers went against the convention the agent used without rules
+- every scenario, and every rule that depends on whether an action can be undone, must state that fact; 'Remove member' did not, and the agent made opposite assumptions in run 1 and run 2, each time saying so
 - a variant encodes how much the product recommends an action, nothing else; this definition let the agent flag a press-and-hold control as outside the system in 3 of 3 runs, where both other levels forced a variant
-- the system states that 'none' is a valid answer and says when to use it; across 243 answers the agent never used it as an escape hatch
+- the system states that 'none' is a valid answer and says when to use it; across 504 answers in 2 runs the agent never used it as an escape hatch
 
-## Rules to test before this wheel's rule set enters `system/`
+## Rule set status
 
-The rule set in `experiment/levels/C-machine-rules.md` had one gap, shown by 5 of its 5 misses in run 1. It did not say when a legitimate alternative is ghost rather than secondary. Rule H12 now says: an alternative that exits or bypasses the current task is ghost; an alternative that completes the task another way is secondary. Scenarios 28 and 29 test it with different wording. H12 is untested until a second run.
+The 12 rules in `experiment/levels/C-machine-rules.md` are tested on 29 scenarios in run 2 and scored 84 of 87. The 3 misses are a fault in scenario 17, not in the rules. The set is ready to be proposed for `system/` once the designer has decided what scenario 17 should say.
 
 ## What this does not justify
 
