@@ -47,4 +47,4 @@ are written down.
 
 ## Licence
 
-Code is under the MIT License. Writing, including findings, rules, scenarios and posts, is under CC BY 4.0: reuse it with credit to Greg Kozakiewicz and a link to this repository. See `LICENSE` for both.
+Code is under the MIT License. Writing, including findings, rules, scenarios and posts, is under CC BY 4.0: reuse it with credit to [Greg Kozakiewicz](https://www.gregkozakiewicz.com) and a link to this repository. See `LICENSE` for both.
