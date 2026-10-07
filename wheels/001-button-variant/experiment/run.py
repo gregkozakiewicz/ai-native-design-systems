@@ -121,13 +121,13 @@ def ask(client, model, effort, level_text, scenario):
         f"Button label: \"{scenario['button']}\"\n\n"
         "Which variant should this button use?"
     )
+    output_config = {"format": {"type": "json_schema", "schema": ANSWER_SCHEMA}}
+    if effort:  # Haiku 4.5 rejects the effort parameter; None leaves the model at its default
+        output_config["effort"] = effort
     response = client.messages.create(
         model=model,
         max_tokens=4000,
-        output_config={
-            "effort": effort,
-            "format": {"type": "json_schema", "schema": ANSWER_SCHEMA},
-        },
+        output_config=output_config,
         system=[
             {"type": "text", "text": SYSTEM_INTRO},
             {

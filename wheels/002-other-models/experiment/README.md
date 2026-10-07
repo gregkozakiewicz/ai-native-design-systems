@@ -12,10 +12,13 @@ Models, one per company at the tier closest to Opus 5.5, plus Anthropic's two sm
 | --- | --- | --- |
 | `gpt-5.6-sol` | OpenAI | Responses API with a strict JSON schema |
 | `gemini-3.1-pro-preview` | Google | generateContent with a response schema |
+| `gemini-2.5-pro` | Google | same; the stable model, added when the preview hit its daily cap |
 | `claude-sonnet-5-5` | Anthropic | wheel 001's code, same as Opus |
 | `claude-haiku-4-5` | Anthropic | wheel 001's code, same as Opus |
 
 The model names were taken from each API's own model list on 7 October 2026.
+
+Google caps `gemini-3.1-pro-preview` at 250 requests a day on the account's tier, so that run stopped at 247 of 261 on 7 October and the last 14 answers, all at level C, were filled the next morning with the same command. The runner now stops cleanly at a daily cap and prints the resume command.
 
 ## Inputs
 

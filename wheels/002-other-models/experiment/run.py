@@ -107,7 +107,8 @@ def ask_google(model, level_text, scenario):
 def ask_anthropic(model, level_text, scenario):
     import anthropic
     client = ask_anthropic.client = getattr(ask_anthropic, "client", None) or anthropic.Anthropic()
-    return w1.ask(client, model, "medium", level_text, scenario)
+    effort = None if model.startswith("claude-haiku") else "medium"
+    return w1.ask(client, model, effort, level_text, scenario)
 
 
 ASK = {"openai": ask_openai, "google": ask_google, "anthropic": ask_anthropic}
@@ -157,7 +158,12 @@ def main():
                             answer = ask(args.model, level_text, scenario)
                             break
                         except urllib.error.HTTPError as e:
-                            detail = e.read().decode(errors="ignore")[:300]
+                            detail = e.read().decode(errors="ignore")
+                            if e.code == 429 and "per_day" in detail:
+                                print(f"\n{provider} daily request cap reached. Saved so far: {out_dir}. "
+                                      f"Resume tomorrow with: python3 run.py --model {args.model} --out {out_dir}")
+                                return
+                            detail = detail[:300]
                             if e.code in (429, 500, 502, 503, 529) and attempt < 3:
                                 wait = int(e.headers.get("retry-after", "20") or 20)
                                 print(f"  {e.code} from {provider}, waiting {wait}s", file=sys.stderr)
