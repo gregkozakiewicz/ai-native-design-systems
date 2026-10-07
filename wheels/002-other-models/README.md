@@ -17,7 +17,7 @@ Wheel 001 showed that written rules took one model from 54 of 87 to 87 of 87. If
 
 - the 29 scenarios, 3 information levels and answer key from wheel 001, unchanged
 - 3 repeats per scenario per level, as before
-- at least 3 models besides Opus 5.5: one smaller Anthropic model, one OpenAI model, one Google model, each at its default reasoning setting
+- at least 3 models besides Opus 5.5, from at least 3 companies, each at its default reasoning setting; xAI was added on 7 October after the first 5 runs, before any findings were final
 - the same 3 measures: accuracy, consistency, over-flagging, plus the matched pairs
 
 **Out of scope**

@@ -6,13 +6,15 @@ Wheel 001's test, run unchanged on other models. The scenarios, the 3 informatio
 
 Each model runs every scenario 3 times at each of the 3 levels: 261 calls per model. Each model runs at its default reasoning setting; wheel 001 ran Opus 5.5 at medium, which is its default.
 
-Models, one per company at the tier closest to Opus 5.5, plus Anthropic's two smaller ones:
+Models, one per company at the tier closest to Opus 5.5, plus smaller or older ones where the company offers them:
 
 | Model | Company | API |
 | --- | --- | --- |
 | `gpt-5.6-sol` | OpenAI | Responses API with a strict JSON schema |
 | `gemini-3.1-pro-preview` | Google | generateContent with a response schema |
 | `gemini-3.8-flash` | Google | same; the newest stable Flash model, added when the preview hit its daily cap (Gemini 2.5 Pro is not available to new accounts) |
+| `grok-4.7` | xAI | chat completions with a strict JSON schema; the current flagship |
+| `grok-4.3` | xAI | same; an older model, for a within-company comparison |
 | `claude-sonnet-5-5` | Anthropic | wheel 001's code, same as Opus |
 | `claude-haiku-4-5` | Anthropic | wheel 001's code, same as Opus |
 
@@ -33,7 +35,7 @@ Wheel 001's `score.py`, pointed at each model's run folder. Same 3 measures, sam
 
 ## How to run
 
-Keys for all three companies go in the repo's `.env` file (see `.env.example`).
+Keys for all four companies go in the repo's `.env` file (see `.env.example`).
 
 1. Run `python3 run.py --model MODEL` from this folder, once per model. Output goes to `../runs/<date>-<model>/`.
 2. Run `python3 ../../001-button-variant/experiment/score.py ../runs/<that folder>` for each.

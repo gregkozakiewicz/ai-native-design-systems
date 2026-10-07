@@ -7,7 +7,7 @@ Usage:
     python3 run.py --model claude-haiku-4-5 --only 6 21 --runs 1   # dry run
 
 The provider is read from the model name: claude-* goes to Anthropic,
-gpt-*/o* to OpenAI, gemini-* to Google. Everything else is wheel 001's:
+gpt-*/o* to OpenAI, gemini-* to Google, grok-* to xAI. Everything else is wheel 001's:
 scenarios, levels, system prompt, answer schema, row format. Answers go to
 ../runs/<date>-<model>/<level>.jsonl. Score with wheel 001's score.py.
 """
@@ -39,6 +39,8 @@ def provider_for(model):
         return "openai"
     if model.startswith("gemini-"):
         return "google"
+    if model.startswith("grok-"):
+        return "xai"
     sys.exit(f"Cannot tell the provider from model name {model!r}")
 
 
@@ -104,6 +106,24 @@ def ask_google(model, level_text, scenario):
     return answer
 
 
+def ask_xai(model, level_text, scenario):
+    body = {
+        "model": model,
+        "messages": [
+            {"role": "system", "content": f"{w1.SYSTEM_INTRO}\n\n--- DESIGN SYSTEM REFERENCE ---\n\n{level_text}"},
+            {"role": "user", "content": user_prompt(scenario)},
+        ],
+        "response_format": {"type": "json_schema", "json_schema": {"name": "variant_answer", "schema": w1.ANSWER_SCHEMA, "strict": True}},
+    }
+    data = post_json("https://api.x.ai/v1/chat/completions", {"Authorization": "Bearer " + os.environ["XAI_API_KEY"]}, body)
+    choice = data["choices"][0]
+    if choice.get("finish_reason") not in (None, "stop"):
+        return {"variant": None, "reason": "stopped: " + str(choice.get("finish_reason")), "usage": data.get("usage", {})}
+    answer = json.loads(choice["message"]["content"])
+    answer["usage"] = data.get("usage", {})
+    return answer
+
+
 def ask_anthropic(model, level_text, scenario):
     import anthropic
     client = ask_anthropic.client = getattr(ask_anthropic, "client", None) or anthropic.Anthropic()
@@ -111,7 +131,7 @@ def ask_anthropic(model, level_text, scenario):
     return w1.ask(client, model, effort, level_text, scenario)
 
 
-ASK = {"openai": ask_openai, "google": ask_google, "anthropic": ask_anthropic}
+ASK = {"openai": ask_openai, "google": ask_google, "anthropic": ask_anthropic, "xai": ask_xai}
 
 
 def main():
