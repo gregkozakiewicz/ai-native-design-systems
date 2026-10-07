@@ -2,16 +2,37 @@
 
 ## Setup
 
-Which agent(s), which model(s), what inputs, how many runs.
+Wheel 001's test, run unchanged on other models. The scenarios, the 3 information levels, the system prompt, the answer format and the scoring are wheel 001's files, read from `../../001-button-variant/experiment/`. Nothing is copied, so the two wheels cannot drift apart.
+
+Each model runs every scenario 3 times at each of the 3 levels: 261 calls per model. Each model runs at its default reasoning setting; wheel 001 ran Opus 5.5 at medium, which is its default.
+
+Models, one per company at the tier closest to Opus 5.5, plus Anthropic's two smaller ones:
+
+| Model | Company | API |
+| --- | --- | --- |
+| `gpt-5.6-sol` | OpenAI | Responses API with a strict JSON schema |
+| `gemini-3.1-pro-preview` | Google | generateContent with a response schema |
+| `claude-sonnet-5-5` | Anthropic | wheel 001's code, same as Opus |
+| `claude-haiku-4-5` | Anthropic | wheel 001's code, same as Opus |
+
+The model names were taken from each API's own model list on 7 October 2026.
 
 ## Inputs
 
-List the files in this folder and in `examples/` that the agent is given.
+- `run.py`: picks the API from the model name and sends wheel 001's prompt and schema to it; everything else is imported from wheel 001
+- `../../001-button-variant/experiment/scenarios.md`, `levels/`: unchanged
+
+Each API is given the same two things: the system text (wheel 001's instruction plus the level's reference) and the user text (the scenario and the button label). Each is asked for the same 2 fields: a variant from the list of 5 and a one-line reason. The only differences are the API's own names for those parts.
 
 ## Scoring
 
-How a run is judged correct or incorrect. Be mechanical where possible.
+Wheel 001's `score.py`, pointed at each model's run folder. Same 3 measures, same matched pairs.
 
 ## How to run
 
-Commands, in order. Output goes to `../runs/YYYY-MM-DD-<label>/`.
+Keys for all three companies go in the repo's `.env` file (see `.env.example`).
+
+1. Run `python3 run.py --model MODEL` from this folder, once per model. Output goes to `../runs/<date>-<model>/`.
+2. Run `python3 ../../001-button-variant/experiment/score.py ../runs/<that folder>` for each.
+
+To check a model works before spending on it: `python3 run.py --model MODEL --only 6 21 --runs 1`.
