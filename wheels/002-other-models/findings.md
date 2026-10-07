@@ -24,6 +24,8 @@ Runs are in `runs/`, one folder per model, each with a `summary.md`. Opus is whe
 | Grok 4.7 | flagship | 83 of 87 | 71 of 87 | 16 of 87 |
 | Grok 4.3 | older | 82 of 87 | 73 of 87 | 13 of 87 |
 
+One run sits outside the wheel's boundary and is reported separately: Claude Fable 5.1 at low reasoning effort, not its default. It scored 87 of 87 with rules, 70 of 87 with human documentation and 48 of 87 with names only, with all 29 scenarios consistent under rules. It cost about €1.40, the most of any run, and it is the only model that was partly a refuser at level A, answering 'none' on 28 of 84.
+
 Consistency with rules, meaning scenarios where all 3 repeats agreed, out of 29: Opus 29, Sonnet 29, Haiku 29, GPT-6 Astra 29, Gemini Flash 28, GPT-5.6 27, Grok 4.3 27, Grok 4.7 26, Gemini Pro 24 of 25 so far.
 
 ### Rules beat human documentation on every model, by 9 to 24 points
@@ -63,5 +65,5 @@ Two choices were corrected during the wheel, before findings were final: GPT-5.6
 These go to `../../QUESTIONS.md`.
 
 - can the 3 open readings be closed with 3 sentences, and do the same 9 models then agree
-- is refusing to guess when the system is silent a property to design for, since 5 of 9 models do it by default
+- is refusing to guess when the system is silent a property to design for, since 5 of 9 models do it by default and a sixth does it a third of the time
 - does the gap between rules and documentation shrink at low reasoning effort
