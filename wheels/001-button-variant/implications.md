@@ -10,7 +10,7 @@
 
 ## Rule set status
 
-The 12 rules in `experiment/levels/C-machine-rules.md` are tested on 29 scenarios in run 3 and scored 87 of 87, with every scenario answered the same way in all 3 repeats. The set is proposed for `system/` as the button variant rules, for one model at medium effort.
+The 12 rules in `experiment/levels/C-machine-rules.md` are tested on 29 scenarios in run 3 and scored 87 of 87, with every scenario answered the same way in all 3 repeats. The set is in `system/button-variant.md` as the button variant rules, accepted on 7 October 2026 on the strength of run 3, for one model at medium effort.
 
 ## What this does not justify
 

@@ -43,7 +43,7 @@ are written down.
 
 ## Current wheel
 
-[001: button variant](wheels/001-button-variant/) is answered. Candidates for the next one are in `QUESTIONS.md`.
+[001: button variant](wheels/001-button-variant/) is answered and its rules are the first entry in `system/`. Candidates for the next wheel are in `QUESTIONS.md`.
 
 ## Licence
 
