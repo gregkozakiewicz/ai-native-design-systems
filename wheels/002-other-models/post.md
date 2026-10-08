@@ -1,27 +1,27 @@
-# The same 12 button rules work on 9 models from 4 companies
+# The same 12 button rules work on 10 models from 4 companies
 
-Nine models from 4 companies chose the correct button variant in 80 to 87 of 87 answers with the rules. With documentation they managed 60 to 73.
+Ten models from 4 companies chose the correct button variant in 80 to 87 of 87 answers with the rules. With human written documentation they managed 60 to 73.
 
 **Wheel:** `wheels/002-other-models/` · **Runs dated:** 7 and 8 October 2026 · **Status:** answered
 
-| 9 of 9 | 23 of 29 | 4 of 29 | 32 of 783 |
+| 10 of 10 | 23 of 29 | 4 of 29 | 32 of 870 |
 | --- | --- | --- | --- |
-| models scored 80 or more of 87 with the rules | scenarios where all 9 models gave the same answer, with rules | scenarios where all 9 agreed with variant names only | answers with rules that missed, all from 3 unwritten sentences |
+| models scored 80 or more of 87 with the rules | scenarios where all 10 models gave the same answer, with rules | scenarios where all 10 agreed with variant names only | answers with rules that missed, all from 3 gaps in the rules |
 
 ## The question
 
-Does the button variant rule set from wheel 001 guide models other than Claude Opus 5.5 as well as it guided Opus? Wheel 001 took one model from 54 of 87 to 87 of 87 with 12 written rules. If that holds only for Opus, the rules are a prompt tuned to one model. If it holds across companies, the rules belong to the design system.
+Does the button variant rule set from [wheel 001](../001-button-variant/post.md) guide models other than Claude Opus 5.5 as well as it guided Opus? Wheel 001 took one model from 54 of 87 to 87 of 87 with 12 written rules. If that holds only for Opus, the rules are a prompt tuned to one model. If it holds across companies, the rules belong to the design system.
 
-**In scope:** the same 29 scenarios, 3 information levels and answer key as wheel 001, on 9 models at their default reasoning settings.
+**In scope:** the same 29 scenarios, 3 information levels and correct answers as wheel 001, on 10 models.
 **Out of scope:** changing the rules to suit a model; tuning per model; other components.
 
 ## The answer
 
-Yes. The rules travel. On every model, written rules beat documentation in the style of a typical design system site, by 9 to 24 points. Every model scored at least 80 of 87 with them. The rules also moved the models towards each other. With rules, all 9 gave the same answer on 23 of 29 scenarios; with names only, on 4. The 6 scenarios where they split are the 3 places the rules leave a reading open, and nothing else. The evidence covers one component and 9 models. It says nothing about Google's newest model, which our key cannot reach, or about reasoning settings other than each model's default.
+Yes. The rules had the same impact. On every model, written rules beat documentation in the style of a typical design system site, by 9 to 24 points. Every model scored at least 80 of 87 with them. The rules also moved the models towards each other. With rules, all 10 gave the same answer on 23 of 29 scenarios; with names only, on 4. The 6 scenarios where they split are the 3 places the rules leave a reading open, and nothing else. The evidence covers one component and 10 models. We do not go into details about reasoning settings for each model.
 
 ## One example
 
-Scenario 13, as every model saw it. The answers are GPT-6 Astra's.
+Scenario 13, as seen by every model. The answers are GPT-6 Astra's.
 
 **The task**
 
@@ -54,39 +54,40 @@ With rules, GPT-6 Astra reached the designer's answer in 3 of 3 repeats, citing 
 
 ## What we found
 
-### Rules beat documentation on all 9 models, by 9 to 24 points
+### Rules beat documentation on all 10 models, by 9 to 24 points
 
 Each model answered 29 scenarios, 3 times each, at 3 levels. Only the reference text changed.
 
 | Model | Tier | Rules | Documentation | Names only |
 | --- | --- | --- | --- | --- |
-| Claude Opus 5.5 | flagship | 87 of 87 | 63 of 87 | 54 of 87 |
+| Claude Fable 5.1 | flagship | 87 of 87 | 70 of 87 | 48 of 87 |
+| Claude Opus 5.5 | large | 87 of 87 | 63 of 87 | 54 of 87 |
 | Claude Sonnet 5.5 | mid | 87 of 87 | 66 of 87 | 27 of 87 |
 | Claude Haiku 4.5 | small | 84 of 87 | 68 of 87 | 54 of 87 |
 | GPT-6 Astra | flagship | 84 of 87 | 63 of 87 | 15 of 87 |
 | GPT-5.6 sol | previous flagship | 80 of 87 | 62 of 87 | 19 of 87 |
-| Gemini 3.1 Pro | top Pro reachable by API | 82 of 87 | 65 of 87 | 53 of 87 |
-| Gemini 3.8 Flash | small | 82 of 87 | 60 of 87 | 54 of 87 |
 | Grok 4.7 | flagship | 83 of 87 | 71 of 87 | 16 of 87 |
 | Grok 4.3 | older | 82 of 87 | 73 of 87 | 13 of 87 |
+| Gemini 3.1 Pro | top Pro reachable by API | 82 of 87 | 65 of 87 | 53 of 87 |
+| Gemini 3.8 Flash | small | 82 of 87 | 60 of 87 | 54 of 87 |
 
-Tiers are each company's own, checked against an independent public index. Grok 4.3 has the best documentation score, 73. Its gap to rules is the narrowest at 9 points, one short of the wheel's 10-point criterion. Claude Fable 5.1, run at low effort outside the boundary, also scored 87 of 87.
+Tiers are each company's own naming, flagship first. Interestingly old model of Grok 4.3 had best result on human written documentation at 9 points behind while on every other models including latest Grok were 16 to 24 points behind.
 
 ### Rules move models towards each other, not only towards the designer
 
-For each scenario we asked whether all 9 models gave the same majority answer, without looking at the key.
+For each scenario we asked whether all 10 models gave the same majority answer, without looking at the correct answers.
 
-| Level | Scenarios where all 9 models agree |
+| Level | Scenarios where all 10 models agree |
 | --- | --- |
 | Names only | 4 of 29 |
 | Documentation | 17 of 29 |
 | Rules | 23 of 29 |
 
-This measure needs no answer key. Write the rules, run them on several models, and the scenarios where models split are the gaps in the rules. In this wheel the 6 splits were exactly the 3 open readings below.
 
-### Every miss comes from 3 sentences nobody wrote
 
-Across 783 answers with rules, 32 missed. All 32 trace to 3 places where the rules leave a reading open, and in every case the model named the rule it chose.
+### All 32 misses come from 3 gaps in the rules
+
+Across 870 answers with rules, 32 missed. All 32 trace to 3 places where the rules leave a reading open, and in every case the model named the rule it chose.
 
 | Open reading | Scenarios | Misses |
 | --- | --- | --- |
@@ -94,7 +95,7 @@ Across 783 answers with rules, 32 missed. All 32 trace to 3 places where the rul
 | Which rule wins when two in the same step fit: 'Not now' is both a dismiss and a bypass | 28, 25 | 7 |
 | What "undone" means: does redoing work by hand count? | 18 | 3 |
 
-On 'Archive project', 5 of 9 models chose ghost against the designer's secondary. It is the one scenario where the designer's reading is the minority one.
+On 'Archive project', 5 of 10 models chose ghost against the designer's secondary. It is the one scenario where the models split down the middle.
 
 ### Models differ in what they do when the system is silent
 
@@ -111,19 +112,19 @@ With names only, 5 models answered 'none' on most scenarios. Grok 4.3 did so on 
 ## What this does not show
 
 - one component; nothing here says rules work for layouts, patterns or whole screens
-- each model at its default reasoning setting; one Fable 5.1 run at low effort is the only other setting tried
+- each model at one reasoning setting; we did not vary it
 - Google's newest model, Gemini 4, is not reachable with our key
-- the answer key is one designer's judgement; on 'Archive project' most models read the rule the other way
+- the correct answers are one designer's judgement; on 'Archive project' half the models read the rule the other way
 - the documentation level was written by us in the style of a typical design system site, not taken from a real one
 
 ## What to do with this
 
-1. Write button rules once, with IDs and a precedence order; they held on 9 models without tuning.
-2. Run your rules on 3 or 4 models and list where they split. The splits are your gaps, and you do not need an answer key to find them.
+1. Write button rules once, with IDs and a precedence order; they held on 10 models without tuning.
+2. Run your rules on 3 or 4 models and list where they split. The splits are your gaps, and you can find them before deciding the correct answers.
 3. Decide what the system wants when it is silent: a guess from convention, or 'none'.
-4. Write the 3 missing sentences, then run again; a rule enters the system only when every model reads it the same way.
+4. Write the 3 missing rules, then run again; a rule enters the system only when every model reads it the same way.
 
-Nothing changes in the system yet. The 12 rules stay as they are, with a note of the 9 models they were tested on. The 3 sentences are a candidate wheel 003.
+Nothing changes in the system yet. The 12 rules stay as they are, with a note of the 10 models they were tested on. The 3 missing rules are a candidate wheel 003.
 
 ## Details
 
@@ -131,13 +132,13 @@ Nothing changes in the system yet. The 12 rules stay as they are, with a note of
 
 | Setting | Value |
 | --- | --- |
-| Models | 9, from Anthropic, OpenAI, Google and xAI, each through its own API at its default reasoning setting |
+| Models | 10, from Anthropic, OpenAI, Google and xAI, each through its own API |
 | Information levels | wheel 001's, unchanged: names, documentation, rules |
-| Scenarios | wheel 001's 29, unchanged, with the same answer key |
+| Scenarios | wheel 001's 29, unchanged, with the same correct answers |
 | Repeats | 3 per scenario per level, each a fresh conversation |
 | Scoring | wheel 001's script, against the same key |
 | Dates | 7 October 2026, with Gemini 3.1 Pro finishing on 8 October |
-| Cost | about €1 per model in API credit, pay as you go, about €10 for all runs including the labelled Fable extra; the Fable run alone was €1.40 |
+| Cost | about €1 per model in API credit, pay as you go, about €10 for all runs; the Fable run alone was €1.40 |
 
 **Reproduce it**
 
@@ -147,7 +148,7 @@ Nothing changes in the system yet. The 12 rules stay as they are, with a note of
 
 **Questions this raises**
 
-- can the 3 open readings be closed with 3 sentences, and do the same 9 models then agree
+- can the 3 open readings be closed with 3 sentences, and do the same 10 models then agree
 - is refusing to guess when the system is silent a property to design for
 - does the lead for rules shrink at low reasoning effort on the models that argued with themselves
 
