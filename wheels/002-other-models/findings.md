@@ -24,7 +24,22 @@ Runs are in `runs/`, one folder per model, each with a `summary.md`. Opus is whe
 
 One run sits outside the wheel's boundary and is reported separately: Claude Fable 5.1 at low reasoning effort, not its default. It scored 87 of 87 with rules, 70 of 87 with human documentation and 48 of 87 with names only, with all 29 scenarios consistent under rules. It cost about €1.40, the most of any run, and it is the only model that was partly a refuser at level A, answering 'none' on 28 of 84.
 
-Consistency with rules, meaning scenarios where all 3 repeats agreed, out of 29: Opus 29, Sonnet 29, Haiku 29, GPT-6 Astra 29, Gemini Flash 28, GPT-5.6 27, Grok 4.3 27, Gemini Pro 28, Grok 4.7 26.
+The same scores broken down by scenario, showing how many of the 3 repeats were right. A scenario at 0 of 3 is a firm different reading; one at 1 or 2 of 3 is a model that could not decide. The Fable row ran at low effort, outside the wheel's boundary.
+
+| Model | Score | 3 of 3 right | 2 of 3 | 1 of 3 | 0 of 3 | Argued with itself |
+| --- | --- | --- | --- | --- | --- | --- |
+| Claude Opus 5.5 | 87 of 87 | 29 | 0 | 0 | 0 | 0 of 29 |
+| Claude Fable 5.1 | 87 of 87 | 29 | 0 | 0 | 0 | 0 of 29 |
+| Claude Sonnet 5.5 | 87 of 87 | 29 | 0 | 0 | 0 | 0 of 29 |
+| Claude Haiku 4.5 | 84 of 87 | 28 | 0 | 0 | 1 | 0 of 29 |
+| GPT-6 Astra | 84 of 87 | 28 | 0 | 0 | 1 | 0 of 29 |
+| Grok 4.7 | 83 of 87 | 26 | 2 | 1 | 0 | 3 of 29 |
+| Gemini 3.1 Pro | 82 of 87 | 27 | 0 | 1 | 1 | 1 of 29 |
+| Gemini 3.8 Flash | 82 of 87 | 27 | 0 | 1 | 1 | 1 of 29 |
+| Grok 4.3 | 82 of 87 | 26 | 2 | 0 | 1 | 2 of 29 |
+| GPT-5.6 sol | 80 of 87 | 26 | 0 | 2 | 1 | 2 of 29 |
+
+The 5 Claude and GPT-6 rows never argued with themselves; every miss they have is a firm reading, which one sentence can change. The Grok, Gemini and GPT-5.6 rows argue only on the secondary-or-ghost line, which is the vaguest of the 3 open readings.
 
 ### Rules beat human documentation on every model, by 9 to 24 points
 
