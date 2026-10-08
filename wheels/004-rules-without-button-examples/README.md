@@ -39,4 +39,4 @@ Several rules give examples in brackets that are the labels of test buttons, suc
 - if misses on the other 17 scenarios rise by more than 6, report it separately, because taking out examples should not affect them
 - abandon if a model cannot run at the same setting as in wheel 002
 
-A rise of 6 allows for variation between runs. In wheel 001, Opus's scores with unchanged names only and unchanged human written documentation moved by 3 to 4 of 87 between runs 2 and 3.
+A rise of 6 allows for variation between runs. In wheel 001, with names only and with human written documentation, Opus's scores moved by 3 to 4 answers between runs 2 and 3, on the 28 scenarios that did not change.
