@@ -57,6 +57,18 @@ On 8 October 2026 the designer approved these changes to the next run's copy of 
 
 The designer's reasoning for both ghost answers: on a page with 'Save changes', a button that undoes the last change, and 'Reset to defaults', the 3 buttons take 3 levels. 'Save changes' is primary, undoing the last change is secondary, and the rarely used reset is ghost.
 
+## What makes an action destructive
+
+This answers the first of the 2 decisions above. The difference between 'Discard changes' and the 2 reset buttons is what the user would have to do to get the lost work back. After 'Discard changes', the user has to recreate the work from memory. After 'Reset to defaults' or 'Revert to original', the user only makes the same choices again from the options on screen.
+
+On 8 October 2026 the designer approved these 2 hard rules for the next run. They replace this wheel's amended H3, whose words "redoing the work by hand does not count" broke 2 scenarios.
+
+> HR2: an action that permanently removes content people created, which would have to be recreated from memory, is destructive, even if it is the main action of the view
+>
+> HR3: an action is never destructive if it can be undone later, or if all it removes are choices the user can make again from the options on screen
+
+The next run's copy of 'Discard changes' says what the unsaved changes are, such as "unsaved changes to a written report". Without that, a model cannot tell whether the changes are typed content or settings.
+
 Wheel 001's scenario file stays as it is, because wheels 001 to 003 were scored against it.
 
 ## Examples in the rules that match test buttons
