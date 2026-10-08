@@ -19,6 +19,7 @@ Visual rules for the published page
 - the 4 numbers under the title render as tiles, not a table
 - at least one chart in "What we found", with its data table beside or under it
 - the example renders as before and after, side by side where the width allows
+- "What to do with this" renders as a dark panel, straight after "What we found"
 - "Details" is collapsed or visually lighter than the rest
 -->
 
@@ -113,16 +114,6 @@ runs it comes from.
 <One line each: what went wrong, how often, where to look. Include our own
 setup's failures, not only the agent's.>
 
-## What this does not show
-
-<The honest list, one sentence each: sample size, one system, one model,
-levels that bundle two changes, scoring that depends on a model, anything
-anonymised and why. Nothing claimed about a fix without a measurement of
-the fix.>
-
-- <limit>
-- <limit>
-
 ## What to do with this
 
 <For a reader with their own design system. Two to four steps, in order,
@@ -135,6 +126,16 @@ each one sentence, each tied to a finding above. If the honest answer is
 <One line on what changes in `system/`, if anything, with the rule from the
 wheel's implications.md and the run that justifies it. Otherwise "Nothing
 changes in the system yet."
+
+## What this does not show
+
+<The honest list, one sentence each: sample size, one system, one model,
+levels that bundle two changes, scoring that depends on a model, anything
+anonymised and why. Nothing claimed about a fix without a measurement of
+the fix.>
+
+- <limit>
+- <limit>
 
 ## Details
 

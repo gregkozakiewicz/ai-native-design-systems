@@ -115,14 +115,6 @@ We recorded each change before the next run. Earlier runs keep their original sc
 - our scenario 17 did not say whether removing a member could be undone
 - the agent made opposite assumptions about scenario 17 in runs 1 and 2, and said so each time
 
-## What this does not show
-
-- one model, Claude Opus 5.5 at medium reasoning effort; other models and lower effort are untested
-- one component; nothing here says rules work for layouts, patterns, or whole screens
-- the correct answers are one designer's judgement, and the designer changed one of them after seeing the agent's reasoning
-- we wrote the human written documentation ourselves, copying the style of a typical design system site rather than a real one
-- the agent names a variant; it does not render a button, so nothing is claimed about the result on screen
-
 ## What to do with this
 
 1. Write your button variant guidance as rules with IDs, and say which rule wins when 2 apply.
@@ -131,6 +123,14 @@ We recorded each change before the next run. Earlier runs keep their original sc
 4. Test rules with reworded scenarios, so you know the agent applies them rather than matching words.
 
 The 12 rules in `wheels/001-button-variant/experiment/levels/C-machine-rules.md` are proposed for `system/` on the strength of run 3.
+
+## What this does not show
+
+- one model, Claude Opus 5.5 at medium reasoning effort; other models and lower effort are untested
+- one component; nothing here says rules work for layouts, patterns, or whole screens
+- the correct answers are one designer's judgement, and the designer changed one of them after seeing the agent's reasoning
+- we wrote the human written documentation ourselves, copying the style of a typical design system site rather than a real one
+- the agent names a variant; it does not render a button, so nothing is claimed about the result on screen
 
 ## Details
 

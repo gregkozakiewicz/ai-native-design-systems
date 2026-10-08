@@ -114,14 +114,6 @@ With names only, 5 models answered 'none' on most scenarios. Grok 4.3 did so on 
 - 7 of 162 reworded pairs broke with rules, all on the pairs that test rule H12
 - in each break a model applied a different rule, and none broke by matching a rule's words
 
-## What this does not show
-
-- one component; nothing here says rules work for layouts, patterns, or whole screens
-- each model at one reasoning setting; we did not vary it
-- Google's newest model, Gemini 4, is not available to our account
-- the correct answers are one designer's judgement; on 'Archive project' half the models read the rule the other way
-- we wrote the human written documentation ourselves, copying the style of a typical design system site rather than a real one
-
 ## What to do with this
 
 1. Write button rules once, with IDs and a precedence order; they held on 10 models without tuning.
@@ -130,6 +122,14 @@ With names only, 5 models answered 'none' on most scenarios. Grok 4.3 did so on 
 4. Write the 3 missing rules, then run again; a rule enters the system only when every model reads it the same way.
 
 Nothing changes in the system yet. The 12 rules stay as they are, with a note of the 10 models they were tested on. The 3 missing rules are a candidate wheel 003.
+
+## What this does not show
+
+- one component; nothing here says rules work for layouts, patterns, or whole screens
+- each model at one reasoning setting; we did not vary it
+- Google's newest model, Gemini 4, is not available to our account
+- the correct answers are one designer's judgement; on 'Archive project' half the models read the rule the other way
+- we wrote the human written documentation ourselves, copying the style of a typical design system site rather than a real one
 
 ## Details
 
