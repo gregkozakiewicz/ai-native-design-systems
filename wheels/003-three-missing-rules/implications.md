@@ -79,6 +79,11 @@ On 8 October 2026 the designer approved these 2 hard rules for the next run. The
 >
 > HR12: an alternative that postpones or skips the current step, leaving the decision for later, is ghost; an alternative that completes the task another way is secondary
 
+The designer also approved a pair of scenarios that tests the difference. Both sit on the same prompt to turn on notifications, next to 'Enable notifications':
+
+- 'Not now' closes the prompt, and the scenario says the app will ask again next week: ghost
+- a new scenario has 'No thanks', which turns notifications down for good, and the app does not ask again: secondary
+
 Wheel 001's scenario file stays as it is, because wheels 001 to 003 were scored against it.
 
 ## Examples in the rules that match test buttons
