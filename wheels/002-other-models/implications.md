@@ -6,6 +6,8 @@
 - the system records which models it has been tested on, with the score for each; a rule set that says "tested on 9 models, 7 October 2026" lets a reader judge it, and a reader with a tenth model knows to run it
 - the system states its scope note as "one component, 9 models" instead of "one model"
 
+- a rule set is checked for gaps by running it on several models and listing the scenarios where they split, before an answer key is consulted; in this wheel the 6 splits with rules were exactly the 3 open readings, and the method found them without the key
+
 ## Rules to test before they enter the system
 
 Three readings are open, each named in the models' own reasons. Each is a candidate for wheel 003, where it is written, run on the same 9 models, and accepted only if every model then agrees.

@@ -38,6 +38,25 @@ With names only, 5 models answered 'none' on most scenarios where a variant was 
 
 The 6 reworded pairs test whether a model gets the original right and the reworded pair wrong. With rules, that happened 7 times in 162 chances across 9 models, and all 7 were on the 2 pairs that test rule H12, where the model applied a different rule to the reworded scenario. GPT-6 Astra read 'Not now' as a dismiss (H5, secondary) in 3 of 3 where the key reads it as a bypass (H12, ghost). Nowhere did a model copy a rule's answer because the scenario echoed the rule's words. Wheel 001's result stands, with the caveat that rule conflicts can break a pair.
 
+### The 9 models agree with each other on 23 of 29 scenarios with rules, 17 with documentation, 4 with names only
+
+Agreement between models is measured without the key: for each scenario, do all 9 models give the same majority answer? With rules they do on 23 of 29. With documentation, 17 of 29. With names only, 4 of 29. Rules do not only move models towards the designer; they move models towards each other.
+
+The 6 scenarios where models split with rules are exactly the 3 open readings below, and nothing else:
+
+| Scenario | Key | Models |
+| --- | --- | --- |
+| 14 'Archive project' | secondary | ghost 5, secondary 4 |
+| 13 'Log out' | secondary | secondary 7, ghost 2 |
+| 8 'Export CSV' | secondary | secondary 8, ghost 1 |
+| 25 'Stay on Free' | secondary | secondary 8, ghost 1 |
+| 28 'Not now' | ghost | ghost 8, secondary 1 |
+| 18 'Discard changes' | destructive | destructive 8, secondary 1 |
+
+On 'Archive project' the majority of models disagree with the key. That does not make the key wrong, but it is the one scenario where the designer's reading is the minority one, and the rule that settles it has to be written with that in mind.
+
+This measure needs no designer. A rule set can be checked for gaps by running it on several models and reading the splits, before anyone writes an answer key.
+
 ### Every miss with rules is one of 3 open readings
 
 | Open reading | Scenarios | Models that read it the other way |
