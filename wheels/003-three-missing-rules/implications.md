@@ -46,6 +46,14 @@ Before the next run uses it, 3 scenarios need to say what else is in their view:
 - 'Export CSV' above a data table names no other action in the toolbar
 - 'Revert to original' in an image editor toolbar names no other action, and H10 sits in no step of the precedence order
 
+On 8 October 2026 the designer approved these changes to the next run's copy of the scenarios:
+
+- 'Archive project' on a project settings page gets 'Save changes' in its description, and stays secondary
+- a new scenario has 'Archive project' alone in the main area of the page, answered primary
+- 'Export CSV' above a data table gets 'Delete 3 rows' next to it, as in the delete scenario, and stays secondary
+
+Wheel 001's scenario file stays as it is, because wheels 001 to 003 were scored against it.
+
 ## What this does not justify
 
 - a claim that written rules stopped working, since Sonnet scored 87 of 87 and the 10 models agree more than before
