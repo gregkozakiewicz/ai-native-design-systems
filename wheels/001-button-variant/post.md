@@ -75,7 +75,18 @@ machine rules                █████████████████
 | B | a description and examples per variant, 3 soft guidelines | 63 of 87 | 26 of 29 |
 | C | what a variant means, 12 hard rules, 5 never rules, an order for conflicts | 87 of 87 | 29 of 29 |
 
-The 5 control scenarios were right at every level, 15 of 15 each. The whole gap is in the hard ones. Run 3 of 3; runs 1 and 2 are below.
+The 29 scenarios fall into 6 groups, from obvious controls to deliberate traps. All 3 levels got every control right, so the gap between the levels comes from the other 5 groups.
+
+| Scenario group | What it tests | Names only | Human written documentation | Rules |
+| --- | --- | --- | --- | --- |
+| Controls, 5 scenarios | obvious cases, such as 'Create account' on a sign-up form | 15 of 15 | 15 of 15 | 15 of 15 |
+| Context, 7 scenarios | the answer depends on what sits around the button, such as 'Cancel' next to 'Delete project' | 12 of 21 | 16 of 21 | 21 of 21 |
+| Traps, 4 scenarios | the button sounds like one variant but is another, such as 'Log out', which is not destructive | 6 of 12 | 6 of 12 | 12 of 12 |
+| Conflicts, 4 scenarios | 2 rules apply and one must win, such as 'Discard changes' in a dialog that also offers 'Save' | 10 of 12 | 11 of 12 | 12 of 12 |
+| Interaction and tools, 3 scenarios | a press-and-hold control, and side tasks such as 'Add file' in a chat composer | 1 of 9 | 3 of 9 | 9 of 9 |
+| Matched pairs, 6 scenarios | earlier scenarios reworded, to test the same rule with different words | 10 of 18 | 12 of 18 | 18 of 18 |
+
+These figures come from run 3 of 3. Runs 1 and 2 are described further down, under the heading about the 3 runs.
 
 ### The agent recognised the situation, not the wording
 
