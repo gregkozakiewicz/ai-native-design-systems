@@ -16,12 +16,17 @@ is a prompt to you: replace it or delete it. Delete every comment before
 publishing.
 
 Visual rules for the published page
+- build the page by copying the newest wheel page in gkwebsite, so it keeps the same styles; as of 8 October 2026 that is wheel 001
+- the summary runs the full content width
 - the 4 numbers under the title render as tiles, not a table, each with a bar showing the score out of its total
+- a line sits above and below the tiles, with a small gap before the question and answer card
 - "The question" and "The answer" render side by side in one white card with an accent edge, with the first word of the answer in large accent type
 - at least one chart in "What we found", with its data table beside or under it
+- a table with long descriptions puts each description under its row name, so the table keeps 4 columns or fewer on a phone
 - the example renders as before and after, side by side where the width allows
-- "What to do with this" renders as a dark panel, straight after "What we found"
+- "What to do with this" renders as a dark panel, straight after "What we found", headed "Use these <n> steps in your own design system"
 - "Details" is collapsed or visually lighter than the rest
+- body text keeps the line-heights of the reference page, which are 10% below the site's original
 -->
 
 <Summary: one sentence with a verb, ending in a full stop. It says what we
@@ -52,9 +57,10 @@ needs two sentences, it is two posts.>
 
 ## The answer
 
-<Two or three sentences. Answer the question directly, including "no" or
-"not yet". Then one sentence on what the evidence does not cover. A reader
-who stops here knows the result and its limit.>
+<Start with "Yes.", "No." or "Partly." on its own, because it renders large
+on the page. Then two or three sentences that answer the question directly.
+Then one sentence on what the evidence does not cover. A reader who stops
+here knows the result and its limit.>
 
 ## One example
 
@@ -94,6 +100,11 @@ never a question. Order by importance.
 Under each heading: the claim in one or two sentences, one chart or table
 with denominators, then one sentence on what it does not show and which
 runs it comes from.
+
+If the scenarios fall into groups, show the groups in a table before any
+sentence refers to them: what each group tests, with one example, and the
+result at each level. Never name a group, such as 'control scenarios', that
+the reader has not been shown.
 -->
 
 ### <Finding 1 as a statement>
@@ -195,6 +206,8 @@ Content
 - [ ] "What to do with this" has steps a reader can take, in order
 - [ ] setup instructions live in the repo, the post links to them
 - [ ] no FAQ
+- [ ] every group, level, or term is shown to the reader before the post refers to it
+- [ ] the answer starts with "Yes.", "No." or "Partly." on its own
 
 Writing
 - [ ] every rule in the 'Writing' section of CLAUDE.md, checked line by line, including the rejected words
