@@ -1,6 +1,6 @@
 # The same 12 button rules work on 10 models from 4 companies
 
-10 models from 4 companies chose the correct button variant in 80 to 87 of 87 answers with the rules. With human written documentation they managed 60 to 73.
+With rules, 10 models chose the correct button variant in 80 to 87 of 87 answers, against 60 to 73 with human written documentation.
 
 **Wheel:** `wheels/002-other-models/` · **Runs dated:** 7 and 8 October 2026 · **Status:** answered
 
@@ -12,12 +12,16 @@
 
 Does the button variant rule set from [wheel 001](../001-button-variant/post.md) guide models other than Claude Opus 5.5 as well as it guided Opus? Wheel 001 took one model from 54 of 87 to 87 of 87 with 12 written rules. If that holds only for Opus, the rules are a prompt tuned to one model. If it holds across companies, the rules belong to the design system.
 
-**In scope:** the same 29 scenarios, 3 information levels and correct answers as wheel 001, on 10 models.
+**In scope:** the same 29 scenarios, 3 information levels, and correct answers as wheel 001, on 10 models.
 **Out of scope:** changing the rules to suit a model; tuning per model; other components.
 
 ## The answer
 
-Yes. The rules had the same impact. On every model, written rules beat documentation in the style of a typical design system site, by 9 to 24 points. Every model scored at least 80 of 87 with them. The rules also moved the models towards each other. With rules, all 10 gave the same answer on 23 of 29 scenarios; with names only, on 4. The 6 scenarios where they split are the 3 places the rules leave a reading open, and nothing else. The evidence covers one component and 10 models. We do not go into details about reasoning settings for each model.
+Yes. The rules had the same impact. On every model, written rules beat human written documentation by 9 to 24 points. Every model scored at least 80 of 87 with them.
+
+The rules also moved the models towards each other. With rules, all 10 gave the same answer on 23 of 29 scenarios; with names only, on 4 of 29. The 6 scenarios where they split are the 3 places the rules leave a reading open, and nothing else.
+
+The evidence covers one component and 10 models. We do not go into details about reasoning settings for each model.
 
 ## One example
 
@@ -54,11 +58,11 @@ With rules, GPT-6 Astra reached the designer's answer in 3 of 3 repeats, citing 
 
 ## What we found
 
-### Rules beat documentation on all 10 models, by 9 to 24 points
+### Rules beat human written documentation on all 10 models, by 9 to 24 points
 
 Each model answered 29 scenarios, 3 times each, at 3 levels. Only the reference text changed.
 
-| Model | Tier | Rules | Documentation | Names only |
+| Model | Tier | Rules | Human written documentation | Names only |
 | --- | --- | --- | --- | --- |
 | Claude Fable 5.1 | flagship | 87 of 87 | 70 of 87 | 48 of 87 |
 | Claude Opus 5.5 | large | 87 of 87 | 63 of 87 | 54 of 87 |
@@ -68,10 +72,10 @@ Each model answered 29 scenarios, 3 times each, at 3 levels. Only the reference 
 | GPT-5.6 sol | previous flagship | 80 of 87 | 62 of 87 | 19 of 87 |
 | Grok 4.7 | flagship | 83 of 87 | 71 of 87 | 16 of 87 |
 | Grok 4.3 | older | 82 of 87 | 73 of 87 | 13 of 87 |
-| Gemini 3.1 Pro | top Pro reachable by API | 82 of 87 | 65 of 87 | 53 of 87 |
+| Gemini 3.1 Pro | top Pro model our account can reach | 82 of 87 | 65 of 87 | 53 of 87 |
 | Gemini 3.8 Flash | small | 82 of 87 | 60 of 87 | 54 of 87 |
 
-Tiers are each company's own naming, flagship first. Interestingly old model of Grok 4.3 had best result on human written documentation at 9 points behind while on every other models including latest Grok were 16 to 24 points behind.
+Tiers are each company's own naming, flagship first. The older Grok 4.3 did best on human written documentation, 9 points behind the rules. On every other model, including Grok 4.7, it was 16 to 24 points behind.
 
 ### Rules move models towards each other, not only towards the designer
 
@@ -80,10 +84,8 @@ For each scenario we asked whether all 10 models gave the same majority answer, 
 | Level | Scenarios where all 10 models agree |
 | --- | --- |
 | Names only | 4 of 29 |
-| Documentation | 17 of 29 |
+| Human written documentation | 17 of 29 |
 | Rules | 23 of 29 |
-
-
 
 ### All 32 misses come from 3 gaps in the rules
 
@@ -91,15 +93,15 @@ Across 870 answers with rules, 32 missed. All 32 trace to 3 places where the rul
 
 | Open reading | Scenarios | Misses |
 | --- | --- | --- |
-| Where "optional" ends: a reversible action like archive, log out or export, is it a real choice (secondary) or optional (ghost)? | 14, 13, 8 | 22 |
-| Which rule wins when two in the same step fit: 'Not now' is both a dismiss and a bypass | 28, 25 | 7 |
+| Where "optional" ends: a reversible action like archive, log out, or export, is it a real choice (secondary) or optional (ghost)? | 14, 13, 8 | 22 |
+| Which rule wins when 2 in the same step fit: 'Not now' is both a dismiss and a bypass | 28, 25 | 7 |
 | What "undone" means: does redoing work by hand count? | 18 | 3 |
 
 On 'Archive project', 5 of 10 models chose ghost against the designer's secondary. It is the one scenario where the models split down the middle.
 
 ### Models differ in what they do when the system is silent
 
-With names only, 5 models answered 'none' on most scenarios. Grok 4.3 did so on 73 of 84, GPT-6 Astra 72, Grok 4.7 71, GPT-5.6 67, Sonnet 57. They read "use only the reference" literally. Opus, Haiku and both Geminis guessed from convention instead. With rules, no model used 'none' once in 84 chances. A design system read by several models has to decide which behaviour it wants when it is silent; the refusers are easier to catch.
+With names only, 5 models answered 'none' on most scenarios. Grok 4.3 did so on 73 of 84, GPT-6 Astra 72, Grok 4.7 71, GPT-5.6 67, Sonnet 57. They read "use only the reference" literally. Opus, Haiku, and both Geminis guessed from convention instead. With rules, no model used 'none' once in 84 chances. A design system read by several models has to decide which behaviour it wants when it is silent; the refusers are easier to catch.
 
 ### Where it failed
 
@@ -114,11 +116,11 @@ With names only, 5 models answered 'none' on most scenarios. Grok 4.3 did so on 
 
 ## What this does not show
 
-- one component; nothing here says rules work for layouts, patterns or whole screens
+- one component; nothing here says rules work for layouts, patterns, or whole screens
 - each model at one reasoning setting; we did not vary it
 - Google's newest model, Gemini 4, is not available to our account
 - the correct answers are one designer's judgement; on 'Archive project' half the models read the rule the other way
-- the documentation level was written by us in the style of a typical design system site, not taken from a real one
+- we wrote the human written documentation ourselves, copying the style of a typical design system site rather than a real one
 
 ## What to do with this
 
@@ -135,8 +137,8 @@ Nothing changes in the system yet. The 12 rules stay as they are, with a note of
 
 | Setting | Value |
 | --- | --- |
-| Models | 10, from Anthropic, OpenAI, Google and xAI, each through its own API |
-| Information levels | wheel 001's, unchanged: names, documentation, rules |
+| Models | 10, from Anthropic, OpenAI, Google, and xAI, each through its own application programming interface (API) |
+| Information levels | wheel 001's, unchanged: names, human written documentation, and rules |
 | Scenarios | wheel 001's 29, unchanged, with the same correct answers |
 | Repeats | 3 per scenario per level, each a fresh conversation |
 | Scoring | wheel 001's script, against the same correct answers |
@@ -147,7 +149,7 @@ Nothing changes in the system yet. The 12 rules stay as they are, with a note of
 
 - wheel: `wheels/002-other-models/`
 - raw output: `wheels/002-other-models/runs/`, one folder per model
-- runner: `wheels/002-other-models/experiment/`, which reuses wheel 001's scenarios, levels and scoring
+- runner: `wheels/002-other-models/experiment/`, which reuses wheel 001's scenarios, levels, and scoring
 
 **Questions this raises**
 
