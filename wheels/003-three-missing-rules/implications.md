@@ -54,6 +54,21 @@ On 8 October 2026 the designer approved these changes to the next run's copy of 
 
 Wheel 001's scenario file stays as it is, because wheels 001 to 003 were scored against it.
 
+## Examples in the rules that match test buttons
+
+Several rules give examples in brackets that are the labels of test buttons, such as "skip, not now, maybe later" in H12. A model can match a label to an example instead of reading the situation. The reworded pairs do not fully check this, because some reworded labels, such as 'Not now', are examples too.
+
+On 8 October 2026 the designer decided to take these examples out of the next run's rules:
+
+- H3: "log out, archive, reset, unsubscribe"
+- H4: "cancel, close, go back"
+- H11: "attach a file, give feedback, learn more"
+- H12: "skip, not now, maybe later"
+- the never rules: "cancel, close, dismiss or skip", and "hold, drag, toggle, slider"
+- this wheel's amended step 5: "archive, export, log out"
+
+Where a never rule names labels, it will name the role instead, such as a button that backs out, dismisses or skips.
+
 ## What this does not justify
 
 - a claim that written rules stopped working, since Sonnet scored 87 of 87 and the 10 models agree more than before
