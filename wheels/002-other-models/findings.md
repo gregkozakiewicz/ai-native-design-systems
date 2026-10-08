@@ -24,7 +24,7 @@ Runs are in `runs/`, one folder per model, each with a `summary.md`. Opus is whe
 
 One run sits outside the wheel's boundary and is reported separately: Claude Fable 5.1 at low reasoning effort, not its default. It scored 87 of 87 with rules, 70 of 87 with human written documentation and 48 of 87 with names only. All 29 scenarios were consistent under rules. It cost about €1.40, the most of any run. It is the only model that partly refused to guess at level A, answering 'none' on 28 of 84.
 
-The same scores broken down by scenario, showing how many of the 3 repeats were right. A scenario at 0 of 3 is a firm different reading; one at 1 or 2 of 3 is a model that could not decide. The Fable row ran at low effort, outside the wheel's boundary.
+The same scores broken down by scenario, showing how many of the 3 repeats were right. A scenario at 0 of 3 is a firm different reading. One at 1 or 2 of 3 is a model that could not decide. The Fable row ran at low effort, outside the wheel's boundary.
 
 | Model | Score | 3 of 3 right | 2 of 3 | 1 of 3 | 0 of 3 | Argued with itself |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -87,8 +87,8 @@ The Claude models read the first and third the designer's way; most others did n
 Our setup, not the models, caused 3 stops:
 
 - Haiku 4.5 rejects a reasoning setting the other Claude models accept, so its first run failed and was rerun without it
-- Gemini 3.1 Pro preview is capped at 250 requests in any 24 hours on the account's tier, so its run stopped at 247 of 261
-- the last 14 Gemini 3.1 Pro answers were filled on 8 October with the same command, a few at a time as the cap allowed
+- Gemini 3.1 Pro preview is capped at 250 requests in any 24 hours on our tier, so its run stopped at 247 of 261
+- the last 14 Gemini 3.1 Pro answers were filled on 8 October, a few at a time as the cap allowed
 - Gemini 2.5 Pro, chosen as the stable fallback, is not available to new Google accounts; Gemini 3.8 Flash was used instead
 
 Two choices were corrected during the wheel, before findings were final. GPT-5.6 sol turned out to be a generation behind OpenAI's flagship, so GPT-6 Astra was added. xAI was added as a fourth company. Google's newest model, Gemini 4, is not available to the account.

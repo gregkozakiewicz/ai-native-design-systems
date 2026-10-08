@@ -5,7 +5,7 @@
 
 ## Question
 
-Do the 3 sentences proposed by wheel 002 close the 32 misses in the button variant rules without opening new ones, on the same 10 models?
+Do the 3 sentences from wheel 002 close its 32 misses without opening new ones, on the same 10 models?
 
 ## Why it matters
 
@@ -28,7 +28,9 @@ Wheel 002 showed the 12 rules had the same impact across companies, and that eve
 
 ## Success criteria
 
-- answered "closed" if every model scores 87 of 87, or if the only remaining misses are on scenarios that were not among wheel 002's 6 splits (a new gap, to be named)
+- answered "closed" if every model scores 87 of 87
+- also answered "closed" if the only remaining misses are on scenarios outside wheel 002's 6 splits, which would be a new gap to name
 - answered "partly" if misses fall but any of the 6 split scenarios still splits across models
-- answered "no" if the total misses do not fall below 32, or if a sentence opens a new split on a scenario that was unanimous before
+- answered "no" if the total misses do not fall below 32
+- also answered "no" if a sentence opens a new split on a scenario that was unanimous before
 - abandon if a model cannot be run at the same setting as in wheel 002

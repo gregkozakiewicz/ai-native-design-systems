@@ -6,30 +6,31 @@ Wheel 001's test, run unchanged on other models. The scenarios, the 3 informatio
 
 Each model runs every scenario 3 times at each of the 3 levels: 261 calls per model. Each model runs at its default reasoning setting; wheel 001 ran Opus 5.5 at medium, which is its default.
 
-Models, labelled by each company's own tier. Flagship means the company's top text model that the account can reach; an independent public index of model intelligence (checked 7 October 2026) was used to confirm which that is.
+Models, labelled by each company's own tier. Flagship means the company's top text model that the account can reach, by the company's own naming. An independent public index, checked on 7 October 2026, ranks Opus 5.5 above Fable 5.1.
 
 | Model | Company | Tier | API |
 | --- | --- | --- | --- |
-| `claude-opus-5-5` (wheel 001) | Anthropic | flagship, top of the index | wheel 001's code |
+| `claude-fable-5-1` | Anthropic | flagship, run at low effort | wheel 001's code, with `--effort low` |
+| `claude-opus-5-5` (wheel 001) | Anthropic | large | wheel 001's code |
 | `claude-sonnet-5-5` | Anthropic | mid | wheel 001's code, same as Opus |
 | `claude-haiku-4-5` | Anthropic | small | wheel 001's code, same as Opus |
 | `gpt-6-astra` | OpenAI | flagship | Responses API with a strict JSON schema |
 | `gpt-5.6-sol` | OpenAI | previous generation's flagship | same |
-| `gemini-3.1-pro-preview` | Google | top Pro reachable by API; Google's newest, Gemini 4, is not available to this key | generateContent with a response schema |
+| `gemini-3.1-pro-preview` | Google | top Pro model the account can reach; Google's newest, Gemini 4, is not available to it | generateContent with a response schema |
 | `gemini-3.8-flash` | Google | small | same |
 | `grok-4.7` | xAI | flagship | chat completions with a strict JSON schema |
 | `grok-4.3` | xAI | older | same |
 
 The model names were taken from each API's own model list on 7 October 2026.
 
-Google caps `gemini-3.1-pro-preview` at 250 requests a day on the account's tier, so that run stopped at 247 of 261 on 7 October and the last 14 answers, all at level C, were filled the next morning with the same command. The runner now stops cleanly at a daily cap and prints the resume command.
+Google caps `gemini-3.1-pro-preview` at 250 requests a day on the account's tier, so that run stopped at 247 of 261 on 7 October. The last 14 answers, all at level C, were filled the next day with the same command. The runner now stops cleanly at a daily cap and prints the resume command.
 
 ## Inputs
 
 - `run.py`: picks the API from the model name and sends wheel 001's prompt and schema to it; everything else is imported from wheel 001
 - `../../001-button-variant/experiment/scenarios.md`, `levels/`: unchanged
 
-Each API is given the same two things: the system text (wheel 001's instruction plus the level's reference) and the user text (the scenario and the button label). Each is asked for the same 2 fields: a variant from the list of 5 and a one-line reason. The only differences are the API's own names for those parts.
+Each API is given the same 2 things. The first is the system text: wheel 001's instruction plus the level's reference. The second is the user text: the scenario and the button label. Each is asked for the same 2 fields: a variant from the list of 5 and a one-line reason. The only differences are the API's own names for those parts.
 
 ## Scoring
 

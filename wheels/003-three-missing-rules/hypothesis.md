@@ -4,11 +4,11 @@ Written on 8 October 2026, before any run.
 
 ## Expectation
 
-Misses fall from 32 to under 10 across the 10 models. The "undone" sentence and the "which rule wins" sentence close their scenarios completely, because they are mechanical. The "where optional ends" sentence closes most of its 22 misses but not all, because 'Archive project' split the models 5 to 5 and a sentence that moves 5 models is a big ask.
+Misses fall from 32 to under 10 across the 10 models. The 'undone' sentence and the 'which rule wins' sentence close their scenarios completely, because they are mechanical. The 'where optional ends' sentence closes most of its 22 misses but not all. 'Archive project' split the models 5 to 5, and moving 5 models with one sentence is a big ask.
 
 ## Reasoning
 
-In wheel 002 every model named the rule it applied, and the misses were not noise: the same scenarios, the same alternative reading, across companies. A sentence aimed at a named reading should move the models that named it. The risk is on the Claude models, which already scored 87: a new sentence can only hurt them, so any new miss there is the cost of the fix.
+In wheel 002 every model named the rule it applied. The misses were not noise: the same scenarios, with the same alternative reading, across companies. A sentence aimed at a named reading should move the models that named it. The risk is on the Claude models, which already scored 87 of 87. A new sentence can only hurt them, so any new miss there is the cost of the fix.
 
 ## What would surprise us
 

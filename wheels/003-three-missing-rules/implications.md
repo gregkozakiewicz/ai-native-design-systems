@@ -30,11 +30,12 @@ The designer can choose one of these answers:
 
 - sentence 1, on where "optional" ends, closed 22 of 22 misses on its targets and goes into the next run unchanged
 - 'New invoice' needs watching in that run, since GPT-6 Astra moved it to secondary in 2 of 3 repeats
-- the order inside step 3 (a bypass beats a plain dismiss) closed 'Not now' and carries forward; the part about H8 depends on decision 2
+- the order inside step 3, where a bypass beats a plain dismiss, closed 'Not now' and carries forward
+- the part about H8 depends on the decision on 'Stay on Free'
 - every rule change runs against all 29 scenarios before it is proposed, because all 3 sentences moved scenarios they were not aimed at
 
 ## What this does not justify
 
 - a claim that written rules stopped working, since Sonnet scored 87 of 87 and the 10 models agree more than before
-- a claim that the flagships are worse at rules, since they followed the new text more strictly than the others
+- a claim that the largest models are worse at rules, since they followed the new text more strictly than the others
 - any change to the designer's answers; the 2 decisions above are the designer's, and the next run tests whatever is decided

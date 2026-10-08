@@ -4,7 +4,7 @@
 
 Wheel 002's runner and models, with one change: the rule file. `levels/C-machine-rules.md` is wheel 001's rule file plus the 3 sentences proposed in wheel 002's `implications.md`. Only level C runs. Each of the 10 models answers the 29 scenarios 3 times: 87 answers per model, 870 in all.
 
-Before the run, the daily cap check from the wheel template: Gemini 3.1 Pro allows 250 requests a day on the account's tier and this run needs 87 per model, so no run is split.
+Before the run, we did the daily cap check from the wheel template. Gemini 3.1 Pro allows 250 requests a day on our tier, and this run needs 87 per model, so no run is split.
 
 ## The 3 sentences
 

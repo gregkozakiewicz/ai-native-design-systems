@@ -2,16 +2,18 @@
 
 ## Setup
 
-One model, Claude Opus 5.5, called through the Anthropic API at medium reasoning effort. Each scenario is sent 3 times at each of 3 information levels: 243 calls for the 27 scenarios in run 1, 261 for the 29 in later runs. The agent sees a short system prompt, the level's reference text, and one scenario. It must answer with exactly one of `primary`, `secondary`, `ghost`, `destructive` or `none`, plus one sentence naming the rule it applied.
+One model, Claude Opus 5.5, called through the Anthropic API at medium reasoning effort. Each scenario is sent 3 times at each of 3 information levels. That is 243 calls for the 27 scenarios in run 1, and 261 for the 29 in later runs. The agent sees a short system prompt, the level's reference text, and one scenario. It must answer with exactly one of `primary`, `secondary`, `ghost`, `destructive` or `none`, plus one sentence naming the rule it applied.
 
 The system prompt tells the agent to base its choice only on the reference. Without that, the names-only level would be answered from general knowledge and the comparison would blur.
 
 ## Inputs
 
-- `scenarios.md`: the 29 scenarios with the designer's answers and a note of every change to them, grouped as easy, context, traps, conflicts, interaction and matched pairs; `run.py` reads the tables directly, so this file is the source of truth
+- `scenarios.md`: the 29 scenarios in 6 groups, with the designer's answers and a note of every change to them
+- `run.py` reads the scenario tables directly, so `scenarios.md` is the source of truth
 - `levels/A-names-only.md`: the 4 variant names and 'none', nothing else
 - `levels/B-human-docs.md`: documentation in the style of a typical design system site, with a description and examples per variant and 3 soft guidelines
-- `levels/C-machine-rules.md`: what a variant means, 12 hard rules (11 in run 1), 5 never rules, a precedence order for conflicts, and a section on unknowns
+- `levels/C-machine-rules.md`: what a variant means, 12 hard rules, 5 never rules, an order for conflicts, and a section on unknowns
+- run 1 used 11 hard rules, and H12 was added before run 2
 
 Level B had one more line before the first full run: "Button variants are for standard click or tap actions." We removed it because real documentation rarely says this, and it gave away scenario 21. The dry run that used it is not kept.
 
@@ -23,7 +25,7 @@ Scoring is mechanical. `score.py` compares each answer with the designer's answe
 - consistency: scenarios where all 3 runs gave the same answer
 - over-flagging: answers of 'none' where a variant was expected
 - accuracy by category
-- matched pairs: for the 4 pairs that test one rule with 2 wordings, whether each run got both, the original only, the pair only, or neither
+- matched pairs: for each pair testing one rule in 2 wordings, whether a run got both, only the original, only the pair, or neither
 - the scenarios most often wrong per level, with the wrong answers given
 
 ## How to run

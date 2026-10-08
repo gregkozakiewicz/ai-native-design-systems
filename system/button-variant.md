@@ -1,10 +1,10 @@
 # Button variant
 
-**Proved by:** [wheel 001](../wheels/001-button-variant/), run 3 of 7 October 2026. Claude Opus 5.5 at medium effort chose the designer's answer in 87 of 87 answers, the same answer in all 3 repeats for all 29 scenarios. Human documentation scored 63 of 87 and names alone 54 of 87.
+Proved by: [wheel 001](../wheels/001-button-variant/), run 3 of 7 October 2026. Claude Opus 5.5 at medium effort chose the designer's answer in 87 of 87 answers. It gave the same answer in all 3 repeats for all 29 scenarios. Human documentation scored 63 of 87 and names alone 54 of 87.
 
-**Scope:** one model, one component. The rules are untested on other models (wheel 002, planned) and say nothing about layouts, patterns or rendering.
+Scope: one model, one component. The rules are untested on other models (wheel 002, planned) and say nothing about layouts, patterns or rendering.
 
-**Text:** sections 1 to 5 below are the file the agent was given, with one change: 5 em-dashes in the precedence list are now colons, to meet the repo's writing rule. This was not re-run. The tested file also had a section 6 setting the experiment's answer format; it is not a rule and is left out.
+Text: sections 1 to 5 below are the file the agent was given, with one change. 5 em-dashes in the precedence list are now colons, to meet the repo's writing rule. This was not re-run. The tested file also had a section 6 setting the experiment's answer format; it is not a rule and is left out.
 
 Give this file to an agent as it is. Where rules conflict, the precedence order in section 4 decides.
 

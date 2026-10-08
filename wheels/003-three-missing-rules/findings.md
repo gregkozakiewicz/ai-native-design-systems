@@ -48,13 +48,13 @@ The models that broke read the sentence exactly. Opus gave this reason on 'Rever
 
 No single definition of "undone" fits all 3 of the designer's answers. 'Discard changes', 'Reset to defaults' and 'Revert to original' all lose state that can only come back by redoing it by hand. The designer calls the first destructive and the other two ghost. The difference is real, but it is not about undo.
 
-### The flagships lost points and the smaller models gained
+### The largest models lost points and the smaller ones gained
 
-4 of 5 flagships scored lower than in wheel 002: Opus by 6, GPT-6 Astra by 8, Grok 4.7 by 4 and Fable by 2. Gemini 3.1 Pro held. All 5 smaller or older models held or gained: Sonnet 0, Haiku 2, GPT-5.6 3, Grok 4.3 3, Gemini Flash 4. The flagships applied the precedence order most strictly, so reversibility, step 1, decided before H10 was reached. A rule that says the wrong thing costs most on the models that follow rules best.
+4 of the 5 largest models scored lower than in wheel 002, and the fifth held. Fable lost 2, Opus 6, GPT-6 Astra 8, and Grok 4.7 4, while Gemini 3.1 Pro held. All 5 smaller or older models held or gained: Sonnet 0, Haiku 2, GPT-5.6 3, Grok 4.3 3, Gemini Flash 4. The largest models applied the precedence order most strictly, so reversibility, step 1, decided before H10 was reached. A rule that says the wrong thing costs most on the models that follow rules best.
 
 ### Models agreed with each other more, including when they were wrong
 
-All 10 models gave the same majority answer on 25 of 29 scenarios, up from 23. The 4 splits are all new. 'New invoice' split 9 to 1, 'Reset to defaults' 8 to 2, 'Stay on Free' 6 to 4 and 'Revert to original' 6 to 4. On 'Revert to original' the majority now disagrees with the designer.
+All 10 models gave the same majority answer on 25 of 29 scenarios, up from 23. The 4 splits are all new. 'New invoice' split 9 to 1 and 'Reset to defaults' 8 to 2. 'Stay on Free' and 'Revert to original' both split 6 to 4. On 'Revert to original' the majority now disagrees with the designer.
 
 ## Failure modes seen
 
