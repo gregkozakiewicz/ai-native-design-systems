@@ -22,6 +22,7 @@ Visual rules for the published page
 - a line sits above and below the tiles, with a small gap before the question and answer card
 - "The question" and "The answer" render side by side in one white card with an accent edge, with the first word of the answer in large accent type, and "In scope:", "Out of scope:", and "Based on:" in bold
 - at least one chart in "What we found", with its data table beside or under it
+- in "What we found", each finding has generous space above its heading, and charts and tables have space above and below so they do not run into the text
 - a table with long descriptions puts each description under its row name, so the table keeps 4 columns or fewer on a phone
 - the example renders as before and after, side by side where the width allows
 - "What to do with this" renders as a dark panel, straight after "What we found", headed "Use these <n> steps in your own design system"
