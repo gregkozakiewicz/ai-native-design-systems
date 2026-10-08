@@ -39,10 +39,17 @@ Move questions here once a wheel has findings, with a link to the wheel.
   machine-readable system rules? Yes: 87 of 87 with rules, 63 of 87 with
   prose, 54 of 87 with names alone (run 3). See `wheels/001-button-variant/`.
 
+- Does the same button rule set hold for other models? Yes: 9 models from
+  4 companies score 80 to 87 of 87 with rules, against 60 to 73 with prose.
+  See `wheels/002-other-models/`.
+
 ## Raised by wheels
 
-- Does the same button rule set hold for other models (Sonnet 5.5, Codex,
-  Gemini)? *(from wheel 001)*
+- Can the 3 open readings in the button rules be closed with 3 sentences,
+  and do the same 9 models then agree? *(from wheel 002; candidate wheel 003)*
+- Is refusing to guess when the system is silent a property to design for?
+  5 of 9 models do it by default. *(from wheel 002)*
+
 - Does the lead for rules over prose shrink at low reasoning effort?
   *(from wheel 001)*
 - Where is the line between a secondary alternative and a ghost option, and

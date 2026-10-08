@@ -1,10 +1,8 @@
 # Findings
 
-Draft of 7 October 2026. The Gemini 3.1 Pro preview run is 12 answers short at level C, held by Google's 250 requests a day cap, and finishes on 8 October. Its figures are marked partial. The other 8 runs are complete.
-
 ## Summary
 
-The rules travel. On 9 models from 4 companies, machine-readable rules scored higher than human documentation on every one, and higher than variant names alone. With rules, 8 of 8 complete runs scored 80 of 87 or more: Opus 87, Sonnet 87, Haiku 84, GPT-6 Astra 84, Grok 4.7 83, Gemini 3.8 Flash 82, Grok 4.3 82, GPT-5.6 80. Gemini 3.1 Pro is at 70 of 75 with 12 to come.
+The rules travel. On 9 models from 4 companies, machine-readable rules scored higher than human documentation on every one, and higher than variant names alone. With rules, all 9 scored 80 of 87 or more: Opus 87, Sonnet 87, Haiku 84, GPT-6 Astra 84, Grok 4.7 83, Gemini 3.1 Pro 82, Gemini 3.8 Flash 82, Grok 4.3 82, GPT-5.6 80.
 
 Every miss with rules, on every model, traces to 3 places where the rules leave a reading open. All 3 are named in the models' own reasons, and each is one sentence away from closed.
 
@@ -19,14 +17,14 @@ Runs are in `runs/`, one folder per model, each with a `summary.md`. Opus is whe
 | Claude Haiku 4.5 | small | 84 of 87 | 68 of 87 | 54 of 87 |
 | GPT-6 Astra | flagship | 84 of 87 | 63 of 87 | 15 of 87 |
 | GPT-5.6 sol | previous flagship | 80 of 87 | 62 of 87 | 19 of 87 |
-| Gemini 3.1 Pro preview (partial) | top reachable Pro | 70 of 75 | 65 of 87 | 53 of 87 |
+| Gemini 3.1 Pro preview | top reachable Pro | 82 of 87 | 65 of 87 | 53 of 87 |
 | Gemini 3.8 Flash | small | 82 of 87 | 60 of 87 | 54 of 87 |
 | Grok 4.7 | flagship | 83 of 87 | 71 of 87 | 16 of 87 |
 | Grok 4.3 | older | 82 of 87 | 73 of 87 | 13 of 87 |
 
 One run sits outside the wheel's boundary and is reported separately: Claude Fable 5.1 at low reasoning effort, not its default. It scored 87 of 87 with rules, 70 of 87 with human documentation and 48 of 87 with names only, with all 29 scenarios consistent under rules. It cost about €1.40, the most of any run, and it is the only model that was partly a refuser at level A, answering 'none' on 28 of 84.
 
-Consistency with rules, meaning scenarios where all 3 repeats agreed, out of 29: Opus 29, Sonnet 29, Haiku 29, GPT-6 Astra 29, Gemini Flash 28, GPT-5.6 27, Grok 4.3 27, Grok 4.7 26, Gemini Pro 24 of 25 so far.
+Consistency with rules, meaning scenarios where all 3 repeats agreed, out of 29: Opus 29, Sonnet 29, Haiku 29, GPT-6 Astra 29, Gemini Flash 28, GPT-5.6 27, Grok 4.3 27, Gemini Pro 28, Grok 4.7 26.
 
 ### Rules beat human documentation on every model, by 9 to 24 points
 
@@ -55,7 +53,7 @@ The Claude models read the first and third the designer's way; most others did n
 Our setup, not the models, caused 3 stops:
 
 - Haiku 4.5 rejects the reasoning-effort setting the other Claude models accept; the first Haiku run failed on its first call and was rerun with the setting omitted
-- Gemini 3.1 Pro preview is capped at 250 requests a day on the account's tier; the run stopped at 247 of 261 and resumes the next day
+- Gemini 3.1 Pro preview is capped at 250 requests a day on the account's tier, as a rolling 24-hour window; the run stopped at 247 of 261 on 7 October and the last 14 answers were filled on 8 October with the same command, one or a few at a time as slots freed
 - Gemini 2.5 Pro, chosen as the stable fallback, is not available to new Google accounts; Gemini 3.8 Flash was used instead
 
 Two choices were corrected during the wheel, before findings were final: GPT-5.6 sol turned out to be a generation behind OpenAI's flagship, so GPT-6 Astra was added; xAI was added as a fourth company. Google's newest model, Gemini 4, is not reachable with the account's key.

@@ -1,6 +1,6 @@
 # 002: other models
 
-**Status:** running (Gemini 3.1 Pro preview finishes 8 October)
+**Status:** answered: the rules travel, with 3 open readings to close
 **Started:** 7 October 2026
 
 ## Question

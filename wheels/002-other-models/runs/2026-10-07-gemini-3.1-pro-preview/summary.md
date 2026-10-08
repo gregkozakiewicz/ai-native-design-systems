@@ -1,6 +1,6 @@
 # Results
 
-Model: gemini-3.1-pro-preview · effort: default · 247 answers
+Model: gemini-3.1-pro-preview · effort: default · 261 answers
 
 ## Headline
 
@@ -8,7 +8,7 @@ Model: gemini-3.1-pro-preview · effort: default · 247 answers
 |---|---|---|---|
 | A · names only | 61% (53/87) | 69% | 6% (5/84) |
 | B · human docs | 75% (65/87) | 93% | 0% (0/84) |
-| C · machine rules | 96% (70/73) | 100% | 0% (0/70) |
+| C · machine rules | 94% (82/87) | 97% | 0% (0/84) |
 
 Accuracy: share of answers matching the key. Consistency: share of scenarios where all runs agreed. Over-flagging: answered `none` when a variant was expected.
 
@@ -21,7 +21,7 @@ Accuracy: share of answers matching the key. Consistency: share of scenarios whe
 | Traps | 25% | 25% | 75% |
 | Conflicts | 100% | 100% | 100% |
 | Interaction & tools | 44% | 78% | 100% |
-| Matched pairs | 50% | 67% | 100% |
+| Matched pairs | 50% | 67% | 89% |
 
 ## Matched pairs
 
@@ -42,11 +42,11 @@ Original scenario vs. a rewording that tests the same rule. 'Original only' mean
 | #10 → #28 | B | 3 | 0 | 0 | 0 |
 | #13 → #29 | B | 0 | 0 | 3 | 0 |
 | #16 → #24 | C | 3 | 0 | 0 | 0 |
-| #20 → #25 | C | 1 | 0 | 0 | 0 |
-| #15 → #26 | C | 0 | 0 | 0 | 0 |
-| #11 → #27 | C | 0 | 0 | 0 | 0 |
-| #10 → #28 | C | 0 | 0 | 0 | 0 |
-| #13 → #29 | C | 0 | 0 | 0 | 0 |
+| #20 → #25 | C | 1 | 2 | 0 | 0 |
+| #15 → #26 | C | 3 | 0 | 0 | 0 |
+| #11 → #27 | C | 3 | 0 | 0 | 0 |
+| #10 → #28 | C | 3 | 0 | 0 | 0 |
+| #13 → #29 | C | 3 | 0 | 0 | 0 |
 
 ## Hardest scenarios per level
 
@@ -71,6 +71,7 @@ Original scenario vs. a rewording that tests the same rule. 'Original only' mean
 **C · machine rules**
 
 - #14 "Archive project": wrong 3×, expected `secondary`, got `ghost`
+- #25 "Stay on Free": wrong 2×, expected `secondary`, got `ghost`
 
 ## Tokens
 
