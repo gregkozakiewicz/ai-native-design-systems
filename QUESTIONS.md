@@ -52,6 +52,9 @@ Move questions here once a wheel has findings, with a link to the wheel.
   'Revert to original' ghost, in words a rule can hold? *(from wheel 003)*
 - Does H8 cover declining an upgrade, or only choices the law requires?
   *(from wheel 003)*
+- Does the step 5 sentence from wheel 003 work on reversible actions it does
+  not name, such as 'Duplicate project' on a project page? The models used it
+  only on the 3 buttons it names. *(from wheel 003)*
 - Is refusing to guess when the system is silent a property to design for?
   5 of 9 models do it by default. *(from wheel 002)*
 
