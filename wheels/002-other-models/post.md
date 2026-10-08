@@ -75,7 +75,7 @@ Each model answered 29 scenarios, 3 times each, at 3 levels. Between levels, onl
 | Gemini 3.1 Pro | top Pro model our account can reach | 82 of 87 | 65 of 87 | 53 of 87 |
 | Gemini 3.8 Flash | small | 82 of 87 | 60 of 87 | 54 of 87 |
 
-Tiers are each company's own naming, flagship first. The older Grok 4.3 did best on human written documentation, 9 points behind the rules. On every other model, including Grok 4.7, it was 16 to 24 points behind.
+Interesting note: the older Grok 4.3 did best on human written documentation, 9 points behind the rules. On every other model, including Grok 4.7, it was 16 to 24 points behind.
 
 ### Rules move models towards each other, not only towards the designer
 
