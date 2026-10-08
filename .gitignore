@@ -5,3 +5,4 @@ node_modules/
 *.log
 CLAUDE.md
 !.env.example
+HANDOVER.md
