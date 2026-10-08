@@ -77,7 +77,7 @@ Each model answered 29 scenarios, 3 times each, at 3 levels. Between levels, onl
 
 Interesting note: the older Grok 4.3 did best on human written documentation, 9 points behind the rules. On every other model, including Grok 4.7, it was 16 to 24 points behind.
 
-### Rules move models towards each other, not only towards the designer
+### Rules aligned the models with each other, as well as with the designer's answers
 
 For each scenario we asked whether all 10 models gave the same majority answer, without looking at the correct answers.
 
