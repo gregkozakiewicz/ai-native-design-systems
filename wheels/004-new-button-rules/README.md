@@ -40,7 +40,7 @@ The main run's scenarios are wheel 001's 29, with 5 descriptions changed and 2 s
 
 That makes 31 scenarios, 3 repeats each, on wheel 002's 10 models at the same settings: 930 answers.
 
-A smaller check run uses wheel 002's rules with only the examples taken out and the new names, on wheel 001's 29 unchanged scenarios: 870 answers. It shows how much the examples alone mattered, and the post mentions it briefly.
+A smaller check run uses wheel 002's rules with only the examples taken out and the new names, on wheel 001's 29 unchanged scenarios. It runs on 9 of the 10 models, without Gemini 3.1 Pro, to stay within its daily limit of 250 requests: 783 answers. It shows how much the examples alone mattered, and the post mentions it briefly.
 
 **Out of scope**
 
@@ -61,7 +61,7 @@ For the main run:
 
 The 2 new pairs are 'Archive project' with and without 'Save changes', and 'Not now' with 'No thanks'.
 
-For the check run, compare the 12 scenarios whose labels were examples with wheel 002, where the models missed 22 of 360 answers. A rise of 6 or fewer means the models read the situation, not the words. A rise of more than 20 means wheels 001 and 002 relied on matching words, and their posts need a note.
+For the check run, compare the 12 scenarios whose labels were examples with wheel 002, on the same 9 models. In wheel 002 those 9 models missed 19 of 324 answers on these 12 scenarios. A rise of 6 or fewer means the models read the situation, not the words. A rise of more than 20 means wheels 001 and 002 relied on matching words, and their posts need a note.
 
 A rise of 6 allows for variation between runs. In wheel 001, Opus's scores moved by 3 to 4 answers between runs 2 and 3, with names only and with human written documentation. That count leaves out the one scenario that changed between the runs.
 
