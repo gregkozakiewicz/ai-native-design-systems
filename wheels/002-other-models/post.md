@@ -79,7 +79,7 @@ Interesting note: the older Grok 4.3 did best on human written documentation, 9 
 
 ### Rules aligned the models with each other, as well as with the designer's answers
 
-For each scenario we asked whether all 10 models gave the same majority answer, without looking at the correct answers.
+We counted the scenarios where all 10 models gave the same answer.
 
 | Level | Scenarios where all 10 models agree |
 | --- | --- |
