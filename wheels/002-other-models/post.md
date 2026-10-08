@@ -103,7 +103,7 @@ On 'Archive project', a button on a project settings page, the models split 5 to
 
 With names only, 5 models answered 'none' on most scenarios where a variant was expected. Grok 4.3 did so on 73 of 84, GPT-6 Astra on 72, Grok 4.7 on 71, GPT-5.6 on 67, and Sonnet on 57. They took the instruction "Base your choice only on the design system reference" literally. Opus, Haiku, and Gemini 3.8 Flash never answered 'none', and Gemini 3.1 Pro did so only 5 times. Fable 5.1 sat in between, with 28 of 84.
 
-With rules, no model answered 'none' on any of the 84 scenarios where a variant was expected. When the design system has no guidance, it needs to tell the model whether to guess from training or answer 'none'. A 'none' is easier to spot than a wrong guess.
+With rules, no model answered 'none' on any of the 84 scenarios where a variant was expected. When the design system has no guidance, it needs to tell the model whether to guess from training or answer 'none'. A 'none' shows your team where the design system has a gap; a wrong guess hides it.
 
 ### Where it failed
 
