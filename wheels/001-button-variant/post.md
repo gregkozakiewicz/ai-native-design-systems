@@ -104,7 +104,7 @@ The risk with written rules is that the agent spots the rule's words in the scen
 | 2 | 29 | 12 | 84 of 87 | one scenario did not say whether the action could be undone |
 | 3 | 29 | 12 | 87 of 87 | no misses |
 
-Each fix was written down before the next run, and earlier runs were never rescored. The misses with rules were never random. In each run they were one gap, stated in the agent's own reasons, and one change closed it.
+We recorded each change before the next run. Earlier runs keep their original scores, even where we later changed a correct answer. The misses with rules were not random. In each run they had one cause, which the agent named in its own reasons. One change fixed it.
 
 ### Where it failed
 
