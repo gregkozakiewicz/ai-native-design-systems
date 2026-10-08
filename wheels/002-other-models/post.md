@@ -89,15 +89,15 @@ We counted the scenarios where all 10 models gave the same answer.
 
 ### All 32 misses come from 3 gaps in the rules
 
-Across 870 answers with rules, 32 missed. All 32 trace to 3 places where the rules leave a reading open, and in every case the model named the rule it chose.
+With rules, the models missed 32 of 870 answers. Every miss came from one of 3 questions the rules do not answer. In each case, the model's one-line reason shows which rule it followed.
 
-| Open reading | Scenarios | Misses |
+| The question the rules leave open | Buttons affected | Misses |
 | --- | --- | --- |
-| Where "optional" ends: a reversible action like archive, log out, or export, is it a real choice (secondary) or optional (ghost)? | 14, 13, 8 | 22 |
-| Which rule wins when 2 in the same step fit: 'Not now' is both a dismiss and a bypass | 28, 25 | 7 |
-| What "undone" means: does redoing work by hand count? | 18 | 3 |
+| Is a reversible action a real choice (secondary) or an optional extra (ghost)? | 'Archive project' on a settings page, 'Log out' in an account menu, 'Export CSV' above a data table | 22 of 32 |
+| When a button fits 2 rules, which one wins? | 'Not now' on a prompt to turn on notifications, 'Stay on Free' on a pricing screen | 7 of 32 |
+| Does redoing the work by hand count as undoing it? | 'Discard changes' in a dialog about unsaved changes | 3 of 32 |
 
-On 'Archive project', 5 of 10 models chose ghost against the designer's secondary. It is the one scenario where the models split down the middle.
+On 'Archive project', a button on a project settings page, the models split 5 to 5: half chose ghost, and half chose the designer's secondary.
 
 ### Models differ in what they do when the system is silent
 
