@@ -65,14 +65,14 @@ The agent sees only the scenario text and the button label. It answers with exac
 | 28 | A prompt asking the user to turn on notifications, with an "Enable notifications" button. Next to it is a button that closes the prompt and leaves notifications off; the app will ask again next week. | "Not now" | G | #10 (HR12) |
 | 29 | A checkout payment step with a "Pay with card" button. Next to it is a button that lets the user pay by bank transfer instead. | "Pay by bank transfer" | S | #13 (HR12) |
 
-### New in wheel 004 (same button, different surroundings)
+### New in wheel 004 (pairs that test the new rules)
 
-Each tests one new rule against an existing scenario. Only the surroundings or the consequence change.
+Each tests one new rule against an existing scenario. 'Archive project' changes only its surroundings. 'No thanks' changes the consequence and the label.
 
 | # | Scenario | Button | Answer | Pairs with |
 |---|---|---|---|---|
-| 30 | A project settings page for a finished project. Its settings are read-only, so the page has no "Save changes" button. Apart from the site's navigation, the only button on the page archives the project; archived projects can be restored later. | "Archive project" | P | #14 (P4) |
-| 31 | A prompt asking the user to turn on notifications, with an "Enable notifications" button. Next to it is a button that turns notifications down for good; the app will not ask again. | "No thanks" | S | #28 (HR8, HR12) |
+| 30 | A project settings page whose settings are read-only, so the page has no "Save changes" button. Apart from the site's navigation, the only button on the page archives the project; archived projects can be restored later. | "Archive project" | P | #14 (P4) |
+| 31 | A prompt asking the user to turn on notifications, with an "Enable notifications" button. Next to it is a button that turns notifications down and closes the prompt. The app will not ask again, but the user can turn notifications on in settings at any time. | "No thanks" | S | #28 (HR8, HR12) |
 
 ## Changes from wheel 001's scenarios
 
@@ -84,5 +84,5 @@ The designer approved each change on 8 October 2026. They are recorded in wheel 
 - 'Revert to original' now names the "Save" button in the top bar and the "Crop" and "Filters" buttons beside it. The answer stays G.
 - 'Not now' now says the app will ask again next week, so the button postpones the decision. The answer stays G.
 - New scenario 30: 'Archive project' as the only button in the main area of the page, answered P.
-- New scenario 31: 'No thanks', which declines notifications for good, answered S.
+- New scenario 31: 'No thanks', which declines notifications and is not asked again, answered S. The user can still turn notifications on in settings, so the button is not destructive.
 - The "Pairs with" column uses the new names HR and P.

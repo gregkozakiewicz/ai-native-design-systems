@@ -14,9 +14,9 @@ variants:
   secondary:
     intent: a real alternative to the primary; a choice the user may reasonably make
   ghost:
-    intent: available but not recommended; optional, rare or repeated actions
+    intent: available but not recommended
   destructive:
-    intent: removes data or has effects the user cannot undo
+    intent: permanently removes content people created, which would have to be recreated from memory
   none:
     intent: no variant applies; flag it instead of forcing one
 ```
@@ -32,13 +32,13 @@ hard_rules:
   - id: HR3
     rule: an action is never destructive if it can be undone later, or if all it removes are choices the user can make again from the options on screen
   - id: HR4
-    rule: the button that backs out of a dialog without acting is always secondary
+    rule: the button that backs out of a dialog without acting is always secondary; a button that postpones a decision follows HR12 instead
   - id: HR5
     rule: a button that only closes something that asks the user for no decision is secondary, even when it is the only button; primary is reserved for actions that move the user forward
   - id: HR6
     rule: a button that is repeated on every item in a list or grid is ghost, never primary or secondary
   - id: HR7
-    rule: when two actions are equally important, the positive or forward-moving one is primary and the other is secondary; never two primaries
+    rule: when two actions are equally important answers to the same decision, the positive or forward-moving one is primary and the other is secondary; never two primaries
   - id: HR8
     rule: when the view asks the user to decide on a recommended option, the recommended option is primary and the button that declines it is secondary; it must remain a visible button, never ghost
   - id: HR9
@@ -46,7 +46,7 @@ hard_rules:
   - id: HR10
     rule: an action that undoes the user's own edits, is rarely needed and cannot cause permanent loss, is ghost
   - id: HR11
-    rule: an action that opens a side task rather than completing the current task is ghost
+    rule: an action that opens a side task, leads to further information, or adds something optional to the current task, rather than completing it, is ghost
   - id: HR12
     rule: an alternative that postpones or skips the current step, leaving the decision for later, is ghost; an alternative that completes the task another way is secondary
 ```
@@ -73,9 +73,9 @@ Apply in this order; the first rule that applies wins.
 
 - **P1: Reversibility**. Can it be undone? Decides destructive vs not (HR2, HR3).
 - **P2: Interaction**. Is it a plain click or tap? If not, answer none.
-- **P3: Role in the view**. Does it back out, dismiss, repeat, bypass, undo the user's own edits, or open a side task? (HR4, HR5, HR6, HR10, HR11, HR12)
+- **P3: Role in the view**. Does it back out of a dialog, close something that asks for no decision, repeat on every item, postpone or skip a step, undo the user's own edits, open a side task, lead to further information, or add something optional? (HR4, HR5, HR6, HR10, HR11, HR12)
 - **P4: Recommendation**. Is it the one action the product recommends? (HR1, HR7, HR8, HR9) When an action is the only one in the main area of a view, and no role rule applies, it is primary. Navigation, menus and footers are not the main area.
-- **P5: Emphasis**. Anything left: a reversible action the user came to the view to do, or may reasonably do there, is secondary; ghost is only for actions most users never take on that view.
+- **P5: Emphasis**. Anything left: if the user came to the view to do it, or may reasonably do it there, it is secondary, even if most users never take it. Otherwise it is ghost.
 
 ## 5. Unknowns
 

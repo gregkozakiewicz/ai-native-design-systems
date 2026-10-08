@@ -21,12 +21,17 @@ The main run uses the rewritten rules, with every change recorded in wheel 003's
 
 - the new names: hard rules HR1 to HR12, never rules NR1 to NR5, and precedence steps P1 to P5
 - every example that names a test button taken out
-- P5 as amended in wheel 003, without its examples
+- P5 from wheel 003, without its examples, and reworded so its 2 halves cannot both apply
 - the hierarchy rule in P4: an action that is the only one in the main area of a view, with no role rule applying, is primary
 - new HR2 and HR3: an action is destructive when the lost content would have to be recreated from memory
 - new HR8 and HR12: declining a recommended option is secondary, and postponing a step is ghost
 - reworded HR5: closing something that asks for no decision is secondary
 - HR10 added to P3
+- HR4 sends a button that postpones a decision to HR12
+- HR7 applies only when 2 actions are answers to the same decision
+- HR11 also covers a button that leads to further information or adds something optional to the task
+- P3's question uses the same words as the new hard rules
+- section 1 describes destructive and ghost in the same way as the new hard rules
 
 The main run's scenarios are wheel 001's 29, with 5 descriptions changed and 2 scenarios added:
 
@@ -36,11 +41,13 @@ The main run's scenarios are wheel 001's 29, with 5 descriptions changed and 2 s
 - 'Discard changes' says what the unsaved changes are, and stays destructive
 - 'Not now' says the app will ask again next week, and stays ghost
 - new: 'Archive project' alone in the main area of the page, answered primary
-- new: 'No thanks' turns notifications down for good, answered secondary
+- new: 'No thanks' turns notifications down and is not asked again, but the user can turn them on in settings, answered secondary
 
 That makes 31 scenarios, 3 repeats each, on wheel 002's 10 models at the same settings: 930 answers.
 
 A smaller check run uses wheel 002's rules with only the examples taken out and the new names, on wheel 001's 29 unchanged scenarios. It runs on 9 of the 10 models, without Gemini 3.1 Pro, to stay within its daily limit of 250 requests: 783 answers. It shows how much the examples alone mattered, and the post mentions it briefly.
+
+Some of these changes came from the check described under 'Checked before the run'. They are the last 6 rule changes, the rewording of P5, and the wording of the 2 new scenarios.
 
 **Out of scope**
 
@@ -66,3 +73,12 @@ For the check run, compare the 12 scenarios whose labels were examples with whee
 A rise of 6 allows for variation between runs. In wheel 001, Opus's scores moved by 3 to 4 answers between runs 2 and 3, with names only and with human written documentation. That count leaves out the one scenario that changed between the runs.
 
 The check run also carries the new names, so it differs from wheel 002 in 2 ways, not one.
+
+## Checked before the run
+
+On 8 October 2026, before any model ran, 19 Claude agents read the new rules against all 31 scenarios. 5 read in different ways, such as strictly in order or skimming. Others checked each scenario where a reader disagreed, and one compared the files with the designer's approved decisions.
+
+Read in order, the rules gave the designer's answer on all 31. But 8 scenarios had a second reading a model could plausibly take. 4 of these appeared only because the examples were taken out. The designer approved a change for each one, and none of the designer's answers changed.
+
+The check used Claude models only, so it may have missed readings that models from other companies take.
+
