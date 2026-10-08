@@ -99,11 +99,11 @@ With rules, the models missed 32 of 870 answers. Every miss came from one of 3 q
 
 On 'Archive project', a button on a project settings page, the models split 5 to 5: half chose ghost, and half chose the designer's secondary.
 
-### Models differ in what they do when the system is silent
+### Models differ in what they do when the design system has no guidance
 
 With names only, 5 models answered 'none' on most scenarios where a variant was expected. Grok 4.3 did so on 73 of 84, GPT-6 Astra on 72, Grok 4.7 on 71, GPT-5.6 on 67, and Sonnet on 57. They took the instruction "Base your choice only on the design system reference" literally. Opus, Haiku, and Gemini 3.8 Flash never answered 'none', and Gemini 3.1 Pro did so only 5 times. Fable 5.1 sat in between, with 28 of 84.
 
-With rules, no model answered 'none' on any of the 84 scenarios where a variant was expected. A design system read by several models has to decide which behaviour it wants when it is silent; the refusers are easier to catch.
+With rules, no model answered 'none' on any of the 84 scenarios where a variant was expected. When the design system has no guidance, it needs to tell the model whether to guess from training or answer 'none'. A 'none' is easier to spot than a wrong guess.
 
 ### Where it failed
 
@@ -120,7 +120,7 @@ With rules, no model answered 'none' on any of the 84 scenarios where a variant 
 
 1. Write button rules once, with IDs and a precedence order; they held on 10 models without tuning.
 2. Run your rules on 3 or 4 models and list where they split. The splits are your gaps, and you can find them before deciding the correct answers.
-3. Decide what the system wants when it is silent: a guess from convention, or 'none'.
+3. Decide what the model should do when the design system has no guidance: guess from convention, or answer 'none'.
 4. Write the 3 missing rules, then run again; a rule enters the system only when every model reads it the same way.
 
 Nothing changes in the system yet. The 12 rules stay as they are, with a note of the 10 models they were tested on. The 3 missing rules are a candidate wheel 003.
@@ -156,7 +156,7 @@ Nothing changes in the system yet. The 12 rules stay as they are, with a note of
 **Questions this raises**
 
 - can the 3 open readings be closed with 3 sentences, and do the same 10 models then agree
-- is refusing to guess when the system is silent a property to design for
+- should a design system tell models to answer 'none' when it has no guidance
 - does the lead for rules shrink at low reasoning effort on the models that argued with themselves
 
 **Changes to this post**
