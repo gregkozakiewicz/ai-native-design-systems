@@ -69,6 +69,16 @@ On 8 October 2026 the designer approved these 2 hard rules for the next run. The
 
 The next run's copy of 'Discard changes' says what the unsaved changes are, such as "unsaved changes to a written report". Without that, a model cannot tell whether the changes are typed content or settings.
 
+## Declining a decision is not the same as postponing it
+
+This answers the second of the 2 decisions above. 'Stay on Free' on a pricing screen declines the option the screen recommends. It is a decision, like 'Reject all' on a cookie banner, so it stays as visible as the option it declines. A button that postpones a step leaves the decision for later, so it can be ghost.
+
+On 8 October 2026 the designer approved these 2 hard rules for the next run. They do not overlap, so neither needs to win over the other.
+
+> HR8: when the view asks the user to decide on a recommended option, the recommended option is primary and the button that declines it is secondary; it must remain a visible button, never ghost
+>
+> HR12: an alternative that postpones or skips the current step, leaving the decision for later, is ghost; an alternative that completes the task another way is secondary
+
 Wheel 001's scenario file stays as it is, because wheels 001 to 003 were scored against it.
 
 ## Examples in the rules that match test buttons
