@@ -10,7 +10,7 @@ With 12 written rules, Claude chose the correct button variant in 87 of 87 answe
 
 ## The question
 
-Can an AI agent consistently choose the correct button variant using only machine-readable design system rules? Agents building user interfaces today pick variants from prose documentation or from habit. When they get it wrong, every screen carries a different idea of what matters most.
+Can an AI agent consistently choose the correct button variant using only machine-readable design system rules? Agents building user interfaces today choose variants from human written documentation, conventions learned in training, or what they learned from the project's code repository. When they choose wrongly, their button choices can make the wrong actions look most important.
 
 **In scope:** 4 button variants, primary, secondary, ghost, and destructive, plus 'none' for a control the system does not cover, across 29 written scenarios.
 **Out of scope:** other components, visual rendering, other models.
