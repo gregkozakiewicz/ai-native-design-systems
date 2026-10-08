@@ -17,7 +17,7 @@ Can an AI agent consistently choose the correct button variant using only machin
 
 ## The answer
 
-Yes. When given the rules, Claude Opus 5.5 got every one of 87 answers right and gave the same answer every time it was asked. When given documentation written the way design system owners usually write it, it got 63 of 87. It also changed its mind between repeats on 3 of 29 scenarios. The evidence covers one model, one component, and one designer's decision, so it says nothing yet about other models or larger choices.
+Yes. When given the rules, Claude Opus 5.5 got every one of 87 answers right and gave the same answer every time it was asked. When given documentation written the way design system owners usually write it, it got 63 of 87. It also changed its mind between repeats on 3 of 29 scenarios. Based on one model, one component, and one designer's decision, the result says nothing yet about other models or larger choices.
 
 ## One example
 
