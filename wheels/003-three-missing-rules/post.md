@@ -1,4 +1,4 @@
-# 3 sentences meant to fix the last 32 misses raised them to 40
+# 3 amended rules meant to fix the last 32 misses raised them to 40
 
 With the rules, models still score 76 to 87 of 87; 3 sentences meant to fix the last 32 misses raised them to 40.
 
