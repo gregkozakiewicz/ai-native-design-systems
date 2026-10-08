@@ -1,6 +1,6 @@
 # 003: three missing rules
 
-**Status:** running
+**Status:** answered: no, misses rose from 32 to 40; one sentence worked, two did not
 **Started:** 8 October 2026
 
 ## Question

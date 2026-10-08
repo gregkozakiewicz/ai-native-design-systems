@@ -43,10 +43,15 @@ Move questions here once a wheel has findings, with a link to the wheel.
   4 companies score 80 to 87 of 87 with rules, against 60 to 73 with prose.
   See `wheels/002-other-models/`.
 
+- Can the 3 open readings in the button rules be closed with 3 sentences?
+  No: misses rose from 32 to 40. See `wheels/003-three-missing-rules/`.
+
 ## Raised by wheels
 
-- Can the 3 open readings in the button rules be closed with 3 sentences,
-  and do the same 9 models then agree? *(from wheel 002; candidate wheel 003)*
+- What makes 'Discard changes' destructive but 'Reset to defaults' and
+  'Revert to original' ghost, in words a rule can hold? *(from wheel 003)*
+- Does H8 cover declining an upgrade, or only choices the law requires?
+  *(from wheel 003)*
 - Is refusing to guess when the system is silent a property to design for?
   5 of 9 models do it by default. *(from wheel 002)*
 
