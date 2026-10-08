@@ -46,6 +46,10 @@ Move questions here once a wheel has findings, with a link to the wheel.
 - Can the 3 open readings in the button rules be closed with 3 sentences?
   No: misses rose from 32 to 40. See `wheels/003-three-missing-rules/`.
 
+- Do rewritten button rules, with no examples that name test buttons, give
+  the designer's answers on 10 models? Partly: misses fell from 32 to 13 of
+  930, and 6 of 10 models scored 93 of 93. See `wheels/004-new-button-rules/`.
+
 ## Raised by wheels
 
 - What makes 'Discard changes' destructive but 'Reset to defaults' and
@@ -55,6 +59,13 @@ Move questions here once a wheel has findings, with a link to the wheel.
 - Does the step 5 sentence from wheel 003 work on reversible actions it does
   not name, such as 'Duplicate project' on a project page? The models used it
   only on the 3 buttons it names. *(from wheel 003)*
+- Why does Haiku 4.5 read a typed report as "choices the user can make
+  again", and does HR2 need to say what content is? *(from wheel 004)*
+- Should P5's 2 halves be one test, so a model cannot stop at "the user did
+  not come to this view"? *(from wheel 004)*
+- Does HR11's "adds something optional" need a limit? It caught 'Export
+  CSV' and 'Archive project' on Grok 4.3. *(from wheel 004)*
+- Do the new names HR, NR and P change answers on their own? *(from wheel 004)*
 - Is refusing to guess when the system is silent a property to design for?
   5 of 9 models do it by default. *(from wheel 002)*
 
