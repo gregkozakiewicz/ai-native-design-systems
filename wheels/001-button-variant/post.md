@@ -23,7 +23,7 @@ Yes. When given the rules, Claude Opus 5.5 got every one of 87 answers right and
 
 ## One example
 
-The agent sees a short instruction, the reference text for its level, and one scenario. This is scenario 21, as seen by the agent.
+The agent sees a short instruction, the design system text for its level, and one scenario. This is scenario 21, as seen by the agent.
 
 **The task**
 
@@ -63,7 +63,7 @@ The rules say what a variant is for, so the agent could tell this control falls 
 
 ### Rules beat human written documentation by 28 points and names alone by 38
 
-Each of the 29 scenarios was sent to the model 3 times at each of 3 levels. Only the reference text changed between levels.
+Each of the 29 scenarios was sent to the model 3 times at each of 3 levels. Between levels, only the design system text given to the model changed: names only, human written documentation, or rules.
 
 ```
 names only                   ████████████████████████████████████████░░░░░░░░░░░░░░░░░░░░░░░░  54 of 87
@@ -141,7 +141,7 @@ The 12 rules in `wheels/001-button-variant/experiment/levels/C-machine-rules.md`
 | Setting | Value |
 | --- | --- |
 | Models | Claude Opus 5.5, through the Anthropic application programming interface (API), at medium reasoning effort |
-| Information levels | the reference text only: names, human written documentation, or machine-readable rules |
+| Information levels | only the design system text given to the model: names only, human written documentation, or machine-readable rules |
 | Scenarios | 29, in `experiment/scenarios.md`, grouped as controls, context, traps, conflicts, interaction, and matched pairs |
 | Repeats | 3 per scenario per level, each a fresh conversation |
 | Scoring | mechanical, by `experiment/score.py`, against the correct answers decided before each run |

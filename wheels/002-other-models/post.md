@@ -60,7 +60,7 @@ With rules, GPT-6 Astra reached the designer's answer in 3 of 3 repeats, citing 
 
 ### Rules beat human written documentation on all 10 models, by 9 to 24 points
 
-Each model answered 29 scenarios, 3 times each, at 3 levels. Only the reference text changed.
+Each model answered 29 scenarios, 3 times each, at 3 levels. Between levels, only the design system text given to the model changed: names only, human written documentation, or rules.
 
 | Model | Tier | Rules | Human written documentation | Names only |
 | --- | --- | --- | --- | --- |
