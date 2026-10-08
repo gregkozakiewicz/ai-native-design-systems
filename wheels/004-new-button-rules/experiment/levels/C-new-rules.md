@@ -40,7 +40,7 @@ hard_rules:
   - id: HR7
     rule: when two actions are equally important answers to the same decision, the positive or forward-moving one is primary and the other is secondary; never two primaries
   - id: HR8
-    rule: when the view asks the user to decide on a recommended option, the recommended option is primary and the button that declines it is secondary; it must remain a visible button, never ghost
+    rule: when the view asks the user to decide on a recommended option, the recommended option is primary and the button that declines it is secondary; it must remain a visible button, never ghost; a button that postpones a decision follows HR12 instead
   - id: HR9
     rule: when something has failed and there is one clear recovery action, that action is primary wherever it appears
   - id: HR10
@@ -74,7 +74,7 @@ Apply in this order; the first rule that applies wins.
 - **P1: Reversibility**. Can it be undone? Decides destructive vs not (HR2, HR3).
 - **P2: Interaction**. Is it a plain click or tap? If not, answer none.
 - **P3: Role in the view**. Does it back out of a dialog, close something that asks for no decision, repeat on every item, postpone or skip a step, undo the user's own edits, open a side task, lead to further information, or add something optional? (HR4, HR5, HR6, HR10, HR11, HR12)
-- **P4: Recommendation**. Is it the one action the product recommends? (HR1, HR7, HR8, HR9) When an action is the only one in the main area of a view, and no role rule applies, it is primary. Navigation, menus and footers are not the main area.
+- **P4: Recommendation**. Is it the one action the product recommends? (HR1, HR7, HR8, HR9) When an action is the only one in the main area of a view, and no role rule applies, it is primary. It counts as the one action the product recommends, even if it does not move the user forward. A page header is part of the main area; navigation, menus and footers are not.
 - **P5: Emphasis**. Anything left: if the user came to the view to do it, or may reasonably do it there, it is secondary, even if most users never take it. Otherwise it is ghost.
 
 ## 5. Unknowns

@@ -80,5 +80,13 @@ On 8 October 2026, before any model ran, 19 Claude agents read the new rules aga
 
 Read in order, the rules gave the designer's answer on all 31. But 8 scenarios had a second reading a model could plausibly take. 4 of these appeared only because the examples were taken out. The designer approved a change for each one, and none of the designer's answers changed.
 
-The check used Claude models only, so it may have missed readings that models from other companies take.
+On 9 October 2026, a second check by 17 Claude agents read the changed rules the same way. The 8 risks were gone, and 4 smaller ones remained. The designer approved 3 more changes:
+
+- HR8 sends a button that postpones a decision to HR12, as HR4 does
+- P4 says the only action in the main area counts as the one the product recommends, even if it does not move the user forward
+- P4 says a page header is part of the main area
+
+The fourth risk, that a model calls 'Export CSV' a side task, was left as it is. The suggested fix copied the scenario's own words into the rules.
+
+Both checks used Claude models only, so they may have missed readings that models from other companies take.
 
