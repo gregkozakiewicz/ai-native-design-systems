@@ -51,6 +51,11 @@ On 8 October 2026 the designer approved these changes to the next run's copy of 
 - 'Archive project' on a project settings page gets 'Save changes' in its description, and stays secondary
 - a new scenario has 'Archive project' alone in the main area of the page, answered primary
 - 'Export CSV' above a data table gets 'Delete 3 rows' next to it, as in the delete scenario, and stays secondary
+- 'Revert to original' in an image editor names a 'Save' button in the top bar and 'Crop' and 'Filters' buttons beside it in the toolbar, and stays ghost
+- 'Reset to defaults' next to 'Save changes' on a settings page stays ghost
+- H10 keeps its wording and is added to the role step of the precedence order, so it is checked before the recommendation step
+
+The designer's reasoning for both ghost answers: on a page with 'Save changes', a button that undoes the last change, and 'Reset to defaults', the 3 buttons take 3 levels. 'Save changes' is primary, undoing the last change is secondary, and the rarely used reset is ghost.
 
 Wheel 001's scenario file stays as it is, because wheels 001 to 003 were scored against it.
 
