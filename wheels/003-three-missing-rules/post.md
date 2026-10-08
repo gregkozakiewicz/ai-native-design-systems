@@ -1,23 +1,23 @@
-# 3 new sentences in the button rules raised misses from 32 to 40
+# 3 sentences meant to fix the last 32 misses raised them to 40
 
-Of 3 sentences added to the button rules, one worked and 2 made other buttons worse: misses rose to 40 of 870 answers.
+With the rules, models still score 76 to 87 of 87; 3 sentences meant to fix the last 32 misses raised them to 40.
 
 **Wheel:** `wheels/003-three-missing-rules/` · **Runs dated:** 8 October 2026 · **Status:** answered
 
-| 40 of 870 | 22 of 22 | 24 of 60 | 6 of 10 |
+| 10 of 10 | 40 of 870 | 22 of 22 | 6 of 10 |
 | --- | --- | --- | --- |
-| answers that missed with the 3 sentences, up from 32 without them | misses fixed on the 3 buttons that the one working sentence was aimed at | answers that missed on 2 buttons that reset the user's edits, up from 0 | models that now call 'Revert to original' in an image editor destructive, not ghost |
+| models still scored 76 or more of 87 with the rules | answers that missed with the 3 sentences, up from 32 without them | misses fixed on the 3 buttons that the one working sentence was aimed at | models that now call 'Revert to original' in an image editor destructive, not ghost |
 
 ## The question
 
-Do the 3 sentences proposed in [wheel 002](../002-other-models/post.md) fix its 32 misses without causing new ones, on the same 10 models? In wheel 002, 10 models chose button variants with the same 12 rules. Every one of their 32 misses, the answers that differed from the designer's, came from 3 gaps in the rules. While those gaps remain, the rules cannot enter the design system as tested on 10 models.
+Do the 3 sentences proposed in [wheel 002](../002-other-models/post.md) fix its 32 misses without causing new ones, on the same 10 models? In wheel 002, 10 models chose button variants with the same 12 rules and scored 80 to 87 of 87. Their 32 misses, the answers that differed from the designer's, all came from 3 gaps in the rules. While those gaps remain, the rules cannot enter the design system as tested on 10 models.
 
 **In scope:** wheel 001's 29 scenarios and correct answers, wheel 002's 10 models at the same settings, and the rules with 3 sentences added.
 **Out of scope:** wheel 002's other 2 levels, names only and human written documentation, which did not change; any other change to the rules; new scenarios.
 
 ## The answer
 
-No. The 3 sentences raised the misses from 32 to 40 of 870 answers, where we expected fewer than 10. One sentence fixed all 22 misses it was aimed at. The other 2 each improved one button and made others worse. The models followed the new text as written, and the text said something the designer did not mean.
+No. The rules still work: with the 3 sentences, every model scored 76 to 87 of 87. But the sentences raised the misses from 32 to 40 of 870, where we expected fewer than 10. One sentence fixed all 22 misses it was aimed at, and the other 2 each improved one button and made others worse. The models followed the new text as written, and the text said something the designer did not mean.
 
 **Based on:** one component, 10 models, and the 3 sentences tested together. It does not show how each sentence works on its own.
 
