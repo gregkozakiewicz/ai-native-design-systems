@@ -35,7 +35,7 @@ It cost 2 misses elsewhere. GPT-6 Astra called 'New invoice' secondary in 2 of 3
 
 The sentence on which rule wins inside a step took 'Not now' from 3 misses to 0. On 'Stay on Free' misses rose from 4 to 12.
 
-The sentence says an equal alternative (H8) beats a bypass (H12). It only works if a model first decides H8 applies. H8 is worded for cases like cookie consent: "a legally or ethically equal alternative". Sonnet and GPT-5.6 read 'Stay on Free' that way and chose secondary. GPT-6 Astra, both Grok models and both Gemini models did not consider H8 at all. The sentence's own example then made the bypass rule easier to reach.
+The sentence says an equal alternative (H8) beats a bypass (H12). It only works if a model first decides H8 applies. H8 is worded for cases like cookie consent: "a legally or ethically equal alternative". Fable, Opus, Sonnet and GPT-5.6 cited H8 and chose secondary. GPT-6 Astra, both Grok models and Gemini 3.1 Pro never cited H8. Gemini 3.8 Flash cited it in 2 of 3 answers and chose ghost in the third. The sentence's own example then made the bypass rule easier to reach.
 
 ### Sentence 3 fixed 'Discard changes' and broke 2 scenarios that were unanimous
 
