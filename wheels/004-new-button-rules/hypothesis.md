@@ -24,4 +24,4 @@ In wheel 003, the models followed the amended rules as written. Every miss came 
 - a rule moving a scenario it was not aimed at, as all 3 amended rules did in wheel 003
 - most models calling 'Archive project' alone secondary, which would mean the hierarchy rule is unclear
 - 'Not now' and 'No thanks' getting the same answer on most models, which would mean the models do not separate declining from postponing
-- in the check run, misses rising by more than 20 on the 12 scenarios whose labels were examples, meaning wheels 001 and 002 relied on words
+- more than 20 extra misses in the check run on the scenarios whose labels were examples, a sign that the earlier wheels matched words
