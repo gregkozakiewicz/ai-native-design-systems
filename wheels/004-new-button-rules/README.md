@@ -1,42 +1,68 @@
-# 004: rules without button examples
+# 004: new button rules
 
 **Status:** proposed
 **Started:** 2026-10-08
 
 ## Question
 
-Do the 10 models still give the designer's answers when the rules no longer list examples that match the test buttons?
+Do the rewritten button rules, with no examples that name test buttons, give the designer's answers on the same 10 models?
 
 ## Why it matters
 
-Several rules give examples in brackets that are the labels of test buttons, such as "skip, not now, maybe later" in H12. A model can match a label to an example instead of reading the situation. Wheels 001 and 002 report 80 to 87 of 87 with rules, and we cannot tell how much of that comes from matching words. If it is a lot, the published posts for wheels 001 and 002 need a note, and the rules need different examples.
+Wheel 003 amended 3 rules and raised the misses from 32 to 40 of 870. The designer then rewrote the rules that broke and added a hierarchy rule, all recorded in wheel 003's `implications.md`. If the rewritten rules work, the button rules can enter `system/` as tested on 10 models.
+
+The rules also listed test button labels as examples, such as "skip, not now, maybe later". This wheel takes them out, so a good score cannot come from matching words.
 
 ## Boundary
 
 **In scope**
 
-- wheel 002's rules file with every example that matches a test button taken out, and nothing else changed
-- the examples taken out: H3 "log out, archive, reset, unsubscribe", H4 "cancel, close, go back", H11 "attach a file, give feedback, learn more", and H12 "skip, not now, maybe later"
-- the never rule "primary for cancel, close, dismiss or skip" names the role instead: a button that backs out, dismisses something, or skips a step
-- the never rule on controls loses its examples "hold, drag, toggle, slider"
-- wheel 001's 29 scenarios and correct answers, unchanged
-- wheel 002's 10 models at the same settings
-- rules only, 3 repeats per scenario per model: 870 answers
+The main run uses the rewritten rules, with every change recorded in wheel 003's `implications.md`:
+
+- the new names: hard rules HR1 to HR12, never rules NR1 to NR5, and precedence steps P1 to P5
+- every example that names a test button taken out
+- P5 as amended in wheel 003, without its examples
+- the hierarchy rule in P4: an action that is the only one in the main area of a view, with no role rule applying, is primary
+- new HR2 and HR3: an action is destructive when the lost content would have to be recreated from memory
+- new HR8 and HR12: declining a recommended option is secondary, and postponing a step is ghost
+- reworded HR5: closing something that asks for no decision is secondary
+- HR10 added to P3
+
+The main run's scenarios are wheel 001's 29, with 5 descriptions changed and 2 scenarios added:
+
+- 'Archive project' names 'Save changes' beside it, and stays secondary
+- 'Export CSV' names 'Delete 3 rows' beside it, and stays secondary
+- 'Revert to original' names 'Save', 'Crop' and 'Filters', and stays ghost
+- 'Discard changes' says what the unsaved changes are, and stays destructive
+- 'Not now' says the app will ask again next week, and stays ghost
+- new: 'Archive project' alone in the main area of the page, answered primary
+- new: 'No thanks' turns notifications down for good, answered secondary
+
+That makes 31 scenarios, 3 repeats each, on wheel 002's 10 models at the same settings: 930 answers.
+
+A smaller check run uses wheel 002's rules with only the examples taken out and the new names, on wheel 001's 29 unchanged scenarios: 870 answers. It shows how much the examples alone mattered, and the post mentions it briefly.
 
 **Out of scope**
 
-- the new rules and scenario changes recorded in wheel 003's `implications.md`, which go to wheel 005
-- the new names HR, NR and P1 to P5: the rules file keeps wheel 002's names, so the examples are the only change the models see
-- names only and human written documentation, which have no examples to take out
+- names only and human written documentation
+- any rule change not recorded in wheel 003's `implications.md`
+- other components
 
 ## Success criteria
 
-12 of the 29 scenarios have a button whose label appears in an example: 'Add file', 'Archive project', 'Cancel', 'Close', 'Dismiss', 'Hold to record', 'Learn more', 'Log out', 'Not now', 'Reset to defaults', 'Send feedback', and 'Skip for now'. In wheel 002 the models missed 22 of the 360 answers on these 12, and 10 of the 510 answers on the other 17.
+For the main run:
 
-- answered "yes, the models read the situation" if misses on the 12 matched scenarios rise by 6 or fewer, to 28 or fewer of 360, and no model loses more than 4 of 87 against wheel 002
-- answered "no, the scores relied on matching words" if misses on the 12 matched scenarios rise by more than 20, to over 42 of 360
-- answered "partly" for anything in between, naming the scenarios that moved
-- if misses on the other 17 scenarios rise by more than 6, report it separately, because taking out examples should not affect them
+- answered "yes" if the misses fall to 10 or fewer of 930, and every model scores 90 or more of 93
+- also needed for "yes": at least 9 of 10 models get both sides of each new pair right
+- answered "partly" if the misses fall below 32 but stay above 10, naming the scenarios that still miss
+- answered "no" if the misses are 32 or more of 930
+- also answered "no" if a scenario on which all 10 models agreed in wheel 002 now splits
 - abandon if a model cannot run at the same setting as in wheel 002
 
-A rise of 6 allows for variation between runs. In wheel 001, with names only and with human written documentation, Opus's scores moved by 3 to 4 answers between runs 2 and 3, on the 28 scenarios that did not change.
+The 2 new pairs are 'Archive project' with and without 'Save changes', and 'Not now' with 'No thanks'.
+
+For the check run, compare the 12 scenarios whose labels were examples with wheel 002, where the models missed 22 of 360 answers. A rise of 6 or fewer means the models read the situation, not the words. A rise of more than 20 means wheels 001 and 002 relied on matching words, and their posts need a note.
+
+A rise of 6 allows for variation between runs. In wheel 001, Opus's scores moved by 3 to 4 answers between runs 2 and 3, with names only and with human written documentation. That count leaves out the one scenario that changed between the runs.
+
+The check run also carries the new names, so it differs from wheel 002 in 2 ways, not one.
