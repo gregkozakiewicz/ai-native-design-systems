@@ -69,6 +69,15 @@ On 8 October 2026 the designer decided to take these examples out of the next ru
 
 Where a never rule names labels, it will name the role instead, such as a button that backs out, dismisses or skips.
 
+## Names in the next run's rules
+
+On 8 October 2026 the designer decided these names, starting with wheel 004. Wheels 001 to 003 keep the names their models read.
+
+- the hard rules H1 to H12 become HR1 to HR12
+- the never rules are numbered NR1 to NR5, in the order they appear
+- the precedence steps are P1: Reversibility, P2: Interaction, P3: Role in the view, P4: Recommendation, and P5: Emphasis
+- the section keeps the name 'Precedence'
+
 ## What this does not justify
 
 - a claim that written rules stopped working, since Sonnet scored 87 of 87 and the 10 models agree more than before
