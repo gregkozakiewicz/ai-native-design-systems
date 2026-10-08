@@ -10,9 +10,10 @@ implications.md). The post is the readable version of it, so it stays
 short: the reader gets the result in the first screen and the detail at the
 bottom.
 
-Write to the rules in CLAUDE.md under "Writing". The checklist at the end is
-the short version. Text in angle brackets is a prompt to you: replace it or
-delete it. Delete every comment before publishing.
+Write to the rules in the 'Writing' section of CLAUDE.md. They are the only
+writing rules, so this template does not repeat them. Text in angle brackets
+is a prompt to you: replace it or delete it. Delete every comment before
+publishing.
 
 Visual rules for the published page
 - the 4 numbers under the title render as tiles, not a table
@@ -194,15 +195,5 @@ Content
 - [ ] no FAQ
 
 Writing
-- [ ] British English
-- [ ] sentences under 25 words, paragraphs under 5 sentences
-- [ ] active voice, "you" and "we", present tense
-- [ ] every specialist term explained on first use, every abbreviation expanded on first use
-- [ ] headings are statements in sentence case, never questions, no links in them
-- [ ] bullets have a lead-in line, start lower case, one sentence each, no full stops
-- [ ] no italics, no bold for emphasis, bold only for interface elements and the run-in labels in this template
-- [ ] code, filenames and commands in code font
-- [ ] link text says where it goes, no "click here", no bare URLs in prose
-- [ ] none of the words on the GOV.UK avoid list, no "simply", "easy", "just", "please note"
-- [ ] no em-dashes, no exclamation marks, no metaphors
+- [ ] every rule in the 'Writing' section of CLAUDE.md, checked line by line, including the rejected words
 -->
