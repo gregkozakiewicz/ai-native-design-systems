@@ -1,6 +1,6 @@
 # The same 12 button rules work on 10 models from 4 companies
 
-Ten models from 4 companies chose the correct button variant in 80 to 87 of 87 answers with the rules. With human written documentation they managed 60 to 73.
+10 models from 4 companies chose the correct button variant in 80 to 87 of 87 answers with the rules. With human written documentation they managed 60 to 73.
 
 **Wheel:** `wheels/002-other-models/` · **Runs dated:** 7 and 8 October 2026 · **Status:** answered
 
@@ -113,7 +113,7 @@ With names only, 5 models answered 'none' on most scenarios. Grok 4.3 did so on 
 
 - one component; nothing here says rules work for layouts, patterns or whole screens
 - each model at one reasoning setting; we did not vary it
-- Google's newest model, Gemini 4, is not reachable with our key
+- Google's newest model, Gemini 4, is not available to our account
 - the correct answers are one designer's judgement; on 'Archive project' half the models read the rule the other way
 - the documentation level was written by us in the style of a typical design system site, not taken from a real one
 
@@ -136,7 +136,7 @@ Nothing changes in the system yet. The 12 rules stay as they are, with a note of
 | Information levels | wheel 001's, unchanged: names, documentation, rules |
 | Scenarios | wheel 001's 29, unchanged, with the same correct answers |
 | Repeats | 3 per scenario per level, each a fresh conversation |
-| Scoring | wheel 001's script, against the same key |
+| Scoring | wheel 001's script, against the same correct answers |
 | Dates | 7 October 2026, with Gemini 3.1 Pro finishing on 8 October |
 | Cost | about €1 per model in API credit, pay as you go, about €10 for all runs; the Fable run alone was €1.40 |
 

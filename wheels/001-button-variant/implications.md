@@ -16,6 +16,6 @@ The 12 rules in `experiment/levels/C-machine-rules.md` are tested on 29 scenario
 
 - any claim about other models; one model was tested
 - any claim about other components; the rules cover buttons only
-- the answer key as good design; it records one designer's judgement, and 'Log out' and 'Skip for now' are cases where the agent's alternative reading was defensible
+- the designer's answers as good design; 'Log out' and 'Skip for now' showed the agent's other reading was defensible
 - a claim that human documentation is bad in general; the documentation tested was written by us in the style of a typical design system site, not taken from a real one
 - a claim about low reasoning effort; medium effort was used throughout

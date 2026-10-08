@@ -1,6 +1,6 @@
 # Button variant
 
-**Proved by:** [wheel 001](../wheels/001-button-variant/), run 3 of 7 October 2026. Claude Opus 5.5 at medium effort chose the variant the key expected in 87 of 87 answers, the same answer in all 3 repeats for all 29 scenarios. Human documentation scored 63 of 87 and names alone 54 of 87.
+**Proved by:** [wheel 001](../wheels/001-button-variant/), run 3 of 7 October 2026. Claude Opus 5.5 at medium effort chose the designer's answer in 87 of 87 answers, the same answer in all 3 repeats for all 29 scenarios. Human documentation scored 63 of 87 and names alone 54 of 87.
 
 **Scope:** one model, one component. The rules are untested on other models (wheel 002, planned) and say nothing about layouts, patterns or rendering.
 

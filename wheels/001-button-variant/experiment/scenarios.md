@@ -1,32 +1,32 @@
 # Button variant experiment
 
-**Question:** Can I make an AI consistently choose the correct button variant using only machine-readable rules?
+Question: can an AI agent consistently choose the correct button variant using only machine-readable rules?
 
 ## Setup
 
-**Answer options** (the agent must pick exactly one):
+The agent must pick exactly one of these answers:
 
 - `primary` (P)
 - `secondary` (S)
 - `ghost` (G)
 - `destructive` (D)
-- `none` — none of these fits; flag it
+- `none`: none of these fits, so the agent flags it
 
-**Information levels** (the only thing that changes between runs):
+The agent gets one of 3 information levels, the only thing that changes between runs:
 
-- **A. Names only** — just the variant names (baseline)
-- **B. Human docs** — typical prose guidance, e.g. "Use primary for the main action"
-- **C. Machine rules** — intent, hard rules, "never" rules, and precedence for conflicts
+- A, names only: the variant names and nothing else
+- B, human written documentation: typical prose guidance, such as "Use primary for the main action"
+- C, machine rules: intent, hard rules, "never" rules, and an order for conflicts
 
-**Runs:** every scenario, 3 times per level. The agent answers with the variant and one line of reasoning.
+Each scenario runs 3 times per level. The agent answers with the variant and one line of reasoning.
 
-**Metrics:**
+The runs are scored on 3 measures:
 
-- **Accuracy** — % correct per level
-- **Consistency** — same answer across the 3 runs
-- **Over-flagging** — % of scenarios where the agent picked `none` but shouldn't have
+- accuracy: answers that match the designer's answer, per level
+- consistency: scenarios where all 3 runs gave the same answer
+- over-flagging: answers of `none` where a variant was expected
 
-⚖️ = contested; good designers could disagree. For each one, write one sentence on *why* — those sentences become the level C rules.
+Some scenarios were contested: good designers could disagree. For each one, the designer wrote one sentence on why, and those sentences became the level C rules.
 
 ## Scenarios
 
@@ -95,19 +95,21 @@ Each of these tests a rule that otherwise has only one scenario. If the agent ge
 
 Each reason is written as a general rule, so it also applies to screens not in this list. These become the level C rules.
 
-- **#6: S.** The button that backs out of a dialog is always secondary, so the confirming action stands out but cancelling still looks like a clear choice.
-- **#11: S.** A button that only dismisses something is secondary, even when it's the only button. Primary is reserved for actions that move the user forward.
-- **#15: G.** An action that undoes the user's own edits, but is rarely needed and can't cause permanent loss, is ghost. Secondary would make it compete with "Save changes".
-- **#16: P.** When something has failed and there is one clear way to recover, that recovery action is primary, wherever it sits. Fixing the problem is the user's main task at that moment.
-- **#19: S.** When two actions are equally important, the positive or forward-moving one is primary and the other is secondary. Two primaries next to each other is never allowed.
-- **#20: S.** Even when two choices are legally equal, the one the product recommends is primary and the alternative is secondary. The alternative must stay a real button, never ghost or hidden.
-- **#13: S** (changed from G after run 1, see below). Logging out is a real action the user chose from a menu of equal options, not a way of exiting a task. Equal options in a menu are secondary; what sets their order is position, not variant.
-- **#10: G** (confirmed after run 1). We want users to finish onboarding, so the button that bypasses the step is ghost. An alternative that exits or bypasses the current task is ghost; one that completes the task another way is secondary.
-- **#21: none.** The variants describe how important an action is, not how it's operated. A control with a different interaction (press and hold, drag, toggle) isn't covered, so the agent should flag it instead of forcing a variant.
+| Scenario | Answer | Reason, written as a general rule |
+| --- | --- | --- |
+| 6 | S | The button that backs out of a dialog is always secondary, so the confirming action stands out but cancelling still looks like a clear choice. |
+| 11 | S | A button that only dismisses something is secondary, even when it is the only button. Primary is for actions that move the user forward. |
+| 15 | G | An action that undoes the user's own edits, but is rarely needed and cannot cause permanent loss, is ghost. Secondary would make it compete with "Save changes". |
+| 16 | P | When something has failed and there is one clear way to recover, that recovery action is primary, wherever it sits. Fixing the problem is the user's main task. |
+| 19 | S | When 2 actions are equally important, the positive or forward-moving one is primary and the other is secondary. Two primaries side by side are never allowed. |
+| 20 | S | Even when 2 choices are legally equal, the one the product recommends is primary and the alternative is secondary. The alternative stays a real button, never ghost or hidden. |
+| 13 | S, changed from G after run 1 | Logging out is a real action the user chose from a menu of equal options, not a way of exiting a task. Equal options in a menu are secondary; position sets their order. |
+| 10 | G, confirmed after run 1 | We want users to finish onboarding, so the button that bypasses the step is ghost. An alternative that exits the task is ghost; one that completes it another way is secondary. |
+| 21 | none | The variants describe how important an action is, not how it is operated. A press-and-hold, drag or toggle control is not covered, so the agent flags it instead of forcing a variant. |
 
-## Changes to the key
+## Changes to the designer's answers
 
 - 7 October 2026, after run 3: 5 em-dashes in the precedence list of `levels/C-machine-rules.md` replaced with colons, for the repo's writing rule. Punctuation only, not re-run. The runs used the dashed version.
 
-- 7 October 2026, after run 2: scenario 17 ('Remove member') now says the member's data is deleted for good. The key stays D. The earlier text did not say whether removal could be undone, and the agent assumed it could not in run 1 (destructive, 3 of 3) and could in run 2 (primary, 3 of 3). Runs 1 and 2 are not rescored.
-- 7 October 2026, after run 1: scenario 13 ('Log out') changed from G to S. The agent chose secondary in 3 of 3 runs at level C and the designer agreed on reflection. Run 1 is scored against the original key and is not rescored. Scenarios 28 and 29 added to test the new rule H12 with different wording.
+- 7 October 2026, after run 2: scenario 17 ('Remove member') now says the member's data is deleted for good. The answer stays D. The earlier text did not say whether removal could be undone, and the agent assumed it could not in run 1 (destructive, 3 of 3) and could in run 2 (primary, 3 of 3). Runs 1 and 2 are not rescored.
+- 7 October 2026, after run 1: scenario 13 ('Log out') changed from G to S. The agent chose secondary in 3 of 3 runs at level C and the designer agreed on reflection. Run 1 is scored against the original answers and is not rescored. Scenarios 28 and 29 added to test the new rule H12 with different wording.

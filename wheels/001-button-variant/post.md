@@ -44,7 +44,7 @@ composer's main action; this is a judgment call rather than a documented
 guideline.
 ```
 
-The agent forced a press-and-hold control into a variant made for taps, in 3 of 3 repeats. The key says 'none'.
+The agent forced a press-and-hold control into a variant made for taps, in 3 of 3 repeats. The correct answer is 'none'.
 
 **With rules** (level C)
 
@@ -129,7 +129,7 @@ The 12 rules in `wheels/001-button-variant/experiment/levels/C-machine-rules.md`
 | Information levels | the reference text only: names, human documentation, or machine-readable rules |
 | Scenarios | 29, in `experiment/scenarios.md`, grouped as easy, context, traps, conflicts, interaction and matched pairs |
 | Repeats | 3 per scenario per level, each a fresh conversation |
-| Scoring | mechanical, by `experiment/score.py`, against a key fixed before each run |
+| Scoring | mechanical, by `experiment/score.py`, against the correct answers decided before each run |
 | Dates | 7 October 2026, 3 runs |
 | Cost | about €1 per run in API credit (pay as you go, not a Claude subscription); about €3 for all 3 runs and 765 calls, because our own mistakes in the rules and one scenario meant 2 reruns |
 

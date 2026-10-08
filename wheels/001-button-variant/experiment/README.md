@@ -8,7 +8,7 @@ The system prompt tells the agent to base its choice only on the reference. With
 
 ## Inputs
 
-- `scenarios.md`: the 29 scenarios with the answer key and a note of every change to it, grouped as easy, context, traps, conflicts, interaction and matched pairs; `run.py` reads the tables directly, so this file is the source of truth
+- `scenarios.md`: the 29 scenarios with the designer's answers and a note of every change to them, grouped as easy, context, traps, conflicts, interaction and matched pairs; `run.py` reads the tables directly, so this file is the source of truth
 - `levels/A-names-only.md`: the 4 variant names and 'none', nothing else
 - `levels/B-human-docs.md`: documentation in the style of a typical design system site, with a description and examples per variant and 3 soft guidelines
 - `levels/C-machine-rules.md`: what a variant means, 12 hard rules (11 in run 1), 5 never rules, a precedence order for conflicts, and a section on unknowns
@@ -17,9 +17,9 @@ Level B had one more line before the first full run: "Button variants are for st
 
 ## Scoring
 
-Scoring is mechanical. `score.py` compares each answer with the key and reports:
+Scoring is mechanical. `score.py` compares each answer with the designer's answer and reports:
 
-- accuracy: answers matching the key, out of 3 per scenario per level
+- accuracy: answers matching the designer's answer, out of 3 per scenario per level
 - consistency: scenarios where all 3 runs gave the same answer
 - over-flagging: answers of 'none' where a variant was expected
 - accuracy by category
@@ -31,7 +31,7 @@ Scoring is mechanical. `score.py` compares each answer with the key and reports:
 You need Python 3 and an Anthropic API key with a few euros of credit. This is pay-as-you-go API credit, separate from a Claude subscription. One full run costs about €1.
 
 1. Install the SDK with `pip3 install anthropic`.
-2. Put the key in the repo's `.env` file (copy `.env.example` if it is missing). Exporting `ANTHROPIC_API_KEY` in the shell also works.
+2. Put that API key in the repo's `.env` file (copy `.env.example` if it is missing). Exporting `ANTHROPIC_API_KEY` in the shell also works.
 3. Run `python3 run.py` from this folder. It prints the folder it writes to, `../runs/<date>-<model>-<effort>/`, and never reuses an existing one: a second run on the same day gets `-run2` added.
 4. Run `python3 score.py ../runs/<that folder>` to write `summary.md` inside it.
 

@@ -9,7 +9,7 @@ Do the 3 sentences proposed by wheel 002 close the 32 misses in the button varia
 
 ## Why it matters
 
-Wheel 002 showed the 12 rules travel across companies, and that every miss came from 3 readings the rules leave open. The method says a rule enters the system only when a run proves it. If the 3 sentences work, the button rule set is finished and can be written into `system/` as proved on 10 models. If they do not, that is worth knowing before the same approach is tried on bigger decisions.
+Wheel 002 showed the 12 rules had the same impact across companies, and that every miss came from 3 readings the rules leave open. The method says a rule enters the system only when a run proves it. If the 3 sentences work, the button rule set is finished and can be written into `system/` as proved on 10 models. If they do not, that is worth knowing before the same approach is tried on bigger decisions.
 
 ## Boundary
 

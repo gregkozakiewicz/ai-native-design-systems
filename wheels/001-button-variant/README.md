@@ -25,7 +25,7 @@ Agents building UI today pick button variants from prose documentation or from h
 - other components, layouts or patterns
 - visual rendering: the agent names a variant, it does not draw one
 - other models or agents (a later wheel)
-- whether the answer key itself is good design; it records one designer's judgement
+- whether the designer's answers are themselves good design; they record one designer's judgement
 
 ## Success criteria
 
