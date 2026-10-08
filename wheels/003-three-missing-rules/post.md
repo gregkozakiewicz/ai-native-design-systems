@@ -10,7 +10,7 @@ With the rules, models still score 76 to 87 of 87; 3 sentences meant to fix the 
 
 ## The question
 
-Do the 3 sentences proposed in [wheel 002](../002-other-models/post.md) fix its 32 misses without causing new ones, on the same 10 models? In wheel 002, 10 models chose button variants with the same 12 rules and scored 80 to 87 of 87. Their 32 misses, the answers that differed from the designer's, all came from 3 gaps in the rules. While those gaps remain, the rules cannot enter the design system as tested on 10 models.
+Can we fix [wheel 002](../002-other-models/post.md)'s 32 misses by amending 3 of its rules, without causing new ones on the same 10 models? In wheel 002, 10 models chose button variants with the same 12 rules and scored 80 to 87 of 87. Their 32 misses, the answers that differed from the designer's, all came from 3 gaps in the rules. While those gaps remain, the rules cannot enter the design system as tested on 10 models.
 
 **In scope:** wheel 001's 29 scenarios and correct answers, wheel 002's 10 models at the same settings, and the rules with 3 sentences added.
 **Out of scope:** wheel 002's other 2 levels, names only and human written documentation, which did not change; any other change to the rules; new scenarios.
