@@ -34,6 +34,18 @@ The designer can choose one of these answers:
 - the part about H8 depends on the decision on 'Stay on Free'
 - every rule change runs against all 29 scenarios before it is proposed, because all 3 sentences moved scenarios they were not aimed at
 
+## A hierarchy rule for the next run
+
+The designer read wheel 002's wrong answers on 'Archive project' on a project settings page. 13 of them called it optional and chose ghost. The scenario does not say what else is on the page, so the models had nothing to rank the button against. The designer proposed this rule for the next run:
+
+> When an action is the only one in the main area of a view, and no role rule applies, it is primary. Navigation, menus and footers are not the main area.
+
+Before the next run uses it, 3 scenarios need to say what else is in their view:
+
+- 'Archive project' on a project settings page names no other action, so this rule would make it primary
+- 'Export CSV' above a data table names no other action in the toolbar
+- 'Revert to original' in an image editor toolbar names no other action, and H10 sits in no step of the precedence order
+
 ## What this does not justify
 
 - a claim that written rules stopped working, since Sonnet scored 87 of 87 and the 10 models agree more than before
