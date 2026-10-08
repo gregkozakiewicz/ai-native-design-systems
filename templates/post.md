@@ -16,7 +16,8 @@ is a prompt to you: replace it or delete it. Delete every comment before
 publishing.
 
 Visual rules for the published page
-- the 4 numbers under the title render as tiles, not a table
+- the 4 numbers under the title render as tiles, not a table, each with a bar showing the score out of its total
+- "The question" and "The answer" render side by side in one white card with an accent edge, with the first word of the answer in large accent type
 - at least one chart in "What we found", with its data table beside or under it
 - the example renders as before and after, side by side where the width allows
 - "What to do with this" renders as a dark panel, straight after "What we found"
