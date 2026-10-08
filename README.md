@@ -8,6 +8,10 @@ small, bounded investigations. Each one answers a single question with a
 test you can run, and the design system in `system/` grows only from what
 those tests prove.
 
+## Read the write-ups
+
+You can find all the summary write-ups on [AI-native design systems, on gregkozakiewicz.com](https://gregkozakiewicz.com/ai-native-design-systems/). There is one page per wheel, with the question, the answer, and what the runs showed.
+
 ## How this repo works
 
 The method is: one wheel at a time, not the whole factory.
