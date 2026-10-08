@@ -84,6 +84,12 @@ The designer also approved a pair of scenarios that tests the difference. Both s
 - 'Not now' closes the prompt, and the scenario says the app will ask again next week: ghost
 - a new scenario has 'No thanks', which turns notifications down for good, and the app does not ask again: secondary
 
+'Not now' also closes the prompt, so it fitted H5 as well as H12. This wheel's amended step 3 settled that with "a bypass beats a plain dismiss". Instead, the designer approved a reworded HR5 that does not overlap with HR12, so the tie-break sentence leaves the next run's rules:
+
+> HR5: a button that only closes something that asks the user for no decision is secondary, even when it is the only button; primary is reserved for actions that move the user forward
+
+With the new HR8, HR12 and HR5, the first half of this wheel's amended step 3, "an equal alternative beats a bypass", is not needed either. Nothing is left of the amended step 3 except moving H10 into it.
+
 Wheel 001's scenario file stays as it is, because wheels 001 to 003 were scored against it.
 
 ## Examples in the rules that match test buttons
