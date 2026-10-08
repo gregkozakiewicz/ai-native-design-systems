@@ -97,10 +97,12 @@ Each fix was written down before the next run, and earlier runs were never resco
 
 ### Where it failed
 
-- with human documentation, the agent changed its answer between repeats on 3 of 29 scenarios; one repeat on 'Close' wrote "one could argue for Secondary", then chose primary
+- with human written documentation, the agent changed its answer between repeats on 3 of 29 scenarios
+- one repeat on 'Close' wrote "one could argue for Secondary", then chose primary
 - with human documentation, 'Revert to original' was called destructive in 3 of 3 repeats, because redoing edits by hand "is not an undo"
 - our level B first contained a line that gave away scenario 21; we removed it before the first full run
-- our scenario 17 did not say whether removing a member could be undone, and the agent made opposite assumptions in runs 1 and 2, saying so each time
+- our scenario 17 did not say whether removing a member could be undone
+- the agent made opposite assumptions about scenario 17 in runs 1 and 2, and said so each time
 
 ## What this does not show
 

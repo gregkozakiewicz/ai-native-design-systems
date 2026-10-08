@@ -104,10 +104,13 @@ With names only, 5 models answered 'none' on most scenarios. Grok 4.3 did so on 
 ### Where it failed
 
 - Haiku 4.5 rejects a reasoning setting the other Claude models accept; its first run failed on the first call and was rerun without it
-- Gemini 3.1 Pro is capped at 250 requests a day on our tier; the 261-call run stopped at 247 and finished the next day as slots freed
+- Gemini 3.1 Pro is capped at 250 requests a day on our tier, so the 261-call run stopped at 247
+- the last 14 Gemini 3.1 Pro answers were filled the next day, a few at a time
 - Gemini 2.5 Pro, our first fallback, is not available to new accounts; Gemini 3.8 Flash was used instead
-- GPT-5.6 sol turned out to be a generation behind OpenAI's flagship, so GPT-6 Astra was added before findings were final; xAI was added the same way
-- 7 of 162 reworded pairs broke with rules, all on the pairs that test rule H12, where a model applied a different rule; none broke by matching a rule's words
+- GPT-5.6 sol turned out to be a generation behind OpenAI's flagship, so GPT-6 Astra was added before findings were final
+- xAI was added the same way, as a fourth company
+- 7 of 162 reworded pairs broke with rules, all on the pairs that test rule H12
+- in each break a model applied a different rule, and none broke by matching a rule's words
 
 ## What this does not show
 
