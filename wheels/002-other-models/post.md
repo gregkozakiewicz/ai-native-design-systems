@@ -10,7 +10,7 @@ With rules, 10 models chose the correct button variant in 80 to 87 of 87 answers
 
 ## The question
 
-Does the button variant rule set from [wheel 001](../001-button-variant/post.md) guide models other than Claude Opus 5.5 as well as it guided Opus? Wheel 001 took one model from 54 of 87 to 87 of 87 with 12 written rules. If that holds only for Opus, the rules are a prompt tuned to one model. If it holds across companies, the rules belong to the design system.
+Does the button variant rule set from [wheel 001](../001-button-variant/post.md) guide models other than Claude Opus 5.5 as well as it guided Opus? Wheel 001 took Opus 5.5 from 54 of 87 to 87 of 87 with 12 written rules. If that holds only for Opus, the rules are a prompt tuned to one model. If it holds across companies, the rules belong to the design system.
 
 **In scope:** the same 29 scenarios, 3 information levels, and correct answers as wheel 001, on 10 models.
 **Out of scope:** changing the rules to suit a model; tuning per model; other components.
