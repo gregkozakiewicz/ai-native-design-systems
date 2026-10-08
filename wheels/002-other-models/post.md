@@ -91,13 +91,47 @@ We counted the scenarios where all 10 models gave the same answer.
 
 With rules, the models missed 32 of 870 answers. Every miss came from one of 3 questions the rules do not answer. In each case, the model's one-line reason shows which rule it followed.
 
-| The question the rules leave open | Buttons affected | Misses |
+| The question the rules do not answer | Buttons affected | Misses |
 | --- | --- | --- |
 | Is a reversible action a real choice (secondary) or an optional extra (ghost)? | 'Archive project' on a settings page, 'Log out' in an account menu, 'Export CSV' above a data table | 22 of 32 |
 | When a button fits 2 rules, which one wins? | 'Not now' on a prompt to turn on notifications, 'Stay on Free' on a pricing screen | 7 of 32 |
 | Does redoing the work by hand count as undoing it? | 'Discard changes' in a dialog about unsaved changes | 3 of 32 |
 
-On 'Archive project', a button on a project settings page, the models split 5 to 5: half chose ghost, and half chose the designer's secondary.
+#### The rules do not say when a reversible action is optional
+
+'Archive project' on a project settings page can be undone, so it is not destructive. No other rule fits it, so the last step in the order the rules are checked decides:
+
+- a real choice the user may take is secondary
+- an optional action that is rarely needed is ghost
+
+The designer's answer is secondary. The models split 5 to 5: half read archiving as optional and rarely needed, and chose ghost. 'Log out' in an account menu and 'Export CSV' above a data table missed the same way.
+
+#### 'Not now' and 'Stay on Free' each fit 2 rules
+
+'Not now' on a prompt to turn on notifications fits 2 rules:
+
+- the skip rule (H12) says a button that skips the task, such as 'Skip' or 'Not now', is ghost
+- the close rule (H5) says a button that only closes something is secondary
+
+Both rules are at the same step in the order the rules are checked, so nothing says which one wins. The designer's answer is ghost. GPT-6 Astra followed the close rule and chose secondary in 3 of 3 tries. Its reason was "this button only dismisses the prompt".
+
+'Stay on Free' on a pricing screen also fits 2 rules:
+
+- the skip rule (H12) says it is ghost, because it skips the upgrade
+- the equal-alternative rule (H8) says an equal alternative to the option the product recommends is secondary, never ghost
+
+Here the rules contradict each other. The order checks the skip rule first, but the equal-alternative rule says "never ghost". The designer's answer is secondary. Gemini 3.1 Pro and both Grok models followed the skip rule and chose ghost in 4 of their 9 answers.
+
+A third answer is also possible: primary, because 'Stay on Free' confirms the plan the user already has, while 'Upgrade to Pro' changes it. No model chose primary in any of the 90 answers on this button, at any level.
+
+#### The rules do not say whether retyping counts as undoing
+
+'Discard changes' in a dialog about unsaved changes fits 2 rules:
+
+- one rule (H2) says an action that cannot be undone is destructive
+- another (H3) says an action that can be undone later is never destructive
+
+The designer's answer is destructive, because the system cannot bring the changes back. Haiku 4.5 argued that "discarding changes can be undone by re-entering the data", so it is not destructive. It chose secondary in 3 of 3 tries. The rules do not say whether redoing the work by hand counts as undoing it.
 
 ### Models differ in what they do when the design system has no guidance
 
