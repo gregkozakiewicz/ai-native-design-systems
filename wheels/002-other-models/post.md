@@ -101,7 +101,9 @@ On 'Archive project', a button on a project settings page, the models split 5 to
 
 ### Models differ in what they do when the system is silent
 
-With names only, 5 models answered 'none' on most scenarios. Grok 4.3 did so on 73 of 84, GPT-6 Astra 72, Grok 4.7 71, GPT-5.6 67, Sonnet 57. They read "use only the reference" literally. Opus, Haiku, and both Geminis guessed from convention instead. With rules, no model used 'none' once in 84 chances. A design system read by several models has to decide which behaviour it wants when it is silent; the refusers are easier to catch.
+With names only, 5 models answered 'none' on most scenarios where a variant was expected. Grok 4.3 did so on 73 of 84, GPT-6 Astra on 72, Grok 4.7 on 71, GPT-5.6 on 67, and Sonnet on 57. They took the instruction "Base your choice only on the design system reference" literally. Opus, Haiku, and Gemini 3.8 Flash never answered 'none', and Gemini 3.1 Pro did so only 5 times. Fable 5.1 sat in between, with 28 of 84.
+
+With rules, no model answered 'none' on any of the 84 scenarios where a variant was expected. A design system read by several models has to decide which behaviour it wants when it is silent; the refusers are easier to catch.
 
 ### Where it failed
 
