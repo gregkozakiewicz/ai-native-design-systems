@@ -20,7 +20,7 @@ Visual rules for the published page
 - the summary runs the full content width
 - the 4 numbers under the title render as tiles, not a table, each with a bar showing the score out of its total
 - a line sits above and below the tiles, with a small gap before the question and answer card
-- "The question" and "The answer" render side by side in one white card with an accent edge, with the first word of the answer in large accent type, and "In scope:" and "Out of scope:" in bold
+- "The question" and "The answer" render side by side in one white card with an accent edge, with the first word of the answer in large accent type, and "In scope:", "Out of scope:", and "Based on:" in bold
 - at least one chart in "What we found", with its data table beside or under it
 - a table with long descriptions puts each description under its row name, so the table keeps 4 columns or fewer on a phone
 - the example renders as before and after, side by side where the width allows
@@ -59,8 +59,9 @@ needs two sentences, it is two posts.>
 
 <Start with "Yes.", "No." or "Partly." on its own, because it renders large
 on the page. Then two or three sentences that answer the question directly.
-Then one sentence on what the evidence does not cover. A reader who stops
-here knows the result and its limit.>
+A reader who stops here knows the result and its limit.>
+
+**Based on:** <what the evidence covers, such as one model and one component. Then one sentence on what it does not say.>
 
 ## One example
 

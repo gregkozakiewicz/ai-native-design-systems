@@ -21,7 +21,7 @@ Yes. The rules had the same impact. On every model, written rules beat human wri
 
 The rules also moved the models towards each other. With rules, all 10 gave the same answer on 23 of 29 scenarios; with names only, on 4 of 29. The 6 scenarios where they split are the 3 places the rules leave a reading open, and nothing else.
 
-The evidence covers one component and 10 models. We do not go into details about reasoning settings for each model.
+**Based on:** one component and 10 models. We do not go into details about reasoning settings for each model.
 
 ## One example
 
