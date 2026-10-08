@@ -26,7 +26,7 @@ Visual rules for the published page
 - a table with long descriptions puts each description under its row name, so the table keeps 4 columns or fewer on a phone
 - the example renders as before and after, side by side where the width allows
 - "What to do with this" renders as a dark panel, straight after "What we found", headed "Use these <n> steps in your own design system"
-- "Details" is collapsed or visually lighter than the rest
+- "Details" is collapsed or visually lighter than the rest, with clear space between its parts: how we tested, reproduce it, questions, and changes
 - body text keeps the line-heights of the reference page, which are 10% below the site's original
 -->
 
