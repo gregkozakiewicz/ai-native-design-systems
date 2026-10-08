@@ -1,6 +1,6 @@
 # The same 12 button rules work on 9 models from 4 companies
 
-Nine models from Anthropic, OpenAI, Google and xAI all chose the correct button variant in 80 to 87 of 87 answers with the rules, against 60 to 73 with documentation.
+Nine models from 4 companies chose the correct button variant in 80 to 87 of 87 answers with the rules. With documentation they managed 60 to 73.
 
 **Wheel:** `wheels/002-other-models/` · **Runs dated:** 7 and 8 October 2026 · **Status:** answered
 
@@ -17,7 +17,7 @@ Does the button variant rule set from wheel 001 guide models other than Claude O
 
 ## The answer
 
-Yes. The rules travel. On every model, written rules beat documentation written in the style of a typical design system site, by 9 to 24 points, and every model scored at least 80 of 87 with them. The rules also moved the models towards each other: with rules, all 9 gave the same answer on 23 of 29 scenarios; with names only, on 4. The 6 scenarios where they split are the 3 places the rules leave a reading open, and nothing else. The evidence covers one component and 9 models; it says nothing about Google's newest model, which our key cannot reach, or about reasoning settings other than each model's default.
+Yes. The rules travel. On every model, written rules beat documentation in the style of a typical design system site, by 9 to 24 points. Every model scored at least 80 of 87 with them. The rules also moved the models towards each other. With rules, all 9 gave the same answer on 23 of 29 scenarios; with names only, on 4. The 6 scenarios where they split are the 3 places the rules leave a reading open, and nothing else. The evidence covers one component and 9 models. It says nothing about Google's newest model, which our key cannot reach, or about reasoning settings other than each model's default.
 
 ## One example
 
@@ -70,7 +70,7 @@ Each model answered 29 scenarios, 3 times each, at 3 levels. Only the reference 
 | Grok 4.7 | flagship | 83 of 87 | 71 of 87 | 16 of 87 |
 | Grok 4.3 | older | 82 of 87 | 73 of 87 | 13 of 87 |
 
-Tiers are each company's own, checked against an independent public index. Grok 4.3 has the best documentation score, 73, so its gap to rules is the narrowest at 9 points, one short of the wheel's 10-point criterion. Claude Fable 5.1, run at low effort outside the boundary, also scored 87 of 87.
+Tiers are each company's own, checked against an independent public index. Grok 4.3 has the best documentation score, 73. Its gap to rules is the narrowest at 9 points, one short of the wheel's 10-point criterion. Claude Fable 5.1, run at low effort outside the boundary, also scored 87 of 87.
 
 ### Rules move models towards each other, not only towards the designer
 
@@ -98,7 +98,7 @@ On 'Archive project', 5 of 9 models chose ghost against the designer's secondary
 
 ### Models differ in what they do when the system is silent
 
-With names only, 5 models answered 'none' on most scenarios: Grok 4.3 on 73 of 84, GPT-6 Astra 72, Grok 4.7 71, GPT-5.6 67, Sonnet 57. They read "use only the reference" literally. Opus, Haiku and both Geminis guessed from convention instead. With rules, no model used 'none' once in 84 chances. A design system read by several models has to decide which behaviour it wants when it is silent; the refusers are easier to catch.
+With names only, 5 models answered 'none' on most scenarios. Grok 4.3 did so on 73 of 84, GPT-6 Astra 72, Grok 4.7 71, GPT-5.6 67, Sonnet 57. They read "use only the reference" literally. Opus, Haiku and both Geminis guessed from convention instead. With rules, no model used 'none' once in 84 chances. A design system read by several models has to decide which behaviour it wants when it is silent; the refusers are easier to catch.
 
 ### Where it failed
 
@@ -119,11 +119,11 @@ With names only, 5 models answered 'none' on most scenarios: Grok 4.3 on 73 of 8
 ## What to do with this
 
 1. Write button rules once, with IDs and a precedence order; they held on 9 models without tuning.
-2. Run your rules on 3 or 4 models and list where they split; the splits are your gaps, and you do not need an answer key to find them.
+2. Run your rules on 3 or 4 models and list where they split. The splits are your gaps, and you do not need an answer key to find them.
 3. Decide what the system wants when it is silent: a guess from convention, or 'none'.
 4. Write the 3 missing sentences, then run again; a rule enters the system only when every model reads it the same way.
 
-Nothing changes in the system yet. The 12 rules stay as they are, with a note of the 9 models they were tested on; the 3 sentences are a candidate wheel 003.
+Nothing changes in the system yet. The 12 rules stay as they are, with a note of the 9 models they were tested on. The 3 sentences are a candidate wheel 003.
 
 ## Details
 
