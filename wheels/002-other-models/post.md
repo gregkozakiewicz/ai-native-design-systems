@@ -162,3 +162,4 @@ Nothing changes in the system yet. The 12 rules stay as they are, with a note of
 **Changes to this post**
 
 - 8 October 2026: first version
+- 8 October 2026: [wheel 003](../003-three-missing-rules/post.md) tested the 3 missing rules, and misses rose from 32 to 40 of 870, so they did not enter the system
