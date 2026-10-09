@@ -99,3 +99,15 @@ On 9 October 2026, after run 1's findings, the designer approved 2 wording fixes
 - HR11's "adds something optional to the current task" becomes "adds an optional extra to the thing the user is creating", because Grok 4.3 applied it to 'Export CSV' and 'Archive project'
 
 Run 2 uses `experiment/levels/C-new-rules-run2.md`, the same 31 scenarios and the same 10 models. Run 1's rules file stays as it was. The success criteria are the same.
+
+## Run 3
+
+On 9 October 2026, the designer decided that a reset is destructive when the user would lose a large configuration, and not when they lose a few settings. This is recorded in `implications.md`. Run 3 starts from run 2's rules and changes:
+
+- HR2, which now covers "content or a configuration people created"
+- HR3 and HR10, which now say "a few choices the user can remember and make again"
+- section 1's meaning of destructive, to match HR2
+- the 'Reset to defaults' scenario, which now says the page has 4 settings and that most people never use the button
+- a new scenario, 'Reset to defaults' on 40 custom automation rules, answered destructive
+
+Run 3 uses `experiment/levels/C-new-rules-run3.md` and `experiment/scenarios-run3.md`. A probe of the 2 reset scenarios runs first, on all 10 models. A full run of all 32 scenarios is needed to show side effects on other buttons.

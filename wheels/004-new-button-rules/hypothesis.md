@@ -42,3 +42,19 @@ What would surprise us:
 
 - a scenario that was right in run 1 now missing, especially 'Add file' next to 'Send', which now depends on the narrower HR11
 - 'Log out' still called ghost by Fable 5.1
+
+## Run 3
+
+Written on 9 October 2026, before run 3.
+
+Run 3 starts from run 2's rules. It changes HR2, HR3 and HR10 so they say how much a reset may lose, rewords the 'Reset to defaults' scenario, and adds a reset of 40 custom rules.
+
+We expect:
+
+- 'Reset to defaults' on a page with 4 settings to be ghost on every model, because the scenario now says most people never use it
+- 'Reset to defaults' on 40 custom rules to be destructive on most models, through HR2
+
+What would surprise us:
+
+- most models calling the reset of 40 custom rules ghost or secondary, which would mean "a configuration people created" does not read as something that can be lost
+- in a full run, 'Revert to original', 'Discard changes' or the delete buttons changing answer, because HR2, HR3 and HR10 decide them too

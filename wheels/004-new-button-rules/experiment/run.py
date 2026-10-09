@@ -5,13 +5,15 @@ Usage:
     python3 run.py --model claude-fable-5-1 --effort low
     python3 run.py --model gpt-6-astra --check              # check run: wheel 002's rules without examples, 29 scenarios
     python3 run.py --model gpt-6-astra --run2               # run 2: new rules with 2 fixes, 31 scenarios
+    python3 run.py --model gpt-6-astra --run3               # run 3: run 2's rules with the reset changes, 32 scenarios
 
 Everything comes from wheel 002's runner except the rules and, for the main
 run, the scenarios. The main run reads levels/C-new-rules.md and this folder's
 scenarios.md. The check run reads levels/C-no-examples.md and wheel 001's
 scenarios.md, unchanged. Run 2 reads levels/C-new-rules-run2.md and this
-folder's scenarios.md. Only level C is run. Check runs and run 2 go to folders
-whose names end in -check and -run2.
+folder's scenarios.md. Run 3 reads levels/C-new-rules-run3.md and
+scenarios-run3.md. Only level C is run. Check runs, run 2 and run 3 go to
+folders whose names end in -check, -run2 and -run3.
 """
 
 import datetime
@@ -39,16 +41,17 @@ r2 = load("run_002", HERE.parents[1] / "002-other-models" / "experiment" / "run.
 
 CHECK = "--check" in sys.argv
 RUN2 = "--run2" in sys.argv
-for flag in ("--check", "--run2"):
+RUN3 = "--run3" in sys.argv
+for flag in ("--check", "--run2", "--run3"):
     if flag in sys.argv:
         sys.argv.remove(flag)
-if CHECK and RUN2:
-    sys.exit("Use --check or --run2, not both")
+if CHECK + RUN2 + RUN3 > 1:
+    sys.exit("Use only one of --check, --run2 and --run3")
 
 r2.w1.LEVELS_DIR = HERE / "levels"
-r2.w1.LEVEL_FILES = {"C": "C-no-examples.md" if CHECK else "C-new-rules-run2.md" if RUN2 else "C-new-rules.md"}
+r2.w1.LEVEL_FILES = {"C": "C-no-examples.md" if CHECK else "C-new-rules-run2.md" if RUN2 else "C-new-rules-run3.md" if RUN3 else "C-new-rules.md"}
 if not CHECK:
-    r2.w1.SCENARIOS_MD = HERE / "scenarios.md"
+    r2.w1.SCENARIOS_MD = HERE / ("scenarios-run3.md" if RUN3 else "scenarios.md")
 r2.RUNS_DIR = HERE.parent / "runs"
 
 
@@ -61,6 +64,8 @@ def default_out():
         label += "-check"
     if RUN2:
         label += "-run2"
+    if RUN3:
+        label += "-run3"
     base = r2.RUNS_DIR / f"{datetime.date.today().isoformat()}-{label}"
     out, n = base, 2
     while out.exists():
