@@ -47,7 +47,7 @@ are written down.
 
 ## Current wheel
 
-[001: button variant](wheels/001-button-variant/) is answered and its rules are the first entry in `system/`. Candidates for the next wheel are in `QUESTIONS.md`.
+[004: new button rules](wheels/004-new-button-rules/) is answered, and its rules are now the button rules in `system/`. No wheel is running. Candidates for the next wheel are in `QUESTIONS.md`.
 
 ## Licence
 
