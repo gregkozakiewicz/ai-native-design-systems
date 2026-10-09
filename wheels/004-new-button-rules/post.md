@@ -1,0 +1,183 @@
+# Rewritten button rules got 948 of 960 answers right on 10 models
+
+Rewritten button rules, with no examples, got 948 of 960 answers right on 10 models; the old rules partly relied on matching button labels.
+
+**Wheel:** `wheels/004-new-button-rules/` · **Runs dated:** 8 and 9 October 2026 · **Status:** answered
+
+| 948 of 960 | 5 of 10 | 69 of 783 | 27 of 27 |
+| --- | --- | --- | --- |
+| answers matched the designer's with the rewritten rules, on 10 models | models gave the designer's answer every time, 96 of 96 | answers missed by the old rules without their examples, up from 27 | answers wrong on 'Not now' on a notifications prompt without the example "not now" |
+
+## The question
+
+Do the rewritten button rules, with no examples that name test buttons, give the designer's answers on the same 10 models? In [wheel 003](../003-three-missing-rules/post.md), 3 amended rules raised the misses from 32 to 40 of 870. The old rules also gave test button labels as examples, such as "skip, not now, maybe later". A model could match a label instead of reading the situation.
+
+**In scope:** the rewritten rules on wheel 001's scenarios, with 6 described more fully and 3 added; wheel 002's 10 models; 3 runs with fixes between them; and a check of the old rules without their examples.
+**Out of scope:** names only and human written documentation; other components; buttons the rules were not written for.
+
+## The answer
+
+Partly. In the last run, the rewritten rules got 948 of 960 answers right, against 838 of 870 for the old rules in wheel 002. 5 of the 10 models were right every time. The result falls short of the "yes" we set before the runs, because Claude Haiku 4.5 missed the same 6 answers in every run.
+
+The check showed that the old rules partly relied on their examples. Without them, 9 models missed 69 of 783 answers, not 27.
+
+**Based on:** one component, 10 models, and 32 scenarios that the rules were developed against. It does not show that the rules work on buttons they were not written for.
+
+## One example
+
+'Learn more' on a promotional banner, as seen by every model. The answers are Claude Opus 5.5's.
+
+**The task**
+
+```
+Context: A promotional banner on a dashboard. The button opens a page with more information about a new feature.
+Button label: "Learn more"
+
+Which variant should this button use?
+```
+
+**With the old rules, without their examples**
+
+```
+primary
+
+Under HR1 a banner is its own view, and 'Learn more' is the one forward-moving action that banner recommends (P4), so it is primary rather than a side task under HR11.
+```
+
+The old side-task rule, HR11, had listed "learn more" as an example. Without it, Opus treated the banner as its own view and chose primary in 3 of 3 tries.
+
+**With the rewritten rules**
+
+```
+ghost
+
+HR11 (applied at P3, before P4's only-action rule): a button that leads to further information rather than completing the current task is ghost.
+```
+
+The rewritten HR11 covers a button that "leads to further information", so Opus chose ghost, the designer's answer, in 3 of 3 tries. All 10 models did the same, in 30 of 30 answers. Full output: `runs/2026-10-09-claude-opus-5-5-run3/`.
+
+## What we found
+
+### The rewritten rules got 948 of 960 answers right in run 3
+
+The rules are the design system text given to each model. Wheel 004 ran the rewritten rules 3 times, fixing the wording between runs. Run 3's rules are the ones the designer kept.
+
+| Rules | Answers missed |
+| --- | --- |
+| Old rules, wheel 002, 10 models | 32 of 870 |
+| Old rules without their examples, 9 models | 69 of 783 |
+| Rewritten rules, run 1 | 13 of 930 |
+| Rewritten rules, run 2 | 10 of 930 |
+| Rewritten rules, run 3 | 12 of 960 |
+
+| Model | Old rules, wheel 002 | Rewritten rules, run 3 |
+| --- | --- | --- |
+| Claude Fable 5.1 | 87 of 87 | 96 of 96 |
+| Claude Opus 5.5 | 87 of 87 | 95 of 96 |
+| Claude Sonnet 5.5 | 87 of 87 | 96 of 96 |
+| Claude Haiku 4.5 | 84 of 87 | 90 of 96 |
+| GPT-6 Astra | 84 of 87 | 96 of 96 |
+| GPT-5.6 sol | 80 of 87 | 96 of 96 |
+| Grok 4.7 | 83 of 87 | 95 of 96 |
+| Grok 4.3 | 82 of 87 | 93 of 96 |
+| Gemini 3.1 Pro | 82 of 87 | 95 of 96 |
+| Gemini 3.8 Flash | 82 of 87 | 96 of 96 |
+
+The 3 gaps that [wheel 002](../002-other-models/post.md) found are closed, apart from one small model:
+
+| Question the old rules did not answer | Misses in wheel 002 | Misses in run 3 |
+| --- | --- | --- |
+| When is a reversible action optional? 'Archive project' on a settings page, 'Log out' in an account menu, 'Export CSV' above a data table | 22 of 90 | 3 of 90 |
+| Which rule wins when a button fits 2? 'Not now' on a notifications prompt, 'Stay on Free' on a pricing screen | 7 of 60 | 0 of 60 |
+| Does retyping count as undoing? 'Discard changes' in a dialog about unsaved changes | 3 of 30 | 3 of 30, all Claude Haiku 4.5 |
+
+Run 3 used 32 scenarios, so its total is not an exact comparison with wheel 002's 29. Runs: `runs/`, one folder per model and run.
+
+### Without their examples, the old rules missed 69 of 783 answers, not 27
+
+The check gave 9 models the old rules from wheel 002 with only the examples taken out, on the same 29 scenarios. It ran without Gemini 3.1 Pro, to stay within that model's daily limit. 12 scenarios had button labels that appeared as examples in the rules.
+
+| Button | Misses in wheel 002, same 9 models | Misses without the examples |
+| --- | --- | --- |
+| 'Not now' on a notifications prompt | 3 of 27 | 27 of 27 |
+| 'Log out' in an account menu | 6 of 27 | 10 of 27 |
+| 'Learn more' on a promotional banner | 0 of 27 | 8 of 27 |
+| 'Add file' next to 'Send' in a chat composer | 0 of 27 | 2 of 27 |
+| The other 8 buttons named in examples | 10 of 216 | 10 of 216 |
+
+On 'Not now', every model used the rule for dismissing something or the rule for backing out instead, and chose secondary. The old skip rule had listed "not now" as an example. On the 17 scenarios without a matching label, misses rose only from 8 to 12 of 459.
+
+This check changed the rule names as well as the examples. The models' reasons quote what the rules say, not their names, but we have not tested the names on their own. Runs: the folders ending in `-check`.
+
+### Each fix between runs moved a button it was not aimed at
+
+| Run | What changed | What it fixed | What it moved |
+| --- | --- | --- | --- |
+| 2 | The last step of the rules became one test, and the side-task rule narrowed | 'Log out' in an account menu, from 4 misses to 0 | 'Reset to defaults' on a settings page, which GPT-6 Astra called secondary in 2 of 3 tries |
+| 3 | A reset is destructive only when the user would lose a large configuration | both reset scenarios, right in 60 of 60 answers | 'Revert to original' in an image editor, called destructive once each by 3 models |
+
+Run 3's change came from the designer. A reset loses the values the user chose, not the settings themselves. With a few settings, the user can set them again. With 40 custom rules, they would have to rebuild them from memory. So the rules now ask how much would be lost. The 'Revert to original' scenario says "several crops and filters", but not how many, so 3 models read it as a large loss.
+
+In run 3, no scenario that all 10 models agreed on in wheel 002 split.
+
+### Where it failed
+
+These went wrong, in the answers and in our setup:
+
+- Claude Haiku 4.5 missed the same 6 answers in every run: 'Discard changes' in a dialog 3 times, and 'Archive project' alone on a settings page 3 times
+- Grok 4.3 called 'Export CSV' or 'Archive project' ghost in 2 or 3 answers in every run, mostly reading them as optional extras
+- run 2 split 'Reset to defaults' on a settings page, which the criteria we set before the runs count as "no"
+- during run 3, the Gemini probe and the Grok runs stopped when those accounts ran out of prepaid credit, and carried on after top-ups
+- the checks before run 1 used Claude models only, and a risk they found for 'Export CSV' was left in and caused misses
+
+## What to do with this
+
+1. Take button labels out of your rules' examples, because models match them: without the example "not now", 'Not now' went wrong in 27 of 27 answers.
+2. If a button can be read 2 ways, put what the answer depends on into the rule, such as how much a reset loses.
+3. Run every rule change against all your scenarios, because each fix in this wheel moved a button it was not aimed at.
+4. Test your rules on a small model as well as large ones, because Claude Haiku 4.5 missed the same 6 answers in every run.
+
+Run 3's rules now replace the 12 rules in [the system's button rules](../../system/button-variant.md), with the limits above written beside them.
+
+## What this does not show
+
+The runs have these limits:
+
+- one component and 10 models
+- the rules were developed against these 32 scenarios over 4 wheels, so we cannot say how they do on other buttons
+- the correct answers are one designer's judgement
+- the check changed the examples and the rule names together
+- 6 scenarios gained more description than in wheel 002, so run 3 is not an exact rerun of wheel 002
+- the checks before run 1 used Claude models only
+
+## Details
+
+**How we tested**
+
+| Setting | Value |
+| --- | --- |
+| Models | wheel 002's 10, from Anthropic, OpenAI, Google, and xAI, at the same settings, each through its own application programming interface (API) |
+| Information levels | rules only: the rewritten rules in runs 1 to 3, and the old rules without their examples in the check |
+| Scenarios | wheel 001's 29, with 6 described more fully; 2 added in run 1 and one more in run 3, making 32 |
+| Repeats | 3 per scenario per model, each a fresh conversation |
+| Scoring | wheel 001's script, against the designer's answers |
+| Dates | the check on 8 October 2026, runs 1 to 3 on 9 October 2026 |
+| Cost | about €11.73 in API credit, pay as you go, with no reruns: €3.10 for run 1, €2.31 for the check, €3.00 for run 2, and €3.31 for run 3 |
+
+We wrote the question and the success criteria before run 1, and what we expected before each run.
+
+**Reproduce it**
+
+- wheel: `wheels/004-new-button-rules/`
+- raw output: `wheels/004-new-button-rules/runs/`, one folder per model and run
+- rules, scenarios and runner: `wheels/004-new-button-rules/experiment/`
+
+**Questions this raises**
+
+- do the rules work on buttons they were never written for
+- does HR11, the side-task rule, need a tighter limit for models that read it widely
+- do the new rule names change answers on their own
+
+**Changes to this post**
+
+- 9 October 2026: first version
