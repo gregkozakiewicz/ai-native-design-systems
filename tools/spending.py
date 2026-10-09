@@ -11,12 +11,24 @@ costs use that instead of list prices. Newest wheel first, oldest last, and the
 first line is always the total.
 """
 
+import datetime
 import json
 import sys
 from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+
+# Subscriptions used for the research, paid monthly from 1 October 2026.
+# Each month that has started counts in full.
+SUBSCRIPTIONS_EUR_PER_MONTH = 98
+SUBSCRIPTIONS_START = datetime.date(2026, 10, 1)
+
+
+def subscriptions_eur(today=None):
+    today = today or datetime.date.today()
+    months = (today.year - SUBSCRIPTIONS_START.year) * 12 + today.month - SUBSCRIPTIONS_START.month + 1
+    return max(months, 0) * SUBSCRIPTIONS_EUR_PER_MONTH
 
 # US dollars per million tokens, list prices, standard tier.
 # input: uncached input; write: writing to the cache; read: reading from the cache.
@@ -125,7 +137,9 @@ def eur(usd):
 def report(data):
     wheel_totals = {w: sum(m["usd"] for m in models.values()) for w, models in data.items()}
     total = sum(wheel_totals.values())
-    lines = [f"Total so far: about €{eur(total):,.2f} of pay-as-you-go API credit, across {len(data)} wheels", ""]
+    answers = sum(m["answers"] for models in data.values() for m in models.values())
+    subs = subscriptions_eur()
+    lines = [f"Total so far: about €{eur(total) + subs:,.2f}: €{eur(total):,.2f} of pay-as-you-go API credit and €{subs:,} of subscriptions, for {answers:,} answers", ""]
     lines += ["# Spending", "",
               f"Costs are estimates from each company's list prices, converted at {EUR_USD} US dollars to the euro "
               f"(European Central Bank reference rate, {EUR_USD_DATE}). Grok costs are the real cost xAI records for each "
