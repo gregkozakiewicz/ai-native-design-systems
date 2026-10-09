@@ -166,3 +166,4 @@ The designer's answers changed once, after run 1: 'Log out' moved from ghost to 
 
 - 7 October 2026: first version
 - 7 October 2026: cost restated in euros as API credit, with the total across all 3 runs
+- 9 October 2026: part of this result relied on button labels; without the rules' examples, in [wheel 004](../004-new-button-rules/post.md), Opus 5.5 scored 81 of 87, not 87

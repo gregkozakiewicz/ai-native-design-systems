@@ -198,3 +198,4 @@ Nothing changes in the system yet. The 12 rules stay as they are, with a note of
 - 8 October 2026: first version
 - 8 October 2026: [wheel 003](../003-three-missing-rules/post.md) tested the 3 missing rules, and misses rose from 32 to 40 of 870, so they did not enter the system
 - 9 October 2026: the cost is now worked out from the tokens each model used and each company's published prices, about €7.62 instead of about €10
+- 9 October 2026: part of this result relied on button labels; without the rules' examples, in [wheel 004](../004-new-button-rules/post.md), 9 models missed 69 of 783 answers, not 27
