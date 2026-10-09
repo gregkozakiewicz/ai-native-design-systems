@@ -70,20 +70,20 @@ The rules are the design system text given to each model. Wheel 004 ran the rewr
 | Rewritten rules, run 2 | 10 of 930 |
 | Rewritten rules, run 3 | 12 of 960 |
 
-| Model | Old rules, wheel 002 | Rewritten rules, run 3 |
-| --- | --- | --- |
-| Claude Fable 5.1 | 87 of 87 (100%) | 96 of 96 (100%) |
-| Claude Opus 5.5 | 87 of 87 (100%) | 95 of 96 (99.0%) |
-| Claude Sonnet 5.5 | 87 of 87 (100%) | 96 of 96 (100%) |
-| Claude Haiku 4.5 | 84 of 87 (96.6%) | 90 of 96 (93.8%) |
-| GPT-6 Astra | 84 of 87 (96.6%) | 96 of 96 (100%) |
-| GPT-5.6 sol | 80 of 87 (92.0%) | 96 of 96 (100%) |
-| Grok 4.7 | 83 of 87 (95.4%) | 95 of 96 (99.0%) |
-| Grok 4.3 | 82 of 87 (94.3%) | 93 of 96 (96.9%) |
-| Gemini 3.1 Pro | 82 of 87 (94.3%) | 95 of 96 (99.0%) |
-| Gemini 3.8 Flash | 82 of 87 (94.3%) | 96 of 96 (100%) |
+| Model | Old rules, wheel 002 | Old rules without the test button names, 9 models | Rewritten rules, run 3 |
+| --- | --- | --- | --- |
+| Claude Fable 5.1 | 87 of 87 (100%) | 83 of 87 (95.4%) | 96 of 96 (100%) |
+| Claude Opus 5.5 | 87 of 87 (100%) | 81 of 87 (93.1%) | 95 of 96 (99.0%) |
+| Claude Sonnet 5.5 | 87 of 87 (100%) | 84 of 87 (96.6%) | 96 of 96 (100%) |
+| Claude Haiku 4.5 | 84 of 87 (96.6%) | 80 of 87 (92.0%) | 90 of 96 (93.8%) |
+| GPT-6 Astra | 84 of 87 (96.6%) | 84 of 87 (96.6%) | 96 of 96 (100%) |
+| GPT-5.6 sol | 80 of 87 (92.0%) | 75 of 87 (86.2%) | 96 of 96 (100%) |
+| Grok 4.7 | 83 of 87 (95.4%) | 77 of 87 (88.5%) | 95 of 96 (99.0%) |
+| Grok 4.3 | 82 of 87 (94.3%) | 78 of 87 (89.7%) | 93 of 96 (96.9%) |
+| Gemini 3.1 Pro | 82 of 87 (94.3%) | not run | 95 of 96 (99.0%) |
+| Gemini 3.8 Flash | 82 of 87 (94.3%) | 72 of 87 (82.8%) | 96 of 96 (100%) |
 
-5 of the 10 models scored 96 of 96 in run 3.
+5 of the 10 models scored 96 of 96 in run 3. The old rules named some of the test buttons in their wording, such as "log out", "archive" and "not now". Without those words, 9 models missed 69 of 783 answers instead of 27. Naming the test buttons is like writing a separate rule for each scenario, which we do not want. Run 3's rules name none of them.
 
 Of the 3 gaps that [wheel 002](../002-other-models/post.md) found, one is closed, and the other 2 each still miss on one model:
 
