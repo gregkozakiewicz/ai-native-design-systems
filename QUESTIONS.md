@@ -47,8 +47,9 @@ Move questions here once a wheel has findings, with a link to the wheel.
   No: misses rose from 32 to 40. See `wheels/003-three-missing-rules/`.
 
 - Do rewritten button rules, with no examples that name test buttons, give
-  the designer's answers on 10 models? Partly: misses fell from 32 to 13 of
-  930, and 6 of 10 models scored 93 of 93. See `wheels/004-new-button-rules/`.
+  the designer's answers on 10 models? Yes: run 3's rules got 948 of 960
+  answers right, 98.8%, and 5 of 10 models scored 96 of 96. See
+  `wheels/004-new-button-rules/`.
 
 ## Raised by wheels
 

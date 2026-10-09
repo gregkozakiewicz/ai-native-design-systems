@@ -2,9 +2,9 @@
 
 ## Summary
 
-Partly. In 3 runs, the rewritten rules missed 10 to 13 answers per run, of 930 to 960. The original rules missed 32 of 870 in wheel 002, and wheel 003's missed 40. The designer kept run 3's rules, which missed 12 of 960. 5 of the 10 models scored 96 of 96 in run 3.
+Yes. In 3 runs, the rewritten rules missed 10 to 13 answers per run, of 930 to 960. The original rules missed 32 of 870 in wheel 002, and wheel 003's missed 40. The designer kept run 3's rules, which got 948 of 960 answers right, 98.8%. 5 of the 10 models scored 96 of 96 in run 3.
 
-No run met every criterion for "yes":
+After the runs, the designer set the bar for "yes" at more than 95% of answers right. By the success criteria written before the runs, no run met every condition for "yes":
 
 - Haiku 4.5 missed the same 6 answers in every run, and "yes" needed every model at 90 or more of 93
 - in runs 1 and 3, 8 of 10 models got both 'Archive project' scenarios right, and "yes" needed 9

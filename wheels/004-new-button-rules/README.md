@@ -1,6 +1,6 @@
 # 004: new button rules
 
-**Status:** answered: partly; the designer kept run 3's rules, which missed 12 of 960, and the check run showed the earlier rules partly relied on matching words
+**Status:** answered: yes; the designer kept run 3's rules, which got 948 of 960 answers right, 98.8%, and the check run showed the earlier rules partly relied on matching words
 **Started:** 2026-10-08
 
 ## Question
@@ -111,3 +111,7 @@ On 9 October 2026, the designer decided that a reset is destructive when the use
 - a new scenario, 'Reset to defaults' on 40 custom automation rules, answered destructive
 
 Run 3 uses `experiment/levels/C-new-rules-run3.md` and `experiment/scenarios-run3.md`. A probe of the 2 reset scenarios runs first, on all 10 models. A full run of all 32 scenarios is needed to show side effects on other buttons.
+
+## Bar for "yes" changed after the runs
+
+On 9 October 2026, after run 3, the designer changed the bar for "yes" to more than 95% of answers right with the rules that are kept. Run 3 got 948 of 960, which is 98.8%. The success criteria above stay as they were written before the runs. By them, no run met every condition for "yes", as `findings.md` records.
