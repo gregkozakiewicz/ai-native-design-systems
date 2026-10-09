@@ -90,3 +90,12 @@ The fourth risk, that a model calls 'Export CSV' a side task, was left as it is.
 
 Both checks used Claude models only, so they may have missed readings that models from other companies take.
 
+
+## Run 2
+
+On 9 October 2026, after run 1's findings, the designer approved 2 wording fixes for a second run. The models' own reasons in run 1 pointed at both:
+
+- P5 becomes one test, because Fable 5.1 and Sonnet 5.5 stopped at its first half on 'Log out' and answered ghost
+- HR11's "adds something optional to the current task" becomes "adds an optional extra to the thing the user is creating", because Grok 4.3 applied it to 'Export CSV' and 'Archive project'
+
+Run 2 uses `experiment/levels/C-new-rules-run2.md`, the same 31 scenarios and the same 10 models. Run 1's rules file stays as it was. The success criteria are the same.

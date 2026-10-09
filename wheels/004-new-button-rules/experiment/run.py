@@ -4,12 +4,14 @@ Usage:
     python3 run.py --model gpt-6-astra                      # main run: new rules, 31 scenarios
     python3 run.py --model claude-fable-5-1 --effort low
     python3 run.py --model gpt-6-astra --check              # check run: wheel 002's rules without examples, 29 scenarios
+    python3 run.py --model gpt-6-astra --run2               # run 2: new rules with 2 fixes, 31 scenarios
 
 Everything comes from wheel 002's runner except the rules and, for the main
 run, the scenarios. The main run reads levels/C-new-rules.md and this folder's
 scenarios.md. The check run reads levels/C-no-examples.md and wheel 001's
-scenarios.md, unchanged. Only level C is run. Check runs go to a folder whose
-name ends in -check.
+scenarios.md, unchanged. Run 2 reads levels/C-new-rules-run2.md and this
+folder's scenarios.md. Only level C is run. Check runs and run 2 go to folders
+whose names end in -check and -run2.
 """
 
 import datetime
@@ -36,11 +38,15 @@ sys.path.insert(0, str(HERE.parents[1] / "002-other-models" / "experiment"))
 r2 = load("run_002", HERE.parents[1] / "002-other-models" / "experiment" / "run.py")
 
 CHECK = "--check" in sys.argv
-if CHECK:
-    sys.argv.remove("--check")
+RUN2 = "--run2" in sys.argv
+for flag in ("--check", "--run2"):
+    if flag in sys.argv:
+        sys.argv.remove(flag)
+if CHECK and RUN2:
+    sys.exit("Use --check or --run2, not both")
 
 r2.w1.LEVELS_DIR = HERE / "levels"
-r2.w1.LEVEL_FILES = {"C": "C-no-examples.md" if CHECK else "C-new-rules.md"}
+r2.w1.LEVEL_FILES = {"C": "C-no-examples.md" if CHECK else "C-new-rules-run2.md" if RUN2 else "C-new-rules.md"}
 if not CHECK:
     r2.w1.SCENARIOS_MD = HERE / "scenarios.md"
 r2.RUNS_DIR = HERE.parent / "runs"
@@ -53,6 +59,8 @@ def default_out():
     label = f"{model}-{effort}" if effort else model
     if CHECK:
         label += "-check"
+    if RUN2:
+        label += "-run2"
     base = r2.RUNS_DIR / f"{datetime.date.today().isoformat()}-{label}"
     out, n = base, 2
     while out.exists():

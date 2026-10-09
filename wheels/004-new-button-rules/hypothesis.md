@@ -25,3 +25,20 @@ In wheel 003, the models followed the amended rules as written. Every miss came 
 - most models calling 'Archive project' alone secondary, which would mean the hierarchy rule is unclear
 - 'Not now' and 'No thanks' getting the same answer on most models, which would mean the models do not separate declining from postponing
 - more than 20 extra misses in the check run on the scenarios whose labels were examples, a sign that the earlier wheels matched words
+
+## Run 2
+
+Written on 9 October 2026, before run 2.
+
+Run 2 changes 2 rules and nothing else. P5 becomes one test: if the user may reasonably do it on that view, it is secondary. HR11 covers an optional extra on the thing the user is creating, instead of anything optional.
+
+We expect the misses to fall from 13 to about 6 of 930:
+
+- 'Log out' in an account menu comes right on Fable 5.1 and Sonnet 5.5
+- 'Export CSV' and 'Archive project' below 'Save changes' come right on Grok 4.3
+- Haiku 4.5's 6 misses stay, because neither fix touches the rules it misread
+
+What would surprise us:
+
+- a scenario that was right in run 1 now missing, especially 'Add file' next to 'Send', which now depends on the narrower HR11
+- 'Log out' still called ghost by Fable 5.1
