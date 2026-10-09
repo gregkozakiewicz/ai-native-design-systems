@@ -10,12 +10,12 @@ Looking at that miss, the designer found a second problem in HR10. It says the a
 
 On 9 October 2026 the designer decided that the answer depends on how much would be lost:
 
-- resetting a few choices the user can easily make again is not destructive, and HR10 can make it ghost
+- resetting a few choices the user can remember and make again is not destructive, and HR10 can make it ghost
 - resetting a large custom configuration that the user would have to rebuild from memory is destructive, under HR2
 
 For run 3 of this wheel, this means:
 
-- HR3 and HR10 say how much may be lost, such as "a few choices the user can easily make again", instead of "cannot cause permanent loss"
+- HR3 and HR10 say how much may be lost, such as "a few choices the user can remember and make again", instead of "cannot cause permanent loss"
 - the 'Reset to defaults' scenario says how many settings the page has
 - a new scenario resets a large custom configuration, answered destructive
 
