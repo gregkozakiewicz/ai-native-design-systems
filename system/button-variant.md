@@ -1,10 +1,19 @@
 # Button variant
 
-Proved by: [wheel 001](../wheels/001-button-variant/), run 3 of 7 October 2026. Claude Opus 5.5 at medium effort chose the designer's answer in 87 of 87 answers. It gave the same answer in all 3 repeats for all 29 scenarios. Human documentation scored 63 of 87 and names alone 54 of 87.
+Proved by: [wheel 004](../wheels/004-new-button-rules/), run 3 of 9 October 2026. 10 models from 4 companies gave the designer's answer in 948 of 960 answers, on 32 scenarios. 5 of the 10 scored 96 of 96, and the lowest, Claude Haiku 4.5, scored 90 of 96.
 
-Scope: one model, one component. The rules are untested on other models (wheel 002, planned) and say nothing about layouts, patterns or rendering.
+These rules replace wheel 001's 12 rules. On the same 10 models in wheel 002, those rules missed 32 of 870 answers. Without their examples, which named some of the test buttons, they missed 69 of 783 on 9 models.
 
-Text: sections 1 to 5 below are the file the agent was given, with one change. 5 em-dashes in the precedence list are now colons, to meet the repo's writing rule. This was not re-run. The tested file also had a section 6 setting the experiment's answer format; it is not a rule and is left out.
+Scope: one component, 10 models. The rules were developed against these 32 scenarios over 4 wheels, so they are untested on buttons they were not written for. They say nothing about layouts, patterns or rendering.
+
+Known limits, from wheel 004:
+
+- in run 3, 3 of 30 answers called 'Revert to original' in an image editor destructive, because its scenario does not say how much is lost
+- Grok 4.3 called 'Export CSV' or 'Archive project' ghost in 2 or 3 answers in every run, as optional extras or side tasks
+- Claude Haiku 4.5 missed the same 6 answers in every run, on 'Discard changes' and on 'Archive project' alone
+- the names HR, NR and P have not been tested on their own
+
+Text: sections 1 to 5 below are the file the models were given in run 3. The tested file also had a section 6 setting the experiment's answer format. It is not a rule, so it is left out.
 
 Give this file to an agent as it is. Where rules conflict, the precedence order in section 4 decides.
 
@@ -22,9 +31,9 @@ variants:
   secondary:
     intent: a real alternative to the primary; a choice the user may reasonably make
   ghost:
-    intent: available but not recommended; optional, rare or repeated actions
+    intent: available but not recommended
   destructive:
-    intent: removes data or has effects the user cannot undo
+    intent: permanently removes content or a configuration people created, which would have to be recreated from memory
   none:
     intent: no variant applies; flag it instead of forcing one
 ```
@@ -33,52 +42,57 @@ variants:
 
 ```yaml
 hard_rules:
-  - id: H1
+  - id: HR1
     rule: at most one primary per view (a page, dialog, banner or composer is one view)
-  - id: H2
-    rule: an action that permanently removes data or cannot be undone is destructive, even if it is the main action of the view
-  - id: H3
-    rule: an action that can be undone or reversed later is never destructive (log out, archive, reset, unsubscribe)
-  - id: H4
-    rule: the button that backs out of a dialog without acting (cancel, close, go back) is always secondary
-  - id: H5
-    rule: a button that only dismisses something is secondary even when it is the only button; primary is reserved for actions that move the user forward
-  - id: H6
+  - id: HR2
+    rule: an action that permanently removes content or a configuration people created, which would have to be recreated from memory, is destructive, even if it is the main action of the view
+  - id: HR3
+    rule: an action is never destructive if it can be undone later, or if all it removes are a few choices the user can remember and make again from the options on screen
+  - id: HR4
+    rule: the button that backs out of a dialog without acting is always secondary; a button that postpones a decision follows HR12 instead
+  - id: HR5
+    rule: a button that only closes something that asks the user for no decision is secondary, even when it is the only button; primary is reserved for actions that move the user forward
+  - id: HR6
     rule: a button that is repeated on every item in a list or grid is ghost, never primary or secondary
-  - id: H7
-    rule: when two actions are equally important, the positive or forward-moving one is primary and the other is secondary; never two primaries
-  - id: H8
-    rule: when the view presents a recommended option and a legally or ethically equal alternative, the recommended one is primary and the alternative is secondary; the alternative must remain a visible button, never ghost
-  - id: H9
+  - id: HR7
+    rule: when two actions are equally important answers to the same decision, the positive or forward-moving one is primary and the other is secondary; never two primaries
+  - id: HR8
+    rule: when the view asks the user to decide on a recommended option, the recommended option is primary and the button that declines it is secondary; it must remain a visible button, never ghost; a button that postpones a decision follows HR12 instead
+  - id: HR9
     rule: when something has failed and there is one clear recovery action, that action is primary wherever it appears
-  - id: H10
-    rule: an action that undoes the user's own edits, is rarely needed and cannot cause permanent loss, is ghost
-  - id: H11
-    rule: an action that opens a side task (attach a file, give feedback, learn more) rather than completing the current task is ghost
-  - id: H12
-    rule: an alternative that exits or bypasses the current task (skip, not now, maybe later) is ghost; an alternative that completes the task another way is secondary
+  - id: HR10
+    rule: an action that undoes the user's own edits, is rarely needed, and removes only a few choices the user can remember and make again, is ghost
+  - id: HR11
+    rule: an action that opens a side task, leads to further information, or adds an optional extra to the thing the user is creating, rather than completing the current task, is ghost
+  - id: HR12
+    rule: an alternative that postpones or skips the current step, leaving the decision for later, is ghost; an alternative that completes the task another way is secondary
 ```
 
 ## 3. Never rules
 
 ```yaml
 never:
-  - primary for cancel, close, dismiss or skip
-  - destructive for anything the user can reverse
-  - two primary buttons in the same view
-  - ghost for an action the user must be able to find to complete the task
-  - a variant for a control that is not a plain click or tap (hold, drag, toggle, slider): answer none
+  - id: NR1
+    rule: primary for a button that backs out, dismisses something, or skips a step
+  - id: NR2
+    rule: destructive for anything the user can reverse
+  - id: NR3
+    rule: two primary buttons in the same view
+  - id: NR4
+    rule: ghost for an action the user must be able to find to complete the task
+  - id: NR5
+    rule: a variant for a control that is not a plain click or tap: answer none
 ```
 
 ## 4. Precedence (when rules conflict)
 
 Apply in this order; the first rule that applies wins.
 
-1. **Reversibility**: can it be undone? Decides destructive vs not (H2, H3).
-2. **Interaction**: is it a plain click or tap? If not, answer none.
-3. **Role in the view**: does it back out, dismiss, repeat, bypass, or open a side task? (H4, H5, H6, H11, H12)
-4. **Recommendation**: is it the one action the product recommends? (H1, H7, H8, H9)
-5. **Emphasis**: anything left: secondary if it is a real choice the user may take, ghost if it is optional and rarely needed.
+- **P1: Reversibility**. Can it be undone? Decides destructive vs not (HR2, HR3).
+- **P2: Interaction**. Is it a plain click or tap? If not, answer none.
+- **P3: Role in the view**. Does it back out of a dialog, close something that asks for no decision, repeat on every item, postpone or skip a step, undo the user's own edits, open a side task, lead to further information, or add an optional extra to what the user is creating? (HR4, HR5, HR6, HR10, HR11, HR12)
+- **P4: Recommendation**. Is it the one action the product recommends? (HR1, HR7, HR8, HR9) When an action is the only one in the main area of a view, and no role rule applies, it is primary. It counts as the one action the product recommends, even if it does not move the user forward. A page header is part of the main area; navigation, menus and footers are not.
+- **P5: Emphasis**. Anything left: if the user may reasonably do it on that view, it is secondary, even if most users never take it. Otherwise it is ghost.
 
 ## 5. Unknowns
 
