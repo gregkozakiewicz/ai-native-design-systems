@@ -1,6 +1,6 @@
 # 004: new button rules
 
-**Status:** answered: partly, misses fell from 32 to 13 of 930, and the check run showed the earlier rules partly relied on matching words
+**Status:** answered: partly; the designer kept run 3's rules, which missed 12 of 960, and the check run showed the earlier rules partly relied on matching words
 **Started:** 2026-10-08
 
 ## Question

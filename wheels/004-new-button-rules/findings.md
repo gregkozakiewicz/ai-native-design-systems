@@ -2,21 +2,21 @@
 
 ## Summary
 
-Partly. The rewritten rules cut the misses to 13 of 930, from 32 in wheel 002 and 40 in wheel 003. 6 of the 10 models scored 93 of 93.
+Partly. In 3 runs, the rewritten rules missed 10 to 13 answers per run, of 930 to 960. The original rules missed 32 of 870 in wheel 002, and wheel 003's missed 40. The designer kept run 3's rules, which missed 12 of 960. 5 of the 10 models scored 96 of 96 in run 3.
 
-The result falls short of "yes" on 3 counts:
+No run met every criterion for "yes":
 
-- there were 13 misses, and "yes" allowed 10
-- Haiku 4.5 scored 87 of 93, and "yes" needed every model at 90 or more
-- 8 of 10 models got both 'Archive project' scenarios right, and "yes" needed 9
+- Haiku 4.5 missed the same 6 answers in every run, and "yes" needed every model at 90 or more of 93
+- in runs 1 and 3, 8 of 10 models got both 'Archive project' scenarios right, and "yes" needed 9
+- run 2 split 'Reset to defaults', which the criteria count as "no"
 
 The check run shows that the earlier wheels partly relied on matching words. Without the examples in the rules, 9 models missed 57 of 324 answers on the 12 scenarios whose labels had been examples. In wheel 002 they missed 19. Most of the rise was 'Not now', which every model got wrong every time.
 
 ## Evidence
 
-Runs are in `runs/`, one folder per model, each with a `summary.md`. The main run's folders are dated 9 October 2026. The check run's folders are dated 8 October 2026 and end in `-check`. Wheel 002's and wheel 003's figures are their results with rules.
+Runs are in `runs/`, one folder per model, each with a `summary.md`. Run 1's folders are dated 9 October 2026. Runs 2 and 3 are dated the same day and end in `-run2` and `-run3`. The check run's folders are dated 8 October 2026 and end in `-check`. Wheel 002's and wheel 003's figures are their results with rules.
 
-### The rewritten rules cut the misses to 13 of 930
+### Run 1: the rewritten rules cut the misses to 13 of 930
 
 | Model | Wheel 002 | Wheel 003 | Wheel 004 |
 | --- | --- | --- | --- |
@@ -76,9 +76,40 @@ On 'Not now', the models used the dismiss and back-out rules instead. Gemini 3.8
 
 8 of the 9 models scored lower than in wheel 002, and GPT-6 Astra did not change. Gemini 3.8 Flash lost 10 of 87, Opus 5.5 and Grok 4.7 lost 6 each, and GPT-5.6 sol lost 5. 30 of 162 reworded pairs broke, against 7 of 162 in wheel 002. 27 of the 30 were 'Skip for now' right and 'Not now' wrong.
 
+### Run 2: 2 wording fixes cut the misses to 10 of 930, but split 'Reset to defaults'
+
+Run 2 changed 2 rules after run 1. P5 became one test, and HR11's "adds something optional" became "adds an optional extra to the thing the user is creating".
+
+| Model | Run 1 | Run 2 | Run 3 |
+| --- | --- | --- | --- |
+| Claude Fable 5.1 | 90 of 93 | 93 of 93 | 96 of 96 |
+| Claude Opus 5.5 | 93 of 93 | 93 of 93 | 95 of 96 |
+| Claude Sonnet 5.5 | 92 of 93 | 93 of 93 | 96 of 96 |
+| Claude Haiku 4.5 | 87 of 93 | 87 of 93 | 90 of 96 |
+| GPT-6 Astra | 93 of 93 | 91 of 93 | 96 of 96 |
+| GPT-5.6 sol | 93 of 93 | 93 of 93 | 96 of 96 |
+| Grok 4.7 | 93 of 93 | 93 of 93 | 95 of 96 |
+| Grok 4.3 | 90 of 93 | 91 of 93 | 93 of 96 |
+| Gemini 3.1 Pro | 93 of 93 | 93 of 93 | 95 of 96 |
+| Gemini 3.8 Flash | 93 of 93 | 93 of 93 | 96 of 96 |
+
+The P5 fix worked: 'Log out' in an account menu went from 4 misses to 0. The HR11 fix worked for 'Archive project' below 'Save changes', but Grok 4.3 still called 'Export CSV' ghost in 2 of 3 tries: "export adds an optional extra".
+
+GPT-6 Astra called 'Reset to defaults' on a profile settings page secondary in 2 of 3 tries. In run 1 it had answered ghost 3 of 3. Its reason: "HR10's rarely-needed condition is not established". The scenario never said the reset is rarely needed. With its most common answer now secondary, the 10 models split 9 to 1 on a scenario they had all agreed on.
+
+### Run 3: a reset is destructive only when much is lost, and both resets came right
+
+After this miss, the designer decided that a reset is destructive when the user would lose a large configuration. It is not destructive when they lose a few settings. Run 3 rewrote HR2, HR3 and HR10 to say so, and section 1's meaning of destructive with them. It changed the reset scenario to a page with 4 settings that most people never reset. It also added a reset of 40 custom rules, answered destructive.
+
+Run 3 missed 12 of 960. Both reset scenarios were right on every model, every time: 30 of 30 ghost for 4 settings, and 30 of 30 destructive for 40 custom rules. 'Not now' and 'No thanks' were right on all 10 models. No scenario on which all 10 agreed in wheel 002 split, and all 10 agreed on 29 of 32 scenarios.
+
+The new wording moved one scenario it was not aimed at. Opus 5.5, Gemini 3.1 Pro and Grok 4.7 each called 'Revert to original' in an image editor destructive once in 3 tries. Grok 4.7 gave this reason: "reverting permanently discards the crop and filter configuration the user created, which would have to be recreated from memory". The scenario says "several crops and filters", but not how many. Each model still answered ghost in 2 of 3 tries, so no scenario split.
+
+The other misses in run 3 were Haiku 4.5's 6 and Grok 4.3's 3. Grok 4.3 called 'Export CSV' ghost once and 'Archive project' ghost twice.
+
 ### What we expected and what happened
 
-The hypothesis expected these, before the run:
+Before run 1 and the check run, the hypothesis expected these:
 
 - 10 or fewer misses in the main run: there were 13
 - 'Archive project', 'Log out' and 'Export CSV' to stay right: they missed 7 of 90
@@ -89,12 +120,16 @@ The hypothesis expected these, before the run:
 - the check run to rise a little, to between 35 and 45 of 870: it rose from 27 to 69 of 783, on 9 models
 - the check run's rise to fall on 'Not now', 'Skip for now', 'Add file', 'Send feedback' and 'Learn more': it fell on 'Not now', 'Learn more' and 'Add file', and 'Log out' rose too
 
-Of the 4 things that would surprise us, one happened in full and one in part:
+Of run 1's 4 things that would surprise us, one happened in full and one in part:
 
 - more than 20 extra misses on the matched scenarios in the check run: there were 38
 - a rule moving a scenario it was not aimed at: HR11's new words moved 'Archive project' once, on Grok 4.3
 - 'Archive project' alone called secondary by most models: one answer of 30
 - 'Not now' and 'No thanks' getting the same answer: no model did this
+
+Before run 2, we expected the misses to fall to about 6. They fell to 10. 'Log out' came right, as expected, and Haiku 4.5's 6 stayed. Grok 4.3's 'Export CSV' did not come right. The surprise we listed, a scenario right in run 1 missing in run 2, happened on 'Reset to defaults'.
+
+Before run 3, we expected both reset scenarios to be right on almost every model, and they were right on every model. The surprise we listed, 'Revert to original' changing answer, happened on 3 models, once each.
 
 ## Failure modes seen
 
@@ -103,11 +138,22 @@ Of the 4 things that would surprise us, one happened in full and one in part:
 - the check run changed 2 things at once, the examples and the names; the reasons quote what the rules say, not their names, but we have not tested the names on their own
 - 5 of the 29 scenarios have more description than in wheel 002, so the main run is not an exact rerun of wheel 002
 - the 2 checks before the run used Claude models only, and the risk they left for 'Export CSV' caused 2 misses
-- no run failed
+- run 3's Gemini and Grok answers stopped twice when the Google and xAI accounts ran out of prepaid credit; after top-ups, the runs carried on where they stopped
+- in run 3, the word "configuration" in HR2 moved 'Revert to original' on 3 models
 
 ## Cost
 
-About €8 of pay-as-you-go API credit for both runs: about €4.50 for the main run and €3.50 for the check run. This is an estimate. It scales wheel 003's estimate of about €4 by the number of tokens: about 1.4 million in wheel 003, 1.6 million in the main run, and 1.2 million in the check run. There were no reruns. The 2 checks before the run ran as Claude Code agents, not on API credit.
+About €11.73 of pay-as-you-go API credit for the whole wheel. `tools/spending.py` works it out from the tokens in the raw runs and each company's published prices. Grok's costs are the charges xAI recorded.
+
+| Run | Answers | Cost |
+| --- | --- | --- |
+| Run 1 | 930 | €3.10 |
+| Check run | 783 | €2.31 |
+| Run 2 | 930 | €3.00 |
+| Run 3, probe of the 2 reset scenarios | 48 | €0.19 |
+| Run 3 | 960 | €3.12 |
+
+There were no reruns. The checks before runs 1 and 2 ran as Claude Code agents, not on API credit.
 
 ## Open questions raised
 
