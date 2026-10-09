@@ -72,16 +72,16 @@ The rules are the design system text given to each model. Wheel 004 ran the rewr
 
 | Model | Old rules, wheel 002 | Rewritten rules, run 3 |
 | --- | --- | --- |
-| Claude Fable 5.1 | 87 of 87 | 96 of 96 |
-| Claude Opus 5.5 | 87 of 87 | 95 of 96 |
-| Claude Sonnet 5.5 | 87 of 87 | 96 of 96 |
-| Claude Haiku 4.5 | 84 of 87 | 90 of 96 |
-| GPT-6 Astra | 84 of 87 | 96 of 96 |
-| GPT-5.6 sol | 80 of 87 | 96 of 96 |
-| Grok 4.7 | 83 of 87 | 95 of 96 |
-| Grok 4.3 | 82 of 87 | 93 of 96 |
-| Gemini 3.1 Pro | 82 of 87 | 95 of 96 |
-| Gemini 3.8 Flash | 82 of 87 | 96 of 96 |
+| Claude Fable 5.1 | 87 of 87 (100%) | 96 of 96 (100%) |
+| Claude Opus 5.5 | 87 of 87 (100%) | 95 of 96 (99.0%) |
+| Claude Sonnet 5.5 | 87 of 87 (100%) | 96 of 96 (100%) |
+| Claude Haiku 4.5 | 84 of 87 (96.6%) | 90 of 96 (93.8%) |
+| GPT-6 Astra | 84 of 87 (96.6%) | 96 of 96 (100%) |
+| GPT-5.6 sol | 80 of 87 (92.0%) | 96 of 96 (100%) |
+| Grok 4.7 | 83 of 87 (95.4%) | 95 of 96 (99.0%) |
+| Grok 4.3 | 82 of 87 (94.3%) | 93 of 96 (96.9%) |
+| Gemini 3.1 Pro | 82 of 87 (94.3%) | 95 of 96 (99.0%) |
+| Gemini 3.8 Flash | 82 of 87 (94.3%) | 96 of 96 (100%) |
 
 5 of the 10 models scored 96 of 96 in run 3.
 
