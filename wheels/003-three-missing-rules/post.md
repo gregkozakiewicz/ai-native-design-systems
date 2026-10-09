@@ -153,7 +153,7 @@ This run has these limits:
 - amended rule 1 names its 3 target buttons as examples, so we have no measure of it on other buttons
 - the correct answers are one designer's judgement; the run shows where the rules and the answers part, not which is right
 - a model's reason is one line it writes with its answer, not a full record of what it weighed
-- the cost is an estimate, not a measured figure
+- the cost comes from published prices, not from the companies' bills, except for Grok, whose charges xAI records
 
 ## Details
 
@@ -167,7 +167,7 @@ This run has these limits:
 | Repeats | 3 per scenario per model, each a fresh conversation: 870 answers |
 | Scoring | wheel 001's script, against the same correct answers |
 | Dates | 8 October 2026 |
-| Cost | about €4 in API credit, pay as you go, for all 10 runs, with no reruns. We estimated it as a third of wheel 002's cost, since each model made a third of the calls: about €0.40 per model |
+| Cost | about €2.70 in API credit, pay as you go, for all 10 runs, with no reruns: from €0.10 for Sonnet 5.5 to €0.54 for Gemini 3.1 Pro. We worked it out from the tokens each model used and each company's published prices |
 
 We wrote the 3 amended rules, the expected result, and the success criteria before the first run, and changed nothing after.
 
@@ -186,3 +186,4 @@ We wrote the 3 amended rules, the expected result, and the success criteria befo
 **Changes to this post**
 
 - 8 October 2026: first version
+- 9 October 2026: the cost is now worked out from the tokens each model used and each company's published prices, about €2.70 instead of about €4

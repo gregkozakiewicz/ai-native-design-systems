@@ -179,7 +179,7 @@ Nothing changes in the system yet. The 12 rules stay as they are, with a note of
 | Repeats | 3 per scenario per level, each a fresh conversation |
 | Scoring | wheel 001's script, against the same correct answers |
 | Dates | 7 October 2026, with Gemini 3.1 Pro finishing on 8 October |
-| Cost | about €1 per model in API credit, pay as you go, about €10 for all runs; the Fable run alone was €1.40 |
+| Cost | about €7.62 in API credit, pay as you go, for the 9 runs, from €0.23 for Haiku 4.5 to €1.71 for Gemini 3.1 Pro. Opus 5.5's run is counted in wheel 001 |
 
 **Reproduce it**
 
@@ -197,3 +197,4 @@ Nothing changes in the system yet. The 12 rules stay as they are, with a note of
 
 - 8 October 2026: first version
 - 8 October 2026: [wheel 003](../003-three-missing-rules/post.md) tested the 3 missing rules, and misses rose from 32 to 40 of 870, so they did not enter the system
+- 9 October 2026: the cost is now worked out from the tokens each model used and each company's published prices, about €7.62 instead of about €10
