@@ -24,6 +24,10 @@ Move a question to `wheels/` with `tools/new-wheel.sh` once it has all three.
   `research/notes/2026-10-06-measuring-agent-use-of-a-design-system.md`)*
 - If an agent can ask the design system a question mid-task, what, if
   anything, still has to be told to it up front? *(from the same reading note)*
+- Does an automatic check that fails the build on raw values stop mistakes
+  that rules alone miss, and which kinds? Same tasks over several sessions,
+  with and without the check. *(from the note
+  `research/notes/2026-10-10-rules-plus-an-automatic-check.md`)*
 
 ## Big questions (too large; here so they stop nagging)
 
