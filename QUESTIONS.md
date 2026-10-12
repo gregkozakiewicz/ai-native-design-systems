@@ -55,6 +55,11 @@ Move questions here once a wheel has findings, with a link to the wheel.
   answers right, 98.8%, and 5 of 10 models scored 96 of 96. See
   `wheels/004-new-button-rules/`.
 
+## Raised by the designer's review of the portal questions
+
+- Does every screen in a journey need exactly one primary button, to guide the user through the step? The designer's view, 12 October 2026: usually yes, apart from screens such as dashboards. HR5 makes a close-only button secondary, which may be why the designer's survey answers differ from the rules on 'Done' and similar buttons.
+- How should a design system tell links, menu items and icon buttons apart from buttons? See `research/parked-scenarios.md`.
+
 ## Raised by wheels
 
 - What makes 'Discard changes' destructive but 'Reset to defaults' and

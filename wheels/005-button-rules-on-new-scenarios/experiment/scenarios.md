@@ -1,6 +1,6 @@
 # Button variant scenarios for wheel 005
 
-Draft, 11 October 2026. The designer's answers come from his own run through the survey on gregkozakiewicz.com on 11 October 2026, before he saw the draft answers.
+Draft, 11 October 2026. The designer's answers come from the designer's own run through the survey on gregkozakiewicz.com on 11 October 2026, before seeing the draft answers.
 
 These are 24 new scenarios, from products wheel 004's 32 scenarios do not cover. Each one says whether the action can be undone, so the model does not have to assume.
 
