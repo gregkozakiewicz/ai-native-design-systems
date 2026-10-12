@@ -2,7 +2,7 @@
 
 The designer reviewed the 56 button scenarios used in the designer judgement portal on 12 October 2026. Some describe a control that is not clearly a button. They are parked here, grouped by the component they belong to, for later wheels. Scenario text is word for word from the wheel named.
 
-The portal on gregkozakiewicz.com now asks 48 button questions in 5 packs. 'Log out' in an account menu, 'Slide to pay' in a taxi app, 'Set temperature' in a smart home app and 'Hold to record' in a chat composer were removed from it without being parked. 'Log out' is a menu item. The other 3 test what 'none' means, not the designer's judgement.
+The portal on gregkozakiewicz.com now asks 48 button questions in 6 packs of 8. 'Log out' in an account menu, 'Slide to pay' in a taxi app, 'Set temperature' in a smart home app and 'Hold to record' in a chat composer were removed from it without being parked. 'Log out' is a menu item. The other 3 test what 'none' means, not the designer's judgement.
 
 ## Links
 
