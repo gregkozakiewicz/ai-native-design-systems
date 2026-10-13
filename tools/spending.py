@@ -39,6 +39,8 @@ PRICES = {
     "claude-opus-5-5": {"input": 4.00, "write": 5.00, "read": 0.20, "output": 20.00},
     "claude-sonnet-5-5": {"input": 2.00, "write": 2.50, "read": 0.20, "output": 10.00},
     "claude-haiku-4-5": {"input": 1.00, "write": 1.25, "read": 0.10, "output": 5.00},
+    # Claude Haiku 5.5: prompts up to 100,000 tokens; cache write and read assumed at the usual 1.25x and 0.1x of input.
+    "claude-haiku-5-5": {"input": 0.10, "write": 0.125, "read": 0.01, "output": 0.50},
     # OpenAI, standard tier, prompts of 272,000 tokens or fewer. Reasoning tokens are billed as output.
     # GPT-5.6 sol's prices are promotional, "at least through November 21, 2026".
     "gpt-6-astra": {"input": 10.00, "write": 12.50, "read": 1.00, "output": 50.00},
@@ -67,6 +69,7 @@ WHEEL_NAMES = {
     "002-other-models": "Wheel 002, other models",
     "003-three-missing-rules": "Wheel 003, 3 missing rules",
     "004-new-button-rules": "Wheel 004, new button rules",
+    "005-button-rules-on-new-scenarios": "Wheel 005, button rules on new scenarios",
 }
 
 

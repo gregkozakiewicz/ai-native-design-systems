@@ -1,6 +1,6 @@
 # 005: button rules on new scenarios
 
-**Status:** proposed
+**Status:** answered: no by the criteria, 381 of 720 answers matched the designer; the rules themselves held, 711 of 720 matched what the rules give
 **Started:** 2026-10-11
 
 ## Question
