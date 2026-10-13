@@ -18,9 +18,9 @@ If the rules hold on new buttons, the 98.8% is a property of the rules, not of t
 **In scope**
 
 - the rules in `system/button-variant.md`, sections 1 to 5, unchanged, with the same answer format as wheel 004's run 3
-- 24 new scenarios, from products the 32 scenarios do not cover, in `experiment/scenarios.md`
-- every hard rule, HR1 to HR12, tested by at least 2 scenarios
-- 4 scenarios where 2 rules apply, and 2 where the answer is 'none'
+- 24 new scenarios, from products the 32 scenarios do not cover, in `experiment/scenarios.md`: 20 of the first 24, and 4 added on the line between secondary and ghost
+- every hard rule except HR9 tested by at least 2 scenarios; HR9 by one
+- 8 scenarios where 2 rules apply, and none where the answer is 'none'
 - 4 models: Claude Opus 5.5, Claude Sonnet 5.5, Claude Haiku 5.5 and GPT-6 Astra
 - 3 repeats for each scenario, at the settings used in wheel 004: 288 answers
 
@@ -34,6 +34,17 @@ Claude Haiku 5.5 is new, so it has no wheel 004 score. Before the main run, it r
 - names only and human written documentation
 - Gemini 3.1 Pro, Gemini 3.8 Flash, Grok 4.7, Grok 4.3, GPT-5.6 sol, Claude Haiku 4.5 and Claude Fable 5.1
 - other components
+
+## Changed before the run
+
+On 13 October 2026, before any model ran, the designer removed 4 scenarios that are not clearly buttons or test what 'none' means: 'Go to field', 'Read tips', 'Set temperature' and 'Slide to pay'. The designer added 4 on the line between secondary and ghost: 'Save for later', 'Copy link', 'Add to wishlist' and 'Send test email'. The total stays at 24.
+
+## Scored against 3 sets of answers
+
+The main score is against the designer's answers, as the success criteria below say. The findings also report 2 other comparisons, because the designer's survey answers differ from the rules on 12 of the first 24 scenarios:
+
+- the answers the rules give when read in order, in `experiment/draft-answers.md`, which shows whether the models apply the rules correctly
+- the most common answer from designers in the designer judgement portal, once at least 5 have answered a scenario
 
 ## Before the run
 

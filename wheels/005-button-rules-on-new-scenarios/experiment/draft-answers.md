@@ -6,6 +6,8 @@ These are the answers the rules in `system/button-variant.md` give when read in 
 
 ## Answers the rules give when read in order
 
+Scenarios 17, 20, 23 and 24 were removed on 13 October 2026 and are not scored.
+
 | # | Button | Tests | Draft answer |
 |---|---|---|---|
 | 1 | "Book table" | HR1 | P |
@@ -32,6 +34,10 @@ These are the answers the rules in `system/button-variant.md` give when read in 
 | 22 | "Skip question" | HR12 | G |
 | 23 | "Set temperature" | NR5 | none |
 | 24 | "Slide to pay" | NR5 | none |
+| 25 | "Save for later" | HR12, P5 | G |
+| 26 | "Copy link" | HR12, P5 | S |
+| 27 | "Add to wishlist" | HR11, P5 | G |
+| 28 | "Send test email" | HR11, P5 | G |
 
 ## Scenarios a model could plausibly read another way
 
@@ -42,3 +48,6 @@ These are the drafts most likely to split. They are listed so the designer can d
 - 'Undo changes' in a calendar is close to 'Discard changes' on a written report, which is destructive; here the lost edits are a time and a room
 - 'Go to field' only moves the page, so a model may call it a side task, not a recovery
 - 'Done' and 'Got it' sound like forward actions, but they only close something that asks for no decision
+- 'Save for later' postpones the order (HR12, ghost), but a model may read saving the photos as a choice the user may reasonably make (P5, secondary)
+- 'Copy link' completes sharing another way (HR12, secondary), but a model may call it a side task (HR11, ghost)
+- 'Add to wishlist' may read as a side task (HR11, ghost) or as a reasonable choice on a product page (P5, secondary)
